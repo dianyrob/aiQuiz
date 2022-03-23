@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Topic5Activity">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/backbtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:onClick="option"
+            app:srcCompat="@drawable/back" />
+
+        <ImageView
+            android:id="@+id/topictest1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:onClick="option"
+            android:layout_alignParentRight="true"
+            app:srcCompat="@drawable/test" />
+    </RelativeLayout>
+
+    <com.github.barteksc.pdfviewer.PDFView
+        android:id="@+id/pdfView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    </com.github.barteksc.pdfviewer.PDFView>
+
+
+
+
+</LinearLayout>
