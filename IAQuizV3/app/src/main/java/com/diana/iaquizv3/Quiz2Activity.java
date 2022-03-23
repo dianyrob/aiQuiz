@@ -17,7 +17,7 @@ import android.widget.TextView;
 import java.util.Random;
 
 public class Quiz2Activity extends AppCompatActivity {
-    String test;
+    
     ScrollView sv;
     TextView Quest,qNum;
     Button a,b,c,d;
