@@ -23,7 +23,7 @@
         <RelativeLayout
             android:id="@+id/header"
             android:layout_width="match_parent"
-            android:layout_height="100dp">
+            android:layout_height="70dp">
 
 
             <ImageView
@@ -37,14 +37,14 @@
 
             <TextView
                 android:id="@+id/topics"
-                android:paddingTop="30dp"
-                android:textAlignment="center"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:paddingTop="30dp"
                 android:text="TOPICS"
+                android:textAlignment="center"
                 android:textColor="#0B0A0A"
                 android:textSize="30sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <ImageView
                 android:id="@+id/backbtn"
@@ -74,6 +74,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="700dp">
 
+                    
+
                     <LinearLayout
                         android:id="@+id/L1"
                         android:layout_width="wrap_content"
@@ -82,26 +84,19 @@
                         android:layout_marginTop="2dp"
                         android:orientation="horizontal">
 
-                        
+                        <Button
+                            android:id="@+id/Topic1"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:onClick="salir"
+                            android:text="Introduction to AI" />
 
-                        <androidx.appcompat.widget.LinearLayoutCompat
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent">
-
-                            <Button
-                                android:id="@+id/Topic1"
-                                android:layout_width="250dp"
-                                android:layout_height="wrap_content"
-                                android:onClick="salir"
-                                android:text="Introduction to AI" />
-
-                            <ImageView
-                                android:id="@+id/test1"
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
-                                android:onClick="salir"
-                                app:srcCompat="@drawable/test" />
-                        </androidx.appcompat.widget.LinearLayoutCompat>
+                        <ImageView
+                            android:id="@+id/test1"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:onClick="salir"
+                            app:srcCompat="@drawable/test" />
 
                     </LinearLayout>
 
