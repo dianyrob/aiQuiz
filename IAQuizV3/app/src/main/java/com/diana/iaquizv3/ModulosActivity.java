@@ -54,6 +54,9 @@ public class ModulosActivity extends AppCompatActivity {
         }else if(v.getId() == R.id.randomquiz){
             Intent intent = new Intent(ModulosActivity.this, RandomQuizActivity.class);
             startActivity(intent);
+        }else if(v.getId() == R.id.back){
+            Intent intent = new Intent(ModulosActivity.this, MainActivity.class);
+            startActivity(intent);
         }
         finish();
     }

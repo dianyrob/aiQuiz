@@ -25,12 +25,12 @@ public class MainActivity extends AppCompatActivity {
 
     public void start(View v) {
 
-        if (v.getId() == R.id.basicbtn) {
+        if (v.getId() == R.id.btnbasic) {
             Intent intent = new Intent(MainActivity.this, BasicPdfActivity.class);
             startActivity(intent);
             finish();
         }
-        if (v.getId() == R.id.advancedbtn) {
+        if (v.getId() == R.id.btntesting) {
             Intent intent = new Intent(MainActivity.this, ModulosActivity.class);
             startActivity(intent);
             finish();

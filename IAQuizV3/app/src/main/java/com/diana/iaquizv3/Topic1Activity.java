@@ -17,7 +17,7 @@ import static com.diana.iaquizv3.R.id.backbtn;
 
 public class Topic1Activity extends AppCompatActivity {
     Intent i;
-    ImageView back,startTest1;
+    ImageView startTest1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +25,7 @@ public class Topic1Activity extends AppCompatActivity {
         setContentView(R.layout.activity_topic1);
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-        back = (ImageView)findViewById(R.id.backbtn);
+
         startTest1 = (ImageView)findViewById(R.id.topictest1);
 
 
@@ -54,7 +54,7 @@ public class Topic1Activity extends AppCompatActivity {
 
     public void option(View v) {
         switch(v.getId()){
-            case backbtn:
+            case R.id.logo:
                 i = new Intent(Topic1Activity.this, ModulosActivity.class);
                 startActivity(i);
                 finish();

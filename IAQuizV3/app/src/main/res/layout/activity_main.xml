@@ -36,7 +36,7 @@
             android:id="@+id/text2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/basicbtn"
+            android:layout_above="@+id/btntesting"
             android:layout_centerHorizontal="true"
             android:paddingBottom="30dp"
             android:paddingLeft="70dp"
@@ -44,7 +44,7 @@
             app:srcCompat="@drawable/text2" />
 
         <ImageView
-            android:id="@+id/basicbtn"
+            android:id="@+id/btntesting"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
@@ -52,14 +52,14 @@
             android:onClick="start"
             android:paddingLeft="30dp"
             android:paddingRight="30dp"
-            app:srcCompat="@drawable/btnbasic"
+            app:srcCompat="@drawable/btntesting"
             tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
         <ImageView
-            android:id="@+id/advancedbtn"
-            android:layout_width="match_parent"
+            android:id="@+id/btnbasic"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/basicbtn"
+            android:layout_above="@+id/btntesting"
             android:layout_centerHorizontal="true"
             android:onClick="start"
             android:paddingLeft="30dp"
@@ -71,11 +71,11 @@
             android:id="@+id/orangeline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/advancedbtn"
+            android:layout_above="@+id/btnbasic"
             android:layout_alignParentStart="true"
             android:layout_centerHorizontal="true"
             android:onClick="salir"
-            android:paddingBottom="160dp"
+            android:paddingBottom="180dp"
             android:paddingLeft="70dp"
             app:srcCompat="@drawable/orangeline"
             tools:ignore="SpeakableTextPresentCheck" />
