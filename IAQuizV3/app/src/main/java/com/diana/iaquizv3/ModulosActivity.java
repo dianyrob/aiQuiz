@@ -11,6 +11,7 @@ import android.widget.Button;
 
 public class ModulosActivity extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,7 +21,6 @@ public class ModulosActivity extends AppCompatActivity {
     }
 
     public void salir(View v){
-
         if(v.getId() == R.id.Topic1){
             Intent intent = new Intent(ModulosActivity.this, Topic1Activity.class);
             startActivity(intent);
@@ -50,6 +50,9 @@ public class ModulosActivity extends AppCompatActivity {
             startActivity(intent);
         }else if(v.getId() == R.id.test7){
             Intent intent = new Intent(ModulosActivity.this, Quiz7Activity.class);
+            startActivity(intent);
+        }else if(v.getId() == R.id.randomquiz){
+            Intent intent = new Intent(ModulosActivity.this, RandomQuizActivity.class);
             startActivity(intent);
         }
         finish();

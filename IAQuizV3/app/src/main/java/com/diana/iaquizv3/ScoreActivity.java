@@ -7,7 +7,6 @@ import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -31,7 +30,7 @@ public class ScoreActivity extends AppCompatActivity {
         format.setMaximumFractionDigits(2); //Define 2 decimales.
 
 
-        x=new Intent(ScoreActivity.this,MainActivity.class);
+        x=new Intent(ScoreActivity.this, MainActivity.class);
         recibe=getIntent();
         bolsa=recibe.getExtras();
         tiempo = bolsa.getLong("dur");

@@ -6,10 +6,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.graphics.Color;
+import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
@@ -19,7 +21,8 @@ public class RandomQuizActivity extends AppCompatActivity {
 
     ScrollView sv;
     TextView Quest,qNum;
-    Button a,b,c,d,sig,ter;
+    Button a,b,c,d;
+    ImageView sig,ter;
     int calificacion=0;
     int ra=0,rb=0,rc=0,rd=0;
     int questions=1,totalQuestions=40;
@@ -41,8 +44,8 @@ public class RandomQuizActivity extends AppCompatActivity {
         c=(Button)findViewById(R.id.c1);
         d=(Button)findViewById(R.id.d1);
         sv = (ScrollView) findViewById(R.id.scrollviewquiz);
-        sig=(Button)findViewById(R.id.sig1);
-        ter=(Button)findViewById(R.id.ter);
+        sig=(ImageView) findViewById(R.id.sig1);
+        ter=(ImageView) findViewById(R.id.ter);
         orderQeustions();
         getQuestion(quest[questions]);
         sig.setEnabled(false);
