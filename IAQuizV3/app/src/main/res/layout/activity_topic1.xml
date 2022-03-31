@@ -15,6 +15,7 @@
         android:layout_marginBottom="-90dp"
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
+        android:onClick="option"
         app:srcCompat="@drawable/logo" />
 
     <RelativeLayout
@@ -22,21 +23,14 @@
         android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/backbtn"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:onClick="option"
-            android:layout_below="@+id/topictest1"
-            app:srcCompat="@drawable/back" />
-
-        <ImageView
             android:id="@+id/topictest1"
-            android:layout_width="300dp"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
+            android:paddingRight="15dp"
             android:onClick="option"
             android:paddingLeft="40dp"
-            app:srcCompat="@drawable/randomquizbtn" />
+            app:srcCompat="@drawable/quizbtn" />
 
         <RelativeLayout
             android:id="@+id/textpdf"
@@ -59,8 +53,7 @@
                 <com.github.barteksc.pdfviewer.PDFView
                     android:id="@+id/pdfView"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-                </com.github.barteksc.pdfviewer.PDFView>
+                    android:layout_height="match_parent"></com.github.barteksc.pdfviewer.PDFView>
 
             </RelativeLayout>
 
