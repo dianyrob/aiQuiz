@@ -47,25 +47,25 @@
         <ImageView
             android:id="@+id/btntesting"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="80dp"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:onClick="start"
             android:paddingLeft="30dp"
             android:paddingRight="30dp"
-            app:srcCompat="@drawable/btntesting"
+            app:srcCompat="@drawable/btntesting2"
             tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
         <ImageView
             android:id="@+id/btnbasic"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="80dp"
             android:layout_above="@+id/btntesting"
             android:layout_centerHorizontal="true"
             android:onClick="start"
             android:paddingLeft="30dp"
             android:paddingRight="30dp"
-            app:srcCompat="@drawable/btnbasic"
+            app:srcCompat="@drawable/btnbasic2"
             tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
         <ImageView
