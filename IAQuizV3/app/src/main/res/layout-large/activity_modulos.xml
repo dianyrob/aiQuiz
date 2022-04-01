@@ -41,8 +41,8 @@
 
             <ImageView
                 android:id="@+id/back"
-                android:paddingLeft="20dp"
-                android:layout_width="80dp"
+                android:paddingLeft="100dp"
+                android:layout_width="500dp"
                 android:layout_height="80dp"
                 android:layout_alignParentLeft="true"
                 android:layout_centerHorizontal="false"
@@ -96,11 +96,12 @@
 
                                 <ImageView
                                     android:id="@+id/test1"
-                                    android:layout_width="100dp"
+                                    android:layout_width="400dp"
                                     android:layout_height="100dp"
                                     android:layout_alignParentRight="true"
                                     android:onClick="salir"
                                     android:paddingTop="20dp"
+                                    android:paddingRight="200dp"
                                     app:srcCompat="@drawable/evaluacionbutton" />
 
 
@@ -131,11 +132,12 @@
 
                                 <ImageView
                                     android:id="@+id/test2"
-                                    android:layout_width="100dp"
+                                    android:layout_width="400dp"
                                     android:layout_height="100dp"
                                     android:layout_alignParentRight="true"
                                     android:onClick="salir"
                                     android:paddingTop="20dp"
+                                    android:paddingRight="200dp"
                                     app:srcCompat="@drawable/evaluacionbutton" />
 
 
@@ -166,11 +168,12 @@
 
                                 <ImageView
                                     android:id="@+id/test3"
-                                    android:layout_width="100dp"
+                                    android:layout_width="400dp"
                                     android:layout_height="100dp"
-                                    android:paddingTop="20dp"
                                     android:layout_alignParentRight="true"
                                     android:onClick="salir"
+                                    android:paddingTop="20dp"
+                                    android:paddingRight="200dp"
                                     app:srcCompat="@drawable/evaluacionbutton" />
 
 
@@ -193,11 +196,12 @@
 
                                 <ImageView
                                     android:id="@+id/test4"
-                                    android:layout_width="100dp"
+                                    android:layout_width="400dp"
                                     android:layout_height="100dp"
-                                    android:paddingTop="20dp"
                                     android:layout_alignParentRight="true"
                                     android:onClick="salir"
+                                    android:paddingTop="20dp"
+                                    android:paddingRight="200dp"
                                     app:srcCompat="@drawable/evaluacionbutton" />
 
                                 <ImageView
@@ -235,11 +239,12 @@
 
                                 <ImageView
                                     android:id="@+id/test5"
-                                    android:layout_width="100dp"
+                                    android:layout_width="400dp"
                                     android:layout_height="100dp"
-                                    android:paddingTop="20dp"
                                     android:layout_alignParentRight="true"
                                     android:onClick="salir"
+                                    android:paddingTop="20dp"
+                                    android:paddingRight="200dp"
                                     app:srcCompat="@drawable/evaluacionbutton" />
 
                             </RelativeLayout>
@@ -269,11 +274,12 @@
 
                                 <ImageView
                                     android:id="@+id/test6"
-                                    android:layout_width="100dp"
+                                    android:layout_width="400dp"
                                     android:layout_height="100dp"
-                                    android:paddingTop="20dp"
                                     android:layout_alignParentRight="true"
                                     android:onClick="salir"
+                                    android:paddingTop="20dp"
+                                    android:paddingRight="200dp"
                                     app:srcCompat="@drawable/evaluacionbutton" />
 
                             </RelativeLayout>
@@ -303,11 +309,12 @@
 
                                 <ImageView
                                     android:id="@+id/test7"
-                                    android:layout_width="100dp"
+                                    android:layout_width="400dp"
                                     android:layout_height="100dp"
-                                    android:paddingTop="20dp"
                                     android:layout_alignParentRight="true"
                                     android:onClick="salir"
+                                    android:paddingTop="20dp"
+                                    android:paddingRight="200dp"
                                     app:srcCompat="@drawable/evaluacionbutton" />
 
                             </RelativeLayout>

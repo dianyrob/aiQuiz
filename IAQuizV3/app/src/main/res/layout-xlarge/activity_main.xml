@@ -17,54 +17,51 @@
 
         <ImageView
             android:id="@+id/logo"
-            android:layout_width="150dp"
+            android:layout_width="650dp"
             android:layout_height="100dp"
             android:layout_above="@+id/imgtext1"
-            android:paddingLeft="70dp"
+            android:paddingLeft="570dp"
+            android:paddingBottom="30dp"
             app:srcCompat="@drawable/logo" />
 
         <ImageView
             android:id="@+id/imgtext1"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_above="@+id/orangeline"
             android:layout_centerHorizontal="true"
-            android:paddingLeft="70dp"
-            android:paddingRight="60dp"
+            android:paddingRight="200dp"
+            android:paddingBottom="30dp"
             app:srcCompat="@drawable/text1" />
 
         <ImageView
             android:id="@+id/text2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/btntesting"
+            android:layout_width="600dp"
+            android:layout_height="300dp"
+            android:layout_below="@+id/orangeline"
             android:layout_centerHorizontal="true"
-            android:paddingBottom="30dp"
-            android:paddingLeft="70dp"
-            android:paddingRight="120dp"
+            android:paddingTop="30dp"
+            android:paddingBottom="120dp"
+            android:paddingRight="260dp"
             app:srcCompat="@drawable/text2" />
 
         <ImageView
             android:id="@+id/btntesting"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/btnbasic"
             android:layout_centerHorizontal="true"
             android:onClick="start"
-            android:paddingLeft="30dp"
-            android:paddingRight="30dp"
             app:srcCompat="@drawable/btntesting"
             tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
         <ImageView
             android:id="@+id/btnbasic"
-            android:layout_width="wrap_content"
+            android:layout_width="500dp"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/btntesting"
+            android:layout_below="@+id/text2"
             android:layout_centerHorizontal="true"
             android:onClick="start"
-            android:paddingLeft="30dp"
-            android:paddingRight="30dp"
             app:srcCompat="@drawable/btnbasic"
             tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
@@ -72,12 +69,9 @@
             android:id="@+id/orangeline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/btnbasic"
-            android:layout_alignParentStart="true"
-            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
             android:onClick="salir"
-            android:paddingBottom="180dp"
-            android:paddingLeft="70dp"
+            android:paddingLeft="570dp"
             app:srcCompat="@drawable/orangeline"
             tools:ignore="SpeakableTextPresentCheck" />
 

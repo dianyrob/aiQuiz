@@ -15,13 +15,7 @@
         android:layout_height="match_parent"
         android:gravity="center_vertical">
 
-        <ImageView
-            android:id="@+id/logo"
-            android:layout_width="150dp"
-            android:layout_height="100dp"
-            android:layout_above="@+id/imgtext1"
-            android:paddingLeft="70dp"
-            app:srcCompat="@drawable/logo" />
+
 
         <ImageView
             android:id="@+id/imgtext1"
@@ -37,9 +31,9 @@
             android:id="@+id/text2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/btntesting"
             android:layout_centerHorizontal="true"
-            android:paddingBottom="30dp"
+            android:layout_alignParentBottom="true"
+            android:paddingBottom="70dp"
             android:paddingLeft="70dp"
             android:paddingRight="120dp"
             app:srcCompat="@drawable/text2" />
@@ -72,7 +66,7 @@
             android:id="@+id/orangeline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/btnbasic"
+            android:layout_above="@+id/btntesting"
             android:layout_alignParentStart="true"
             android:layout_centerHorizontal="true"
             android:onClick="salir"

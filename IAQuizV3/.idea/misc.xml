@@ -5,13 +5,15 @@
       <map>
         <entry key="app/src/main/res/drawable-v24/esquinas.xml" value="0.196" />
         <entry key="app/src/main/res/layout-large/activity_main.xml" value="0.8025" />
-        <entry key="app/src/main/res/layout-normal/activity_main.xml" value="0.375" />
-        <entry key="app/src/main/res/layout-small/activity_main.xml" value="1.5" />
-        <entry key="app/src/main/res/layout-xlarge/activity_main.xml" value="0.25078125" />
+        <entry key="app/src/main/res/layout-large/activity_modulos.xml" value="0.165" />
+        <entry key="app/src/main/res/layout-normal/activity_main.xml" value="0.335" />
+        <entry key="app/src/main/res/layout-small/activity_main.xml" value="1.0" />
+        <entry key="app/src/main/res/layout-xlarge/activity_main.xml" value="0.165" />
+        <entry key="app/src/main/res/layout-xlarge/activity_modulos.xml" value="0.335" />
         <entry key="app/src/main/res/layout/activity_basic_pdf.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/activity_basic_quiz.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.125" />
-        <entry key="app/src/main/res/layout/activity_modulos.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_modulos.xml" value="0.165" />
         <entry key="app/src/main/res/layout/activity_quiz1.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_quiz2.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_quiz3.xml" value="0.1" />
@@ -21,7 +23,7 @@
         <entry key="app/src/main/res/layout/activity_quiz7.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_random_quiz.xml" value="0.2546875" />
         <entry key="app/src/main/res/layout/activity_score.xml" value="0.165" />
-        <entry key="app/src/main/res/layout/activity_topic1.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/activity_topic1.xml" value="0.75" />
         <entry key="app/src/main/res/layout/activity_topic1_quiz.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_topic2.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_topic7.xml" value="0.1" />
