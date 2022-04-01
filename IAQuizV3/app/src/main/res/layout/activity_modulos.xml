@@ -88,8 +88,8 @@
 
                                 <ImageView
                                     android:id="@+id/Topic1"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="115dp"
                                     android:layout_centerHorizontal="true"
                                     android:onClick="salir"
                                     app:srcCompat="@drawable/botontopic1" />
@@ -123,8 +123,8 @@
 
                                 <ImageView
                                     android:id="@+id/Topic2"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="115dp"
                                     android:layout_centerHorizontal="true"
                                     android:onClick="salir"
                                     app:srcCompat="@drawable/botontopic2" />
@@ -158,8 +158,8 @@
 
                                 <ImageView
                                     android:id="@+id/Topic3"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="115dp"
                                     android:layout_centerHorizontal="true"
                                     android:onClick="salir"
                                     app:srcCompat="@drawable/botontopic3" />
@@ -202,8 +202,8 @@
 
                                 <ImageView
                                     android:id="@+id/Topic4"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="115dp"
                                     android:layout_centerHorizontal="true"
                                     android:onClick="salir"
                                     app:srcCompat="@drawable/botontopic4" />
@@ -227,8 +227,8 @@
 
                                 <ImageView
                                     android:id="@+id/Topic5"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="115dp"
                                     android:layout_centerHorizontal="true"
                                     android:onClick="salir"
                                     app:srcCompat="@drawable/botontopic5" />
@@ -261,8 +261,8 @@
 
                                 <ImageView
                                     android:id="@+id/Topic6"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="115dp"
                                     android:layout_centerHorizontal="true"
                                     android:onClick="salir"
                                     app:srcCompat="@drawable/botontopic6" />
@@ -295,8 +295,8 @@
 
                                 <ImageView
                                     android:id="@+id/Topic7"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="115dp"
                                     android:layout_centerHorizontal="true"
                                     android:onClick="salir"
                                     app:srcCompat="@drawable/botontopic7" />
