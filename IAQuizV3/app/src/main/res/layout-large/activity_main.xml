@@ -8,78 +8,60 @@
     tools:context=".MainActivity"
     android:background="@drawable/fondo1">
 
-
-
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center_vertical">
+        android:orientation="vertical">
 
         <ImageView
             android:id="@+id/logo"
             android:layout_width="150dp"
-            android:layout_height="100dp"
-            android:layout_above="@+id/imgtext1"
+            android:layout_height="150dp"
             android:paddingLeft="70dp"
+            android:paddingTop="20dp"
             app:srcCompat="@drawable/logo" />
 
         <ImageView
-            android:id="@+id/imgtext1"
+            android:id="@+id/text1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/orangeline"
-            android:layout_centerHorizontal="true"
             android:paddingLeft="70dp"
-            android:paddingRight="60dp"
+            android:paddingTop="20dp"
             app:srcCompat="@drawable/text1" />
-
+        <ImageView
+            android:id="@+id/orangeline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="salir"
+            android:paddingTop="20dp"
+            android:paddingLeft="70dp"
+            app:srcCompat="@drawable/orangeline" />
         <ImageView
             android:id="@+id/text2"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/btntesting"
-            android:layout_centerHorizontal="true"
+            android:layout_height="250dp"
             android:paddingBottom="30dp"
-            android:paddingLeft="70dp"
-            android:paddingRight="120dp"
+            android:paddingTop="20dp"
             app:srcCompat="@drawable/text2" />
+
+
+        <ImageView
+            android:id="@+id/btnbasic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:onClick="start"
+            app:srcCompat="@drawable/btnbasic"
+            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
         <ImageView
             android:id="@+id/btntesting"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:onClick="start"
-            android:paddingLeft="30dp"
-            android:paddingRight="30dp"
             app:srcCompat="@drawable/btntesting"
             tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
-        <ImageView
-            android:id="@+id/btnbasic"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/btntesting"
-            android:layout_centerHorizontal="true"
-            android:onClick="start"
-            android:paddingLeft="30dp"
-            android:paddingRight="30dp"
-            app:srcCompat="@drawable/btnbasic"
-            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
-
-        <ImageView
-            android:id="@+id/orangeline"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/btnbasic"
-            android:layout_alignParentStart="true"
-            android:layout_centerHorizontal="true"
-            android:onClick="salir"
-            android:paddingBottom="180dp"
-            android:paddingLeft="70dp"
-            app:srcCompat="@drawable/orangeline"
-            tools:ignore="SpeakableTextPresentCheck" />
-
-    </RelativeLayout>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

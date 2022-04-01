@@ -168,9 +168,9 @@
                                     android:id="@+id/test3"
                                     android:layout_width="100dp"
                                     android:layout_height="100dp"
-                                    android:paddingTop="20dp"
                                     android:layout_alignParentRight="true"
                                     android:onClick="salir"
+                                    android:paddingTop="20dp"
                                     app:srcCompat="@drawable/evaluacionbutton" />
 
 
