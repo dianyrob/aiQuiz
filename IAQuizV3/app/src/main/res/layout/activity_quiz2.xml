@@ -25,15 +25,13 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/Config"
+                <ImageView
+                    android:id="@+id/top2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="- Overview of testing AI system-"
-                    android:textAlignment="center"
-                    android:textColor="#070707"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
+                    android:onClick="salir"
+                    android:layout_gravity="center_horizontal"
+                    app:srcCompat="@drawable/topic2" />
 
 
                 <TextView
@@ -116,14 +114,7 @@
                     app:srcCompat="@drawable/finishbtn" />
 
 
-                <ImageView
-                    android:id="@+id/quit"
-                    android:layout_width="40dp"
-                    android:layout_height="60dp"
-                    android:paddingTop="10dp"
-                    android:onClick="salir"
-                    android:layout_gravity="center_horizontal"
-                    app:srcCompat="@drawable/salida" />
+
 
             </LinearLayout>
         </RelativeLayout>

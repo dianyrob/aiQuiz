@@ -8,29 +8,48 @@
     tools:context=".Topic1Activity"
     android:background="@drawable/fondo2">
 
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-40dp">
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginBottom="-90dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:onClick="option"
+            app:srcCompat="@drawable/logo" />
+
+        <ImageView
+            android:id="@+id/topictest1"
+            android:layout_width="250dp"
+            android:layout_height="70dp"
+            android:layout_alignParentRight="true"
+            android:onClick="option"
+            android:paddingLeft="40dp"
+            android:paddingRight="15dp"
+            android:paddingTop="10dp"
+            app:srcCompat="@drawable/quizbtn" />
+    </RelativeLayout>
+
     <ImageView
-        android:id="@+id/logo"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginBottom="-90dp"
+        android:id="@+id/top1header"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginBottom="-170dp"
         android:paddingLeft="20dp"
-        android:paddingTop="10dp"
+        android:paddingRight="20dp"
         android:onClick="option"
-        app:srcCompat="@drawable/logo" />
+        app:srcCompat="@drawable/topic1" />
 
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
-        <ImageView
-            android:id="@+id/topictest1"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:paddingRight="15dp"
-            android:onClick="option"
-            android:paddingLeft="40dp"
-            app:srcCompat="@drawable/quizbtn" />
 
         <RelativeLayout
             android:id="@+id/textpdf"
@@ -45,7 +64,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/esquinas"
-                android:paddingBottom="10dp"
+                android:layout_marginBottom="20dp"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
                 android:paddingTop="10dp">
@@ -53,7 +72,9 @@
                 <com.github.barteksc.pdfviewer.PDFView
                     android:id="@+id/pdfView"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"></com.github.barteksc.pdfviewer.PDFView>
+                    android:layout_height="match_parent">
+
+                </com.github.barteksc.pdfviewer.PDFView>
 
             </RelativeLayout>
 
