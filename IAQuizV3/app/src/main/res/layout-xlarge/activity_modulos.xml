@@ -99,8 +99,9 @@
                                     android:layout_width="400dp"
                                     android:layout_height="100dp"
                                     android:layout_alignParentRight="true"
+                                    android:layout_marginRight="2dp"
                                     android:onClick="salir"
-                                    android:paddingRight="90dp"
+                                    android:paddingRight="30dp"
                                     android:paddingTop="20dp"
                                     app:srcCompat="@drawable/evaluacionbutton" />
 
@@ -136,7 +137,7 @@
                                     android:layout_height="100dp"
                                     android:layout_alignParentRight="true"
                                     android:onClick="salir"
-                                    android:paddingRight="90dp"
+                                    android:paddingRight="30dp"
                                     android:paddingTop="20dp"
                                     app:srcCompat="@drawable/evaluacionbutton" />
 
@@ -172,7 +173,7 @@
                                     android:layout_height="100dp"
                                     android:layout_alignParentRight="true"
                                     android:onClick="salir"
-                                    android:paddingRight="90dp"
+                                    android:paddingRight="30dp"
                                     android:paddingTop="20dp"
                                     app:srcCompat="@drawable/evaluacionbutton" />
 
@@ -201,7 +202,7 @@
                                     android:layout_alignParentRight="true"
                                     android:onClick="salir"
                                     android:paddingTop="20dp"
-                                    android:paddingRight="90dp"
+                                    android:paddingRight="30dp"
                                     app:srcCompat="@drawable/evaluacionbutton" />
 
                                 <ImageView
@@ -243,7 +244,7 @@
                                     android:layout_height="100dp"
                                     android:layout_alignParentRight="true"
                                     android:onClick="salir"
-                                    android:paddingRight="90dp"
+                                    android:paddingRight="30dp"
                                     android:paddingTop="20dp"
                                     app:srcCompat="@drawable/evaluacionbutton" />
 
@@ -278,7 +279,7 @@
                                     android:layout_height="100dp"
                                     android:layout_alignParentRight="true"
                                     android:onClick="salir"
-                                    android:paddingRight="90dp"
+                                    android:paddingRight="30dp"
                                     android:paddingTop="20dp"
                                     app:srcCompat="@drawable/evaluacionbutton" />
 
@@ -313,7 +314,7 @@
                                     android:layout_height="100dp"
                                     android:layout_alignParentRight="true"
                                     android:onClick="salir"
-                                    android:paddingRight="90dp"
+                                    android:paddingRight="30dp"
                                     android:paddingTop="20dp"
                                     app:srcCompat="@drawable/evaluacionbutton" />
 

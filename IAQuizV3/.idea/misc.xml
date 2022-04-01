@@ -4,11 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable-v24/esquinas.xml" value="0.196" />
-        <entry key="app/src/main/res/layout-large/activity_main.xml" value="0.8025" />
+        <entry key="app/src/main/res/layout-large/activity_main.xml" value="0.125" />
         <entry key="app/src/main/res/layout-large/activity_modulos.xml" value="0.165" />
-        <entry key="app/src/main/res/layout-normal/activity_main.xml" value="0.335" />
-        <entry key="app/src/main/res/layout-small/activity_main.xml" value="1.0" />
-        <entry key="app/src/main/res/layout-xlarge/activity_main.xml" value="0.165" />
+        <entry key="app/src/main/res/layout-normal/activity_main.xml" value="0.165" />
+        <entry key="app/src/main/res/layout-small/activity_main.xml" value="0.375" />
+        <entry key="app/src/main/res/layout-xlarge/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout-xlarge/activity_modulos.xml" value="0.335" />
         <entry key="app/src/main/res/layout/activity_basic_pdf.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/activity_basic_quiz.xml" value="0.19322916666666667" />
