@@ -1,6 +1,6 @@
 package com.diana.iaquizv3;
 
-import static com.diana.iaquizv3.R.id.backbtn;
+//import static com.diana.iaquizv3.R.id.backbtn;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -22,7 +22,7 @@ public class Topic7Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_topic7);
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        back = (ImageView)findViewById(R.id.backbtn);
+        //back = (ImageView)findViewById(R.id.backbtn);
         startTest1 = (ImageView)findViewById(R.id.topictest1);
 
 
@@ -49,7 +49,7 @@ public class Topic7Activity extends AppCompatActivity {
 
     public void option(View v) {
         switch(v.getId()){
-            case backbtn:
+            case R.id.logo:
                 i = new Intent(Topic7Activity.this, ModulosActivity.class);
                 startActivity(i);
                 finish();

@@ -10,7 +10,7 @@ import android.widget.ImageView;
 
 import com.github.barteksc.pdfviewer.PDFView;
 
-import static com.diana.iaquizv3.R.id.backbtn;
+//import static com.diana.iaquizv3.R.id.backbtn;
 
 public class Topic2Activity extends AppCompatActivity {
     Intent i;
@@ -21,13 +21,13 @@ public class Topic2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_topic2);
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        back = (ImageView)findViewById(R.id.backbtn);
+        //back = (ImageView)findViewById(R.id.backbtn);
         startTest1 = (ImageView)findViewById(R.id.topictest1);
 
 
         PDFView pdfView = findViewById(R.id.pdfView);
         pdfView.fromAsset("chapter2.pdf")
-                .pages(0,1,2,3,4,5,6,7,8) // all pages are displayed by default
+                //.pages(0,1,2,3,4,5,6,7,8) // all pages are displayed by default
                 .enableSwipe(true) // allows to block changing pages using swipe
                 .swipeHorizontal(false)
                 .enableDoubletap(true)
@@ -48,12 +48,12 @@ public class Topic2Activity extends AppCompatActivity {
 
     public void option(View v) {
         switch(v.getId()){
-            case backbtn:
+            case R.id.logo:
                 i = new Intent(Topic2Activity.this, ModulosActivity.class);
                 startActivity(i);
                 finish();
                 break;
-            case R.id.topictest1:
+            case R.id.topictest2:
                 i = new Intent(Topic2Activity.this, Quiz2Activity.class);
                 startActivity(i);
                 finish();
