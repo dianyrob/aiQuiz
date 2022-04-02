@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-import static com.diana.iaquizv3.R.id.backbtn;
+//import static com.diana.iaquizv3.R.id.backbtn;
 
 public class Topic5Activity extends AppCompatActivity {
     Intent i;
@@ -18,18 +18,18 @@ public class Topic5Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_topic5);
-        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        //this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
     }
 
     public void option(View v) {
         switch(v.getId()){
-            case backbtn:
+            case R.id.logo:
                 i = new Intent(Topic5Activity.this, ModulosActivity.class);
                 startActivity(i);
                 finish();
                 break;
-            case R.id.topictest1:
+            case R.id.topictest5:
                 i = new Intent(Topic5Activity.this, Quiz5Activity.class);
                 startActivity(i);
                 finish();

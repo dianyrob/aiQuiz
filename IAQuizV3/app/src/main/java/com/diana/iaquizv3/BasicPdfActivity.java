@@ -1,6 +1,6 @@
 package com.diana.iaquizv3;
 
-import static com.diana.iaquizv3.R.id.backbtn;
+//import static com.diana.iaquizv3.R.id.backbtn;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -23,7 +23,7 @@ public class BasicPdfActivity extends AppCompatActivity {
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
 
-        back = (ImageView)findViewById(R.id.backbtn);
+        //back = (ImageView)findViewById(R.id.backbtn);
         startTest1 = (ImageView)findViewById(R.id.topictest1);
 
 
@@ -50,7 +50,7 @@ public class BasicPdfActivity extends AppCompatActivity {
 
     public void option(View v) {
         switch(v.getId()){
-            case backbtn:
+            case R.id.logo:
                 i = new Intent(BasicPdfActivity.this, MainActivity.class);
                 startActivity(i);
                 finish();

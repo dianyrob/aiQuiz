@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-import static com.diana.iaquizv3.R.id.backbtn;
+//import static com.diana.iaquizv3.R.id.backbtn;
 
 public class Topic4Activity extends AppCompatActivity {
     Intent i;
@@ -24,12 +24,12 @@ public class Topic4Activity extends AppCompatActivity {
 
     public void option(View v) {
         switch(v.getId()){
-            case backbtn:
+            case R.id.logo:
                 i = new Intent(Topic4Activity.this, ModulosActivity.class);
                 startActivity(i);
                 finish();
                 break;
-            case R.id.topictest1:
+            case R.id.topictest4:
                 i = new Intent(Topic4Activity.this, Quiz4Activity.class);
                 startActivity(i);
                 finish();
