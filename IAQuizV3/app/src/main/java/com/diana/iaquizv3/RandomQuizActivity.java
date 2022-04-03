@@ -28,6 +28,8 @@ public class RandomQuizActivity extends AppCompatActivity {
     int questions=1,totalQuestions=40;
     Intent i;
     int[] quest={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+    Questions1 q1 = new Questions1();
+    QuestionSettings qSet = new QuestionSettings();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,27 +51,27 @@ public class RandomQuizActivity extends AppCompatActivity {
         orderQeustions();
         getQuestion(quest[questions]);
         sig.setEnabled(false);
-        clearColor();
+        qSet.clearColor(a,b,c,d);
     }
 
     public void responder(View v) {
         switch(v.getId()){
             case R.id.a1:
-                deshabilitar();
+                qSet.deshabilitar(a,b,c,d,sig);
                 correctQuestion(quest[questions],"a");
                 break;
             case R.id.b1:
-                deshabilitar();
+                qSet.deshabilitar(a,b,c,d,sig);
                 correctQuestion(quest[questions],"b");
                 calificacion=0;
                 break;
             case R.id.c1:
-                deshabilitar();
+                qSet.deshabilitar(a,b,c,d,sig);
                 correctQuestion(quest[questions],"c");
                 calificacion=0;
                 break;
             case R.id.d1:
-                deshabilitar();
+                qSet.deshabilitar(a,b,c,d,sig);
                 correctQuestion(quest[questions],"d");
                 calificacion=1;
                 break;
@@ -77,8 +79,8 @@ public class RandomQuizActivity extends AppCompatActivity {
                 questions+=1;
                 if(questions<totalQuestions){
                     getQuestion(quest[questions]);;
-                    clearColor();
-                    habilitar();
+                    qSet.clearColor(a,b,c,d);
+                    qSet.habilitar(a,b,c,d,sig,sv);
                 }else{
                     calificacion=ra+rb+rc+rd;
                     i.putExtra("calificacion",calificacion);
@@ -127,104 +129,34 @@ public class RandomQuizActivity extends AppCompatActivity {
     public void getQuestion(int question){
         switch (question){
             case 1:
-                qNum.setText(questions+".");
-                Quest.setText("Is the intelligence acquired by a machine to solve problems usually solved by humans? ");
-                a.setText("A) Artificial knowledge");
-                b.setText("B) Artificial intelligence");
-                c.setText("C) Machine learning");
-                d.setText("D) Deep learning");
-                c.setVisibility(View.VISIBLE);
-                d.setVisibility(View.VISIBLE);
+                q1.fillQuestion(Quest, qNum, a, b, c, d, questions, question);
                 break;
             case 2:
-                qNum.setText(questions+".");
-                Quest.setText("In which sectors is Al playing a leading role?");
-                a.setText("A) Healthcare and manufacturing");
-                b.setText("B) E-commerce and retail");
-                c.setText("C) Social Media and logistics ");
-                d.setText("D) All of the above");
-                c.setVisibility(View.VISIBLE);
-                d.setVisibility(View.VISIBLE);
+                q1.fillQuestion(Quest, qNum, a, b, c, d, questions, question);
                 break;
             case 3:
-                qNum.setText(questions+".");
-                Quest.setText("How is the Artificial Intelligence categorized?");
-                a.setText("A) Narrow");
-                b.setText("B) General");
-                c.setText("C) Super AI ");
-                d.setText("D) All of the above");
-                c.setVisibility(View.VISIBLE);
-                d.setVisibility(View.VISIBLE);
+                q1.fillQuestion(Quest, qNum, a, b, c, d, questions, question);
                 break;
             case 4:
-                qNum.setText(questions+".");
-                Quest.setText("Is the category for the machines that are programmed for carrying out a specific task with limited context. For example, game playing machines, voice assistants and all AI currently:");
-                a.setText("A) Simple AI");
-                b.setText("B) Narrow");
-                c.setText("C) General");
-                d.setText("D) Super AI");
-                c.setVisibility(View.VISIBLE);
-                d.setVisibility(View.VISIBLE);
+                q1.fillQuestion(Quest, qNum, a, b, c, d, questions, question);
                 break;
             case 5:
-                qNum.setText(questions+".");
-                Quest.setText("Is the category for the machines with general cognitive abilities are popularly called as Strong AI cases. These AIs can reason and understand their environment as humans do, and act accordingly. For instance, common- sense reasoning:");
-                a.setText("A) Single AI");
-                b.setText("B) Narrow");
-                c.setText("C) General");
-                d.setText("D) Super AI ");
-                c.setVisibility(View.VISIBLE);
-                d.setVisibility(View.VISIBLE);
+                q1.fillQuestion(Quest, qNum, a, b, c, d, questions, question);
                 break;
             case 6:
-                qNum.setText(questions+".");
-                Quest.setText("Is the category for machines that are capable of replicating human thoughts, ideas and emotions. It is that super state of intelligence where machines will become smarter and wiser than humans. ");
-                a.setText("A) Simple AI");
-                b.setText("B) Narrow");
-                c.setText("C) General");
-                d.setText("D) Super AI ");
-                c.setVisibility(View.VISIBLE);
-                d.setVisibility(View.VISIBLE);
+                q1.fillQuestion(Quest, qNum, a, b, c, d, questions, question);
                 break;
             case 7:
-                qNum.setText(questions+".");
-                Quest.setText("These are the systems that learn and improve with experience, and, with time, refine a model that can be used to predict the outcome of questions, based on the previous learning? ");
-                a.setText("A) Artificial knowledge");
-                b.setText("B) Artificial intelligence");
-                c.setText("C) Machine learning");
-                d.setText("D) Deep learning");
-                c.setVisibility(View.VISIBLE);
-                d.setVisibility(View.VISIBLE);
+                q1.fillQuestion(Quest, qNum, a, b, c, d, questions, question);
                 break;
             case 8:
-                qNum.setText(questions+".");
-                Quest.setText("Some of the technologies used to accomplish AI are: Machine Learning (ML), Natural Language Processing (NLP), Robotics, Speech Processing, Computer Vision ");
-                a.setText("A) True");
-                b.setText("B) False");
-                c.setText("");
-                d.setText("");
-                c.setVisibility(View.GONE);
-                d.setVisibility(View.GONE);
+                q1.fillQuestion(Quest, qNum, a, b, c, d, questions, question);
                 break;
             case 9:
-                qNum.setText(questions+".");
-                Quest.setText("Some of the technologies used to accomplish ML are: Artificial Intelligence (AI), Natural Language Processing (NLP), Robotics, Speech Processing, Computer Vision ");
-                a.setText("A) True");
-                b.setText("B) False");
-                c.setText("");
-                d.setText("");
-                c.setVisibility(View.GONE);
-                d.setVisibility(View.GONE);
+                q1.fillQuestion(Quest, qNum, a, b, c, d, questions, question);
                 break;
             case 10:
-                qNum.setText(questions+".");
-                Quest.setText("These are a few ways in which ML algorithms can be categorized: Supervised Learning, Unsupervised Learning, Reinforcement Learning ");
-                a.setText("A) True");
-                b.setText("B) False");
-                c.setText("");
-                d.setText("");
-                c.setVisibility(View.GONE);
-                d.setVisibility(View.GONE);
+                q1.fillQuestion(Quest, qNum, a, b, c, d, questions, question);
                 break;
             case 11:
                 qNum.setText(questions+".");
@@ -536,361 +468,241 @@ public class RandomQuizActivity extends AppCompatActivity {
         WindowManager.LayoutParams wmlp;
         switch (question){
             case 1:
-                setColorAr();
-                setColorBg();
-                setColorCr();
-                setColorDr();
+                qSet.correctB(a,b,c,d);
                 if(opt.equals("b")){
                     rc+=1;
                 }
                 break;
             case 2:
-                setColorAr();
-                setColorBr();
-                setColorCr();
-                setColorDg();
+                qSet.correctD(a,b,c,d);
                 if(opt.equals("d")){
                     ra+=1;
                 }
                 break;
             case 3:
-                setColorAr();
-                setColorBr();
-                setColorCr();
-                setColorDg();
+                qSet.correctD(a,b,c,d);
                 if(opt.equals("d")){
                     rb+=1;
                 }
                 break;
             case 4:
-                setColorAr();
-                setColorBg();
-                setColorCr();
-                setColorDr();
+                qSet.correctB(a,b,c,d);
                 if(opt.equals("b")){
                     ra+=1;
                 }
                 break;
             case 5:
-                setColorAr();
-                setColorBr();
-                setColorCg();
-                setColorDr();
+                qSet.correctC(a,b,c,d);
                 if(opt.equals("c")){
                     rb+=1;
                 }
                 break;
             case 6:
-                setColorAr();
-                setColorBr();
-                setColorCr();
-                setColorDg();
+                qSet.correctD(a,b,c,d);
                 if(opt.equals("d")){
                     rb+=1;
                 }
                 break;
             case 7:
-                setColorAr();
-                setColorBr();
-                setColorCg();
-                setColorDr();
+                qSet.correctC(a,b,c,d);
                 if(opt.equals("c")){
                     ra+=1;
                 }
                 break;
             case 8:
-                setColorAg();
-                setColorBr();
-                setColorCr();
-                setColorDr();
+                qSet.correctA(a,b,c,d);
                 if(opt.equals("a")){
                     rc+=1;
                 }
                 break;
             case 9:
-                setColorAr();
-                setColorBg();
-                setColorCr();
-                setColorDr();
+                qSet.correctB(a,b,c,d);
                 if(opt.equals("b")){
                     rd+=1;
                 }
                 break;
             case 10:
-                setColorAg();
-                setColorBr();
-                setColorCr();
-                setColorDr();
+                qSet.correctA(a,b,c,d);
                 if(opt.equals("a")){
                     ra+=1;
                 }
                 break;
             case 11:
-                setColorAr();
-                setColorBg();
-                setColorCr();
-                setColorDr();
+                qSet.correctB(a,b,c,d);
                 if(opt.equals("b")){
                     rb+=1;
                 }
                 break;
             case 12:
-                setColorAg();
-                setColorBr();
-                setColorCr();
-                setColorDr();
+                qSet.correctA(a,b,c,d);
                 if(opt.equals("a")){
                     ra+=1;
                 }
                 break;
             case 13:
-                setColorAr();
-                setColorBg();
-                setColorCr();
-                setColorDr();
+                qSet.correctB(a,b,c,d);
                 if(opt.equals("b")){
                     rb+=1;
                 }
                 break;
             case 14:
-                setColorAg();
-                setColorBr();
-                setColorCr();
-                setColorDr();
+                qSet.correctA(a,b,c,d);
                 if(opt.equals("a")){
                     rd+=1;
                 }
                 break;
             case 15:
-                setColorAg();
-                setColorBr();
-                setColorCr();
-                setColorDr();
+                qSet.correctA(a,b,c,d);
                 if(opt.equals("a")){
                     rc+=1;
                 }
                 break;
             case 16:
-                setColorAr();
-                setColorBg();
-                setColorCr();
-                setColorDr();
+                qSet.correctB(a,b,c,d);
                 if(opt.equals("b")){
                     ra+=1;
                 }
                 break;
             case 17:
-                setColorAr();
-                setColorBg();
-                setColorCr();
-                setColorDr();
+                qSet.correctB(a,b,c,d);
                 if(opt.equals("b")){
                     rb+=1;
                 }
                 break;
             case 18:
-                setColorAr();
-                setColorBr();
-                setColorCg();
-                setColorDr();
+                qSet.correctC(a,b,c,d);
                 if(opt.equals("c")){
                     ra+=1;
                 }
                 break;
             case 19:
-                setColorAr();
-                setColorBg();
-                setColorCr();
-                setColorDr();
+                qSet.correctB(a,b,c,d);
                 if(opt.equals("b")){
                     rb+=1;
                 }
                 break;
             case 20:
-                setColorAr();
-                setColorBr();
-                setColorCr();
-                setColorDg();
+                qSet.correctD(a,b,c,d);
                 if(opt.equals("d")){
                     ra+=1;
                 }
                 break;
             case 21:
-                setColorAr();
-                setColorBr();
-                setColorCg();
-                setColorDr();
+                qSet.correctC(a,b,c,d);
                 if(opt.equals("c")){
                     rb+=1;
                 }
                 break;
             case 22:
-                setColorAr();
-                setColorBr();
-                setColorCr();
-                setColorDg();
+                qSet.correctD(a,b,c,d);
                 if(opt.equals("d")){
                     ra+=1;
                 }
                 break;
             case 23:
-                setColorAg();
-                setColorBr();
-                setColorCr();
-                setColorDr();
+                qSet.correctA(a,b,c,d);
                 if(opt.equals("a")){
                     rb+=1;
                 }
                 break;
             case 24:
-                setColorAr();
-                setColorBg();
-                setColorCr();
-                setColorDr();
+                qSet.correctB(a,b,c,d);
                 if(opt.equals("b")){
                     ra+=1;
                 }
                 break;
             case 25:
-                setColorAg();
-                setColorBr();
-                setColorCr();
-                setColorDr();
+                qSet.correctA(a,b,c,d);
                 if(opt.equals("a")){
                     rb+=1;
                 }
                 break;
             case 26:
-                setColorAr();
-                setColorBr();
-                setColorCr();
-                setColorDg();
+                qSet.correctD(a,b,c,d);
                 if(opt.equals("d")){
                     ra+=1;
                 }
                 break;
             case 27:
-                setColorAg();
-                setColorBr();
-                setColorCr();
-                setColorDr();
+                qSet.correctA(a,b,c,d);
                 if(opt.equals("a")){
                     rb+=1;
                 }
                 break;
             case 28:
-                setColorAr();
-                setColorBg();
-                setColorCr();
-                setColorDr();
+                qSet.correctB(a,b,c,d);
                 if(opt.equals("b")){
                     ra+=1;
                 }
                 break;
             case 29:
-                setColorAr();
-                setColorBr();
-                setColorCg();
-                setColorDr();
+                qSet.correctC(a,b,c,d);
                 if(opt.equals("c")){
                     rb+=1;
                 }
                 break;
             case 30:
-                setColorAg();
-                setColorBr();
-                setColorCr();
-                setColorDr();
+                qSet.correctA(a,b,c,d);
                 if(opt.equals("a")){
                     ra+=1;
                 }
                 break;
             case 31:
-                setColorAg();
-                setColorBr();
-                setColorCr();
-                setColorDr();
+                qSet.correctA(a,b,c,d);
                 if(opt.equals("a")){
                     rb+=1;
                 }
                 break;
             case 32:
-                setColorAr();
-                setColorBg();
-                setColorCr();
-                setColorDr();
+                qSet.correctB(a,b,c,d);
                 if(opt.equals("b")){
                     rb+=1;
                 }
                 break;
             case 33:
-                setColorAr();
-                setColorBr();
-                setColorCr();
-                setColorDg();
+                qSet.correctD(a,b,c,d);
                 if(opt.equals("d")){
                     ra+=1;
                 }
                 break;
             case 34:
-                setColorAg();
-                setColorBr();
-                setColorCr();
-                setColorDr();
+                qSet.correctA(a,b,c,d);
                 if(opt.equals("a")){
                     rb+=1;
                 }
                 break;
             case 35:
-                setColorAr();
-                setColorBg();
-                setColorCr();
-                setColorDr();
+                qSet.correctB(a,b,c,d);
                 if(opt.equals("b")){
                     ra+=1;
                 }
                 break;
             case 36:
-                setColorAr();
-                setColorBr();
-                setColorCr();
-                setColorDg();
+                qSet.correctD(a,b,c,d);
                 if(opt.equals("d")){
                     rb+=1;
                 }
                 break;
             case 37:
-                setColorAr();
-                setColorBr();
-                setColorCg();
-                setColorDr();
+                qSet.correctC(a,b,c,d);
                 if(opt.equals("c")){
                     ra+=1;
                 }
                 break;
             case 38:
-                setColorAr();
-                setColorBr();
-                setColorCr();
-                setColorDg();
+                qSet.correctD(a,b,c,d);
                 if(opt.equals("d")){
                     rb+=1;
                 }
                 break;
             case 39:
-                setColorAr();
-                setColorBr();
-                setColorCg();
-                setColorDr();
+                qSet.correctC(a,b,c,d);
                 if(opt.equals("c")){
                     ra+=1;
                 }
                 break;
             case 40:
-                setColorAr();
-                setColorBr();
-                setColorCr();
-                setColorDg();
+                qSet.correctD(a,b,c,d);
                 if(opt.equals("d")){
                     rb+=1;
                 }
@@ -898,56 +710,5 @@ public class RandomQuizActivity extends AppCompatActivity {
         }
     }
 
-    public void deshabilitar(){
-        a.setEnabled(false);
-        b.setEnabled(false);
-        c.setEnabled(false);
-        d.setEnabled(false);
-        sig.setEnabled(true);
 
-    }
-    public void habilitar(){
-        a.setEnabled(true);
-        b.setEnabled(true);
-        c.setEnabled(true);
-        d.setEnabled(true);
-        sig.setEnabled(false);
-        sv.fullScroll(ScrollView.FOCUS_UP);
-    }
-
-    public void setColorAr(){
-        a.setBackgroundColor(Color.RED);
-    }
-    public void setColorBr(){
-        b.setBackgroundColor(Color.RED);
-    }
-    public void setColorCr(){
-        c.setBackgroundColor(Color.RED);
-    }
-    public void setColorDr(){
-        d.setBackgroundColor(Color.RED);
-    }
-    public void setColorAg(){
-        a.setBackgroundColor(Color.GREEN);
-    }
-    public void setColorBg(){
-        b.setBackgroundColor(Color.GREEN);
-    }
-    public void setColorCg(){
-        c.setBackgroundColor(Color.GREEN);
-    }
-    public void setColorDg(){
-        d.setBackgroundColor(Color.GREEN);
-    }
-
-    public void clearColor(){
-        a.setBackgroundColor(Color.LTGRAY);
-        b.setBackgroundColor(Color.LTGRAY);
-        c.setBackgroundColor(Color.LTGRAY);
-        d.setBackgroundColor(Color.LTGRAY);
-    }
-
-    public void salir(View view) {
-        finish();
-    }
 }

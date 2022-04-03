@@ -32,7 +32,6 @@
             android:id="@+id/orangeline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="salir"
             android:paddingTop="20dp"
             android:paddingLeft="70dp"
             app:srcCompat="@drawable/orangeline" />

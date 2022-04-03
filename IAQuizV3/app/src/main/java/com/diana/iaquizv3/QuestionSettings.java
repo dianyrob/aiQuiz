@@ -57,27 +57,25 @@ public class QuestionSettings {
     }
 
     public void setColorAr(Button a){
-        a.setBackgroundColor(Color.RED);
+        a.setBackgroundColor(Color.parseColor("#F9926E"));
     }
     public void setColorBr(Button b){
-        b.setBackgroundColor(Color.RED);
+        b.setBackgroundColor(Color.parseColor("#F9926E"));
     }
     public void setColorCr(Button c){
-        c.setBackgroundColor(Color.RED);
+        c.setBackgroundColor(Color.parseColor("#F9926E"));
     }
-    public void setColorDr(Button d){
-        d.setBackgroundColor(Color.RED);
-    }
+    public void setColorDr(Button d) { d.setBackgroundColor(Color.parseColor("#F9926E")); }
     public void setColorAg(Button a){
-        a.setBackgroundColor(Color.GREEN);
+        a.setBackgroundColor(Color.parseColor("#58D8D0"));
     }
     public void setColorBg(Button b){
-        b.setBackgroundColor(Color.GREEN);
+        b.setBackgroundColor(Color.parseColor("#58D8D0"));
     }
     public void setColorCg(Button c){
-        c.setBackgroundColor(Color.GREEN);
+        c.setBackgroundColor(Color.parseColor("#58D8D0"));
     }
     public void setColorDg(Button d){
-        d.setBackgroundColor(Color.GREEN);
+        d.setBackgroundColor(Color.parseColor("#58D8D0"));
     }
 }
