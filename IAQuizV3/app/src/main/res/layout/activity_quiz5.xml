@@ -31,7 +31,6 @@
                     android:id="@+id/top5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:onClick="salir"
                     android:layout_gravity="center_horizontal"
                     app:srcCompat="@drawable/topic5" />
 

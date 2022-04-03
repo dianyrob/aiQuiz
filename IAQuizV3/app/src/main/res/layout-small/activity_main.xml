@@ -69,7 +69,6 @@
             android:layout_above="@+id/btntesting"
             android:layout_alignParentStart="true"
             android:layout_centerHorizontal="true"
-            android:onClick="salir"
             android:paddingBottom="180dp"
             android:paddingLeft="70dp"
             app:srcCompat="@drawable/orangeline"

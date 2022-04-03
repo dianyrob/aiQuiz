@@ -62,7 +62,5 @@ public class ModulosActivity extends AppCompatActivity {
     }
 
 
-    public void quit(View v){
-        finish();
-    }
+    //public void quit(View v){finish();}
 }
