@@ -318,360 +318,252 @@ public class Quiz2Activity extends AppCompatActivity {
         WindowManager.LayoutParams wmlp;
         switch (question){
             case 1:
-                qSet.correctA(a,b,c,d);
-                if(opt.equals("d")){
-                    rd+=1;
-                }
+                qSet.correctA(a,b,c,d,sv);
+                addCount(opt);
                 break;
             case 2:
-                qSet.correctA(a,b,c,d);
-                if(opt.equals("a")){
-                    ra+=1;
-                }
+                qSet.correctA(a,b,c,d,sv);
+                addCount(opt);
                 break;
             case 3:
-                qSet.correctB(a,b,c,d);
-                if(opt.equals("b")){
-                    rb+=1;
-                }
+                qSet.correctB(a,b,c,d,sv);
+                addCount(opt);
                 break;
             case 4:
-                qSet.correctA(a,b,c,d);
-                if(opt.equals("a")){
-                    ra+=1;
-                }
+                qSet.correctA(a,b,c,d,sv);
+                addCount(opt);
                 break;
             case 5:
-                qSet.correctB(a,b,c,d);
-                if(opt.equals("b")){
-                    rb+=1;
-                }
+                qSet.correctB(a,b,c,d,sv);
+                addCount(opt);
                 break;
             case 6:
-                qSet.correctB(a,b,c,d);
-                if(opt.equals("b")){
-                    rb+=1;
-                }
+                qSet.correctB(a,b,c,d,sv);
+                addCount(opt);
                 break;
             case 7:
-                qSet.correctA(a,b,c,d);
-                if(opt.equals("a")){
-                    ra+=1;
-                }
+                qSet.correctA(a,b,c,d,sv);
+                addCount(opt);
                 break;
             case 8:
-                qSet.correctA(a,b,c,d);
-                if(opt.equals("a")){
-                    ra+=1;
-                }
+                qSet.correctA(a,b,c,d,sv);
+                addCount(opt);
                 break;
             case 9:
-                qSet.correctB(a,b,c,d);
-                if(opt.equals("b")){
-                    rb+=1;
-                }
+                qSet.correctB(a,b,c,d,sv);
+                addCount(opt);
                 break;
             case 10:
-                qSet.correctA(a,b,c,d);
-                if(opt.equals("a")){
-                    ra+=1;
-                }
+                qSet.correctA(a,b,c,d,sv);
+                addCount(opt);
                 break;
             case 11:
-                qSet.correctB(a,b,c,d);
-                if(opt.equals("b")){
-                    rb+=1;
-                }
+                qSet.correctB(a,b,c,d,sv);
+                addCount(opt);
                 break;
             case 12:
-                qSet.correctA(a,b,c,d);
-                if(opt.equals("a")){
-                    ra+=1;
-                }
+                qSet.correctA(a,b,c,d,sv);
+                addCount(opt);
                 break;
             case 13:
-                qSet.correctB(a,b,c,d);
-                if(opt.equals("b")){
-                    rb+=1;
-                }
+                qSet.correctB(a,b,c,d,sv);
+                addCount(opt);
                 break;
             case 14:
-                qSet.correctA(a,b,c,d);
-                if(opt.equals("a")){
-                    ra+=1;
-                }
+                qSet.correctA(a,b,c,d,sv);
+                addCount(opt);
                 break;
             case 15:
-                qSet.correctB(a,b,c,d);
-                if(opt.equals("b")){
-                    rb+=1;
-                }
+                qSet.correctB(a,b,c,d,sv);
+                addCount(opt);
                 break;
             case 16:
-                qSet.correctA(a,b,c,d);
-                if(opt.equals("a")){
-                    ra+=1;
-                }
+                qSet.correctA(a,b,c,d,sv);
+                addCount(opt);
                 break;
             case 17:
-                qSet.correctB(a,b,c,d);
-                if(opt.equals("b")){
-                    rb+=1;
-                }
+                qSet.correctB(a,b,c,d,sv);
+                addCount(opt);
                 break;
             case 18:
-                qSet.correctA(a,b,c,d);
-                if(opt.equals("a")){
-                    ra+=1;
-                }
+                qSet.correctA(a,b,c,d,sv);
+                addCount(opt);
                 break;
             case 19:
-                qSet.correctB(a,b,c,d);
-                if(opt.equals("b")){
-                    rb+=1;
-                }
+                qSet.correctB(a,b,c,d,sv);
+                addCount(opt);
                 break;
             case 20:
-                qSet.correctA(a,b,c,d);
-                if(opt.equals("a")){
-                    ra+=1;
-                }
+                qSet.correctA(a,b,c,d,sv);
+                addCount(opt);
                 break;
             case 21:
-                qSet.correctB(a,b,c,d);
-                if(opt.equals("b")){
-                    rb+=1;
-                }
+                qSet.correctB(a,b,c,d,sv);
+                addCount(opt);
                 break;
             case 22:
-                qSet.correctA(a,b,c,d);
-                if(opt.equals("a")){
-                    ra+=1;
-                }
+                qSet.correctA(a,b,c,d,sv);
+                addCount(opt);
                 break;
             case 23:
-                qSet.correctB(a,b,c,d);
-                if(opt.equals("b")){
-                    rb+=1;
-                }
+                qSet.correctB(a,b,c,d,sv);
+                addCount(opt);
                 break;
             case 24:
-                qSet.correctA(a,b,c,d);
-                if(opt.equals("a")){
-                    ra+=1;
-                }
+                qSet.correctA(a,b,c,d,sv);
+                addCount(opt);
                 break;
             case 25:
-                qSet.correctB(a,b,c,d);
-                if(opt.equals("b")){
-                    rb+=1;
-                }
+                qSet.correctB(a,b,c,d,sv);
+                addCount(opt);
                 break;
             case 26:
-                qSet.correctA(a,b,c,d);
-                if(opt.equals("a")){
-                    ra+=1;
-                }
+                qSet.correctA(a,b,c,d,sv);
+                addCount(opt);
                 break;
             case 27:
-                qSet.correctB(a,b,c,d);
-                if(opt.equals("b")){
-                    rb+=1;
-                }
+                qSet.correctB(a,b,c,d,sv);
+                addCount(opt);
                 break;
             case 28:
-                qSet.correctA(a,b,c,d);
-                if(opt.equals("a")){
-                    ra+=1;
-                }
+                qSet.correctA(a,b,c,d,sv);
+                addCount(opt);
                 break;
             case 29:
-                qSet.correctB(a,b,c,d);
-                if(opt.equals("b")){
-                    rb+=1;
-                }
+                qSet.correctB(a,b,c,d,sv);
+                addCount(opt);
                 break;
             case 30:
-                qSet.correctA(a,b,c,d);
-                if(opt.equals("a")){
-                    ra+=1;
-                }
+                qSet.correctA(a,b,c,d,sv);
+                addCount(opt);
                 break;
             case 31:
-                qSet.correctB(a,b,c,d);
-                if(opt.equals("b")){
-                    rb+=1;
-                }
+                qSet.correctB(a,b,c,d,sv);
+                addCount(opt);
                 break;
             case 32:
-                qSet.correctA(a,b,c,d);
-                if(opt.equals("a")){
-                    ra+=1;
-                }
+                qSet.correctA(a,b,c,d,sv);
+                addCount(opt);
                 break;
             case 33:
-                qSet.correctB(a,b,c,d);
-                if(opt.equals("b")){
-                    rb+=1;
-                }
+                qSet.correctB(a,b,c,d,sv);
+                addCount(opt);
                 break;
             case 34:
-                qSet.correctA(a,b,c,d);
-                if(opt.equals("a")){
-                    ra+=1;
-                }
+                qSet.correctA(a,b,c,d,sv);
+                addCount(opt);
                 break;
             case 35:
-                qSet.correctB(a,b,c,d);
-                if(opt.equals("b")){
-                    rb+=1;
-                }
+                qSet.correctB(a,b,c,d,sv);
+                addCount(opt);
                 break;
             case 36:
-                qSet.correctA(a,b,c,d);
-                if(opt.equals("a")){
-                    ra+=1;
-                }
+                qSet.correctA(a,b,c,d,sv);
+                addCount(opt);
                 break;
             case 37:
-                qSet.correctB(a,b,c,d);
-                if(opt.equals("b")){
-                    rb+=1;
-                }
+                qSet.correctB(a,b,c,d,sv);
+                addCount(opt);
                 break;
             case 38:
-                qSet.correctA(a,b,c,d);
-                if(opt.equals("a")){
-                    ra+=1;
-                }
+                qSet.correctA(a,b,c,d,sv);
+                addCount(opt);
                 break;
             case 39:
-                qSet.correctB(a,b,c,d);
-                if(opt.equals("b")){
-                    rb+=1;
-                }
+                qSet.correctB(a,b,c,d,sv);
+                addCount(opt);
                 break;
             case 40:
-                qSet.correctA(a,b,c,d);
-                if(opt.equals("a")){
-                    ra+=1;
-                }
+                qSet.correctA(a,b,c,d,sv);
+                addCount(opt);
                 break;
             case 41:
-                qSet.correctB(a,b,c,d);
-                if(opt.equals("b")){
-                    rb+=1;
-                }
+                qSet.correctB(a,b,c,d,sv);
+                addCount(opt);
                 break;
             case 42:
-                qSet.correctA(a,b,c,d);
-                if(opt.equals("a")){
-                    ra+=1;
-                }
+                qSet.correctA(a,b,c,d,sv);
+                addCount(opt);
                 break;
             case 43:
-                qSet.correctB(a,b,c,d);
-                if(opt.equals("b")){
-                    rb+=1;
-                }
+                qSet.correctB(a,b,c,d,sv);
+                addCount(opt);
                 break;
             case 44:
-                qSet.correctA(a,b,c,d);
-                if(opt.equals("d")){
-                    rd+=1;
-                }
+                qSet.correctA(a,b,c,d,sv);
+                addCount(opt);
                 break;
             case 45:
-                qSet.correctA(a,b,c,d);
-                if(opt.equals("d")){
-                    rd+=1;
-                }
+                qSet.correctA(a,b,c,d,sv);
+                addCount(opt);
                 break;
             case 46:
-                qSet.correctA(a,b,c,d);
-                if(opt.equals("a")){
-                    ra+=1;
-                }
+                qSet.correctA(a,b,c,d,sv);
+                addCount(opt);
                 break;
             case 47:
-                qSet.correctA(a,b,c,d);
-                if(opt.equals("c")){
-                    rc+=1;
-                }
+                qSet.correctA(a,b,c,d,sv);
+                addCount(opt);
                 break;
             case 48:
-                qSet.correctB(a,b,c,d);
-                if(opt.equals("b")){
-                    rb+=1;
-                }
+                qSet.correctB(a,b,c,d,sv);
+                addCount(opt);
                 break;
             case 49:
-                qSet.correctA(a,b,c,d);
-                if(opt.equals("c")){
-                    rc+=1;
-                }
+                qSet.correctA(a,b,c,d,sv);
+                addCount(opt);
                 break;
             case 50:
-                qSet.correctA(a,b,c,d);
-                if(opt.equals("d")){
-                    rd+=1;
-                }
+                qSet.correctA(a,b,c,d,sv);
+                addCount(opt);
                 break;
             case 51:
-                qSet.correctA(a,b,c,d);
-                if(opt.equals("c")){
-                    rc+=1;
-                }
+                qSet.correctA(a,b,c,d,sv);
+                addCount(opt);
                 break;
             case 52:
-                qSet.correctA(a,b,c,d);
-                if(opt.equals("d")){
-                    rd+=1;
-                }
+                qSet.correctA(a,b,c,d,sv);
+                addCount(opt);
                 break;
             case 53:
-                qSet.correctB(a,b,c,d);
-                if(opt.equals("b")){
-                    rb+=1;
-                }
+                qSet.correctB(a,b,c,d,sv);
+                addCount(opt);
                 break;
             case 54:
-                qSet.correctA(a,b,c,d);
-                if(opt.equals("c")){
-                    rc+=1;
-                }
+                qSet.correctA(a,b,c,d,sv);
+                addCount(opt);
                 break;
             case 55:
-                qSet.correctA(a,b,c,d);
-                if(opt.equals("a")){
-                    ra+=1;
-                }
+                qSet.correctA(a,b,c,d,sv);
+                addCount(opt);
                 break;
             case 56:
-                qSet.correctA(a,b,c,d);
-                if(opt.equals("d")){
-                    rd+=1;
-                }
+                qSet.correctA(a,b,c,d,sv);
+                addCount(opt);
                 break;
             case 57:
-                qSet.correctA(a,b,c,d);
-                if(opt.equals("c")){
-                    rc+=1;
-                }
+                qSet.correctA(a,b,c,d,sv);
+                addCount(opt);
                 break;
             case 58:
-                qSet.correctA(a,b,c,d);
-                if(opt.equals("a")){
-                    ra+=1;
-                }
+                qSet.correctA(a,b,c,d,sv);
+                addCount(opt);
                 break;
             case 59:
-                qSet.correctA(a,b,c,d);
-                if(opt.equals("d")){
-                    rd+=1;
-                }
+                qSet.correctA(a,b,c,d,sv);
+                addCount(opt);
                 break;
         }
     }
-    
+    public void addCount(String opt){
+        if(opt.equals("d")){
+            rd+=1;
+        }else if(opt.equals("c")){
+            rc+=1;
+        }else if(opt.equals("b")){
+            rb+=1;
+        }else if(opt.equals("a")){
+            ra+=1;
+        }
+    }
 }
