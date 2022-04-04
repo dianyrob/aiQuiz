@@ -15,29 +15,33 @@ public class QuestionSettings {
         d.setBackgroundColor(Color.LTGRAY);
     }
 
-    public void correctA(Button a, Button b, Button c, Button d){
+    public void correctA(Button a, Button b, Button c, Button d, ScrollView sv){
         setColorAg(a);
         setColorBr(b);
         setColorCr(c);
         setColorDr(d);
+        sv.fullScroll(ScrollView.FOCUS_DOWN);
     }
-    public void correctB(Button a, Button b, Button c, Button d){
+    public void correctB(Button a, Button b, Button c, Button d, ScrollView sv){
         setColorAr(a);
         setColorBg(b);
         setColorCr(c);
         setColorDr(d);
+        sv.fullScroll(ScrollView.FOCUS_DOWN);
     }
-    public void correctC(Button a, Button b, Button c, Button d){
+    public void correctC(Button a, Button b, Button c, Button d, ScrollView sv){
         setColorAr(a);
         setColorBr(b);
         setColorCg(c);
         setColorDr(d);
+        sv.fullScroll(ScrollView.FOCUS_DOWN);
     }
-    public void correctD(Button a, Button b, Button c, Button d){
+    public void correctD(Button a, Button b, Button c, Button d, ScrollView sv){
         setColorAr(a);
         setColorBr(b);
         setColorCr(c);
         setColorDg(d);
+        sv.fullScroll(ScrollView.FOCUS_DOWN);
     }
     public void deshabilitar(Button a, Button b, Button c, Button d, ImageView sig){
         a.setEnabled(false);
