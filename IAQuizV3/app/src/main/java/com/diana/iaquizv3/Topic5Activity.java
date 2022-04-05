@@ -24,7 +24,7 @@ public class Topic5Activity extends AppCompatActivity {
 
     public void option(View v) {
         switch(v.getId()){
-            case R.id.logo:
+            case R.id.back:
                 i = new Intent(Topic5Activity.this, ModulosActivity.class);
                 startActivity(i);
                 finish();

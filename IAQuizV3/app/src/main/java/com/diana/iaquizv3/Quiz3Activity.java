@@ -14,4 +14,5 @@ public class Quiz3Activity extends AppCompatActivity {
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
     }
+
 }

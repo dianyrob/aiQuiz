@@ -48,9 +48,16 @@ public class BasicPdfActivity extends AppCompatActivity {
                 .load();
     }
 
+    @Override
+    public void onBackPressed () {
+        i = new Intent(BasicPdfActivity.this, MainActivity.class);
+        startActivity(i);
+        finish();
+    }
+
     public void option(View v) {
         switch(v.getId()){
-            case R.id.logo:
+            case R.id.back:
                 i = new Intent(BasicPdfActivity.this, MainActivity.class);
                 startActivity(i);
                 finish();

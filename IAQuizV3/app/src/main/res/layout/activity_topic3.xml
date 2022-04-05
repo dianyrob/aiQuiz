@@ -20,7 +20,6 @@
             android:layout_marginBottom="-90dp"
             android:paddingLeft="20dp"
             android:paddingTop="10dp"
-            android:onClick="option"
             app:srcCompat="@drawable/logo" />
 
         <ImageView
@@ -35,34 +34,45 @@
             app:srcCompat="@drawable/quizbtn" />
     </RelativeLayout>
 
+
+
     <ImageView
         android:id="@+id/top3header"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:layout_marginBottom="-120dp"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
-        android:onClick="option"
+        android:layout_marginTop="-20dp"
+        android:layout_marginBottom="-75dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
         app:srcCompat="@drawable/topic3" />
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginBottom="-90dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="15dp"
+        android:onClick="option"
+        app:srcCompat="@drawable/regresarblanco" />
 
     <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-20dp"
+        android:layout_marginTop="90dp">
 
         <RelativeLayout
             android:id="@+id/textpdf"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:paddingTop="100dp">
+            android:paddingRight="20dp">
 
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginBottom="5dp"
                 android:background="@drawable/esquinas"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"

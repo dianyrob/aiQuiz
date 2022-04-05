@@ -61,6 +61,11 @@ public class ModulosActivity extends AppCompatActivity {
         finish();
     }
 
+    @Override
+    public void onBackPressed () {
+        Intent intent = new Intent(ModulosActivity.this, MainActivity.class);
+        startActivity(intent);
+    }
 
     //public void quit(View v){finish();}
 }

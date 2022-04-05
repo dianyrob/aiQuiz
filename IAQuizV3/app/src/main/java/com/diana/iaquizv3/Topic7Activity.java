@@ -49,7 +49,7 @@ public class Topic7Activity extends AppCompatActivity {
 
     public void option(View v) {
         switch(v.getId()){
-            case R.id.logo:
+            case R.id.back:
                 i = new Intent(Topic7Activity.this, ModulosActivity.class);
                 startActivity(i);
                 finish();

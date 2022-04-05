@@ -48,7 +48,7 @@ public class Topic2Activity extends AppCompatActivity {
 
     public void option(View v) {
         switch(v.getId()){
-            case R.id.logo:
+            case R.id.back:
                 i = new Intent(Topic2Activity.this, ModulosActivity.class);
                 startActivity(i);
                 finish();

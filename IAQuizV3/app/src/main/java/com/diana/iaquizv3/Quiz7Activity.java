@@ -18,12 +18,12 @@ import java.util.Random;
 
 public class Quiz7Activity extends AppCompatActivity {
     ScrollView sv;
-    TextView Quest,qNum;
+    TextView Quest;
     Button a,b,c,d;
     ImageView sig,ter;
     int calificacion=0;
     int ra=0,rb=0,rc=0,rd=0;
-    int questions=1,totalQuestions=41;
+    int questions=0,totalQuestions=41;
     Intent i;
     int[] quest={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
     long startTime=0,endTime=0;
@@ -38,7 +38,7 @@ public class Quiz7Activity extends AppCompatActivity {
         i=new Intent(Quiz7Activity.this, ScoreActivity.class);
         Quest=(TextView) findViewById(R.id.Respuestas);
         //qNum=(TextView) findViewById();
-        qNum=(TextView) findViewById(R.id.question);
+        //qNum=(TextView) findViewById(R.id.question);
         a=(Button)findViewById(R.id.a1);
         b=(Button)findViewById(R.id.b1);
         c=(Button)findViewById(R.id.c1);
@@ -51,6 +51,10 @@ public class Quiz7Activity extends AppCompatActivity {
         sig.setEnabled(false);
         qSet.clearColor(a,b,c,d);
         startTime = System.currentTimeMillis()/1000;
+    }
+    @Override
+    public void onBackPressed () {
+
     }
     public void responder(View v) {
         switch(v.getId()){
@@ -128,129 +132,131 @@ public class Quiz7Activity extends AppCompatActivity {
     }
 
     public void getQuestion(int question){
-        switch (question){
+        int quest = question;
+        int noQuest = questions + 1;
+        switch (quest){
             case 1:
-                q7.fillQuestion(Quest, qNum, a, b, c, d, questions, question);
+                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
                 break;
             case 2:
-                q7.fillQuestion(Quest, qNum, a, b, c, d, questions, question);
+                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
                 break;
             case 3:
-                q7.fillQuestion(Quest, qNum, a, b, c, d, questions, question);
+                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
                 break;
             case 4:
-                q7.fillQuestion(Quest, qNum, a, b, c, d, questions, question);
+                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
                 break;
             case 5:
-                q7.fillQuestion(Quest, qNum, a, b, c, d, questions, question);
+                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
                 break;
             case 6:
-                q7.fillQuestion(Quest, qNum, a, b, c, d, questions, question);
+                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
                 break;
             case 7:
-                q7.fillQuestion(Quest, qNum, a, b, c, d, questions, question);
+                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
                 break;
             case 8:
-                q7.fillQuestion(Quest, qNum, a, b, c, d, questions, question);
+                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
                 break;
             case 9:
-                q7.fillQuestion(Quest, qNum, a, b, c, d, questions, question);
+                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
                 break;
             case 10:
-                q7.fillQuestion(Quest, qNum, a, b, c, d, questions, question);
+                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
                 break;
             case 11:
-                q7.fillQuestion(Quest, qNum, a, b, c, d, questions, question);
+                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
                 break;
             case 12:
-                q7.fillQuestion(Quest, qNum, a, b, c, d, questions, question);
+                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
                 break;
             case 13:
-                q7.fillQuestion(Quest, qNum, a, b, c, d, questions, question);
+                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
                 break;
             case 14:
-                q7.fillQuestion(Quest, qNum, a, b, c, d, questions, question);
+                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
                 break;
             case 15:
-                q7.fillQuestion(Quest, qNum, a, b, c, d, questions, question);
+                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
                 break;
             case 16:
-                q7.fillQuestion(Quest, qNum, a, b, c, d, questions, question);
+                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
                 break;
             case 17:
-                q7.fillQuestion(Quest, qNum, a, b, c, d, questions, question);
+                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
                 break;
             case 18:
-                q7.fillQuestion(Quest, qNum, a, b, c, d, questions, question);
+                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
                 break;
             case 19:
-                q7.fillQuestion(Quest, qNum, a, b, c, d, questions, question);
+                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
                 break;
             case 20:
-                q7.fillQuestion(Quest, qNum, a, b, c, d, questions, question);
+                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
                 break;
             case 21:
-                q7.fillQuestion(Quest, qNum, a, b, c, d, questions, question);
+                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
                 break;
             case 22:
-                q7.fillQuestion(Quest, qNum, a, b, c, d, questions, question);
+                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
                 break;
             case 23:
-                q7.fillQuestion(Quest, qNum, a, b, c, d, questions, question);
+                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
                 break;
             case 24:
-                q7.fillQuestion(Quest, qNum, a, b, c, d, questions, question);
+                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
                 break;
             case 25:
-                q7.fillQuestion(Quest, qNum, a, b, c, d, questions, question);
+                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
                 break;
             case 26:
-                q7.fillQuestion(Quest, qNum, a, b, c, d, questions, question);
+                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
                 break;
             case 27:
-                q7.fillQuestion(Quest, qNum, a, b, c, d, questions, question);
+                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
                 break;
             case 28:
-                q7.fillQuestion(Quest, qNum, a, b, c, d, questions, question);
+                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
                 break;
             case 29:
-                q7.fillQuestion(Quest, qNum, a, b, c, d, questions, question);
+                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
                 break;
             case 30:
-                q7.fillQuestion(Quest, qNum, a, b, c, d, questions, question);
+                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
                 break;
             case 31:
-                q7.fillQuestion(Quest, qNum, a, b, c, d, questions, question);
+                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
                 break;
             case 32:
-                q7.fillQuestion(Quest, qNum, a, b, c, d, questions, question);
+                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
                 break;
             case 33:
-                q7.fillQuestion(Quest, qNum, a, b, c, d, questions, question);
+                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
                 break;
             case 34:
-                q7.fillQuestion(Quest, qNum, a, b, c, d, questions, question);
+                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
                 break;
             case 35:
-                q7.fillQuestion(Quest, qNum, a, b, c, d, questions, question);
+                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
                 break;
             case 36:
-                q7.fillQuestion(Quest, qNum, a, b, c, d, questions, question);
+                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
                 break;
             case 37:
-                q7.fillQuestion(Quest, qNum, a, b, c, d, questions, question);
+                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
                 break;
             case 38:
-                q7.fillQuestion(Quest, qNum, a, b, c, d, questions, question);
+                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
                 break;
             case 39:
-                q7.fillQuestion(Quest, qNum, a, b, c, d, questions, question);
+                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
                 break;
             case 40:
-                q7.fillQuestion(Quest, qNum, a, b, c, d, questions, question);
+                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
                 break;
             case 41:
-                q7.fillQuestion(Quest, qNum, a, b, c, d, questions, question);
+                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
                 break;
         }
     }
@@ -262,178 +268,187 @@ public class Quiz7Activity extends AppCompatActivity {
         switch (question){
             case 1:
                 qSet.correctA(a,b,c,d,sv);
-                addCount(opt);
+                addCountA(opt);
                 break;
             case 2:
                 qSet.correctA(a,b,c,d,sv);
-                addCount(opt);
+                addCountA(opt);
                 break;
             case 3:
                 qSet.correctA(a,b,c,d,sv);
-                addCount(opt);
+                addCountA(opt);
                 break;
             case 4:
                 qSet.correctB(a,b,c,d,sv);
-                addCount(opt);
+                addCountB(opt);
                 break;
             case 5:
                 qSet.correctA(a,b,c,d,sv);
-                addCount(opt);
+                addCountA(opt);
                 break;
             case 6:
                 qSet.correctA(a,b,c,d,sv);
-                addCount(opt);
+                addCountA(opt);
                 break;
             case 7:
                 qSet.correctB(a,b,c,d,sv);
-                addCount(opt);
+                addCountB(opt);
                 break;
             case 8:
                 qSet.correctA(a,b,c,d,sv);
-                addCount(opt);
+                addCountA(opt);
                 break;
             case 9:
                 qSet.correctB(a,b,c,d,sv);
-                addCount(opt);
+                addCountB(opt);
                 break;
             case 10:
                 qSet.correctA(a,b,c,d,sv);
-                addCount(opt);
+                addCountA(opt);
                 break;
             case 11:
                 qSet.correctB(a,b,c,d,sv);
-                addCount(opt);
+                addCountB(opt);
                 break;
             case 12:
                 qSet.correctA(a,b,c,d,sv);
-                addCount(opt);
+                addCountA(opt);
                 break;
             case 13:
                 qSet.correctA(a,b,c,d,sv);
-                addCount(opt);
+                addCountA(opt);
                 break;
             case 14:
                 qSet.correctB(a,b,c,d,sv);
-                addCount(opt);
+                addCountB(opt);
                 break;
             case 15:
                 qSet.correctA(a,b,c,d,sv);
-                addCount(opt);
+                addCountA(opt);
                 break;
             case 16:
                 qSet.correctA(a,b,c,d,sv);
-                addCount(opt);
+                addCountA(opt);
                 break;
             case 17:
                 qSet.correctB(a,b,c,d,sv);
-                addCount(opt);
+                addCountB(opt);
                 break;
             case 18:
                 qSet.correctA(a,b,c,d,sv);
-                addCount(opt);
+                addCountA(opt);
                 break;
             case 19:
                 qSet.correctB(a,b,c,d,sv);
-                addCount(opt);
+                addCountB(opt);
                 break;
             case 20:
                 qSet.correctA(a,b,c,d,sv);
-                addCount(opt);
+                addCountA(opt);
                 break;
             case 21:
                 qSet.correctB(a,b,c,d,sv);
-                addCount(opt);
+                addCountB(opt);
                 break;
             case 22:
                 qSet.correctA(a,b,c,d,sv);
-                addCount(opt);
+                addCountA(opt);
                 break;
             case 23:
                 qSet.correctB(a,b,c,d,sv);
-                addCount(opt);
+                addCountB(opt);
                 break;
             case 24:
                 qSet.correctA(a,b,c,d,sv);
-                addCount(opt);
+                addCountA(opt);
                 break;
             case 25:
                 qSet.correctA(a,b,c,d,sv);
-                addCount(opt);
+                addCountA(opt);
                 break;
             case 26:
                 qSet.correctB(a,b,c,d,sv);
-                addCount(opt);
+                addCountB(opt);
                 break;
             case 27:
                 qSet.correctA(a,b,c,d,sv);
-                addCount(opt);
+                addCountA(opt);
                 break;
             case 28:
                 qSet.correctB(a,b,c,d,sv);
-                addCount(opt);
+                addCountB(opt);
                 break;
             case 29:
                 qSet.correctA(a,b,c,d,sv);
-                addCount(opt);
+                addCountA(opt);
                 break;
             case 30:
                 qSet.correctB(a,b,c,d,sv);
-                addCount(opt);
+                addCountB(opt);
                 break;
             case 31:
                 qSet.correctA(a,b,c,d,sv);
-                addCount(opt);
+                addCountA(opt);
                 break;
             case 32:
                 qSet.correctB(a,b,c,d,sv);
-                addCount(opt);
+                addCountB(opt);
                 break;
             case 33:
                 qSet.correctA(a,b,c,d,sv);
-                addCount(opt);
+                addCountA(opt);
                 break;
             case 34:
                 qSet.correctB(a,b,c,d,sv);
-                addCount(opt);
+                addCountB(opt);
                 break;
             case 35:
                 qSet.correctA(a,b,c,d,sv);
-                addCount(opt);
+                addCountA(opt);
                 break;
             case 36:
                 qSet.correctB(a,b,c,d,sv);
-                addCount(opt);
+                addCountB(opt);
                 break;
             case 37:
                 qSet.correctA(a,b,c,d,sv);
-                addCount(opt);
+                addCountA(opt);
                 break;
             case 38:
                 qSet.correctB(a,b,c,d,sv);
-                addCount(opt);
+                addCountB(opt);
                 break;
             case 39:
                 qSet.correctA(a,b,c,d,sv);
-                addCount(opt);
+                addCountA(opt);
                 break;
             case 40:
                 qSet.correctB(a,b,c,d,sv);
-                addCount(opt);
+                addCountB(opt);
                 break;
             case 41:
                 qSet.correctA(a,b,c,d,sv);
-                addCount(opt);
+                addCountA(opt);
                 break;
         }
     }
-    public void addCount(String opt){
-        if(opt.equals("d")){
-            rd+=1;
-        }else if(opt.equals("c")){
-            rc+=1;
-        }else if(opt.equals("b")){
-            rb+=1;
-        }else if(opt.equals("a")){
+    public void addCountD(String opt) {
+        if (opt.equals("d")) {
+            rd += 1;
+        }
+    }
+    public void addCountC(String opt) {
+        if (opt.equals("c")) {
+            rc += 1;
+        }
+    }
+    public void addCountB(String opt) {
+        if (opt.equals("b")) {
+            rb += 1;
+        }
+    }
+    public void addCountA(String opt){
+        if(opt.equals("a")){
             ra+=1;
         }
     }
