@@ -25,7 +25,7 @@ public class RandomQuizActivity extends AppCompatActivity {
     ImageView sig,ter;
     int calificacion=0;
     int ra=0,rb=0,rc=0,rd=0;
-    int questions=1,totalQuestions=40;
+    int questions=0,totalQuestions=40;
     Intent i;
     int[] quest={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
     Questions1 q1 = new Questions1();
@@ -127,36 +127,38 @@ public class RandomQuizActivity extends AppCompatActivity {
     }
 
     public void getQuestion(int question){
-        switch (question){
+        int quest = question + 1;
+        int noQuest = questions + 1;
+        switch (quest){
             case 1:
-                q1.fillQuestion(Quest, qNum, a, b, c, d, questions, question);
+                q1.fillQuestion(Quest, a, b, c, d, noQuest, quest);
                 break;
             case 2:
-                q1.fillQuestion(Quest, qNum, a, b, c, d, questions, question);
+                q1.fillQuestion(Quest, a, b, c, d, noQuest, quest);
                 break;
             case 3:
-                q1.fillQuestion(Quest, qNum, a, b, c, d, questions, question);
+                q1.fillQuestion(Quest, a, b, c, d, noQuest, quest);
                 break;
             case 4:
-                q1.fillQuestion(Quest, qNum, a, b, c, d, questions, question);
+                q1.fillQuestion(Quest, a, b, c, d, noQuest, quest);
                 break;
             case 5:
-                q1.fillQuestion(Quest, qNum, a, b, c, d, questions, question);
+                q1.fillQuestion(Quest, a, b, c, d, noQuest, quest);
                 break;
             case 6:
-                q1.fillQuestion(Quest, qNum, a, b, c, d, questions, question);
+                q1.fillQuestion(Quest, a, b, c, d, noQuest, quest);
                 break;
             case 7:
-                q1.fillQuestion(Quest, qNum, a, b, c, d, questions, question);
+                q1.fillQuestion(Quest, a, b, c, d, noQuest, quest);
                 break;
             case 8:
-                q1.fillQuestion(Quest, qNum, a, b, c, d, questions, question);
+                q1.fillQuestion(Quest, a, b, c, d, noQuest, quest);
                 break;
             case 9:
-                q1.fillQuestion(Quest, qNum, a, b, c, d, questions, question);
+                q1.fillQuestion(Quest, a, b, c, d, noQuest, quest);
                 break;
             case 10:
-                q1.fillQuestion(Quest, qNum, a, b, c, d, questions, question);
+                q1.fillQuestion(Quest, a, b, c, d, noQuest, quest);
                 break;
             case 11:
                 qNum.setText(questions+".");

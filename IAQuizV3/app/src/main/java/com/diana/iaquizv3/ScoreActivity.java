@@ -56,7 +56,10 @@ public class ScoreActivity extends AppCompatActivity {
             }
         });
     }
+    @Override
+    public void onBackPressed () {
 
+    }
     public void salir(View v){
         finish();
     }

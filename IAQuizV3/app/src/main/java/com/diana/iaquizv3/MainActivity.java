@@ -23,6 +23,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public void onBackPressed () {
+
+    }
+
     public void start(View v) {
 
         if (v.getId() == R.id.btnbasic) {

@@ -10,36 +10,41 @@ public class QuestionSettings {
 
     public void clearColor(Button a, Button b, Button c, Button d){
         a.setBackgroundColor(Color.LTGRAY);
+        a.setTextColor(Color.BLACK);
         b.setBackgroundColor(Color.LTGRAY);
+        b.setTextColor(Color.BLACK);
         c.setBackgroundColor(Color.LTGRAY);
+        c.setTextColor(Color.BLACK);
         d.setBackgroundColor(Color.LTGRAY);
+        d.setTextColor(Color.BLACK);
     }
 
     public void correctA(Button a, Button b, Button c, Button d, ScrollView sv){
         setColorAg(a);
-        setColorBr(b);
-        setColorCr(c);
-        setColorDr(d);
+        //setColorBr(b);
+        //setColorCr(c);
+        //setColorDr(d);
         sv.fullScroll(ScrollView.FOCUS_DOWN);
     }
     public void correctB(Button a, Button b, Button c, Button d, ScrollView sv){
-        setColorAr(a);
+        //setColorAr(a);
         setColorBg(b);
-        setColorCr(c);
-        setColorDr(d);
+        //setColorCr(c);
+        //setColorDr(d);
+
         sv.fullScroll(ScrollView.FOCUS_DOWN);
     }
     public void correctC(Button a, Button b, Button c, Button d, ScrollView sv){
-        setColorAr(a);
-        setColorBr(b);
+        //setColorAr(a);
+        //setColorBr(b);
         setColorCg(c);
-        setColorDr(d);
+        //setColorDr(d);
         sv.fullScroll(ScrollView.FOCUS_DOWN);
     }
     public void correctD(Button a, Button b, Button c, Button d, ScrollView sv){
-        setColorAr(a);
-        setColorBr(b);
-        setColorCr(c);
+        //setColorAr(a);
+        //setColorBr(b);
+        //setColorCr(c);
         setColorDg(d);
         sv.fullScroll(ScrollView.FOCUS_DOWN);
     }
@@ -60,9 +65,7 @@ public class QuestionSettings {
         sv.fullScroll(ScrollView.FOCUS_UP);
     }
 
-    public void setColorAr(Button a){
-        a.setBackgroundColor(Color.parseColor("#F9926E"));
-    }
+    /*public void setColorAr(Button a) { a.setBackgroundColor(Color.parseColor("#F9926E")); }
     public void setColorBr(Button b){
         b.setBackgroundColor(Color.parseColor("#F9926E"));
     }
@@ -70,16 +73,21 @@ public class QuestionSettings {
         c.setBackgroundColor(Color.parseColor("#F9926E"));
     }
     public void setColorDr(Button d) { d.setBackgroundColor(Color.parseColor("#F9926E")); }
+    */
     public void setColorAg(Button a){
+        a.setTextColor(Color.BLACK);
         a.setBackgroundColor(Color.parseColor("#58D8D0"));
     }
     public void setColorBg(Button b){
+        b.setTextColor(Color.BLACK);
         b.setBackgroundColor(Color.parseColor("#58D8D0"));
     }
     public void setColorCg(Button c){
+        c.setTextColor(Color.BLACK);
         c.setBackgroundColor(Color.parseColor("#58D8D0"));
     }
     public void setColorDg(Button d){
+        d.setTextColor(Color.BLACK);
         d.setBackgroundColor(Color.parseColor("#58D8D0"));
     }
 }

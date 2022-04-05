@@ -35,15 +35,7 @@
                     app:srcCompat="@drawable/topic4" />
 
 
-                <TextView
-                    android:id="@+id/question"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingLeft="10dp"
-                    android:text="1."
-                    android:textColor="#FAF6F6"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
+
 
                 <TextView
                     android:id="@+id/Respuestas"
@@ -56,45 +48,52 @@
                     android:text="Is this the question 1?"
                     android:textAlignment="textStart"
                     android:textColor="#FFFFFF"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
+                    android:textSize="20sp"
+                    android:textStyle="normal" />
 
                 <Button
                     android:id="@+id/a1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:onClick="responder"
                     android:paddingLeft="10dp"
                     android:text="A) Yes"
-                    android:onClick="responder"
-                    android:textAlignment="textStart" />
+                    android:textAlignment="textStart"
+                    android:textSize="18sp" />
 
                 <Button
                     android:id="@+id/b1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:onClick="responder"
                     android:paddingLeft="10dp"
                     android:text="B)  No"
-                    android:onClick="responder"
-                    android:textAlignment="textStart" />
+                    android:textAlignment="textStart"
+                    android:textSize="18sp" />
 
                 <Button
                     android:id="@+id/c1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:onClick="responder"
                     android:paddingLeft="10dp"
                     android:text="C) Maybe"
-                    android:onClick="responder"
-                    android:textAlignment="textStart" />
+                    android:textAlignment="textStart"
+                    android:textSize="18sp" />
 
 
                 <Button
                     android:id="@+id/d1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="responder"
                     android:paddingLeft="10dp"
                     android:text="D) All the above"
-                    android:onClick="responder"
-                    android:textAlignment="textStart" />
+                    android:textAlignment="textStart"
+                    android:textSize="18sp" />
 
                 <ImageView
                     android:id="@+id/sig1"
