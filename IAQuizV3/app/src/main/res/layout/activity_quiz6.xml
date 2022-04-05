@@ -50,6 +50,7 @@
                     android:textAlignment="textStart"
                     android:textColor="#FFFFFF"
                     android:textSize="20sp"
+                    android:justificationMode="inter_word"
                     android:textStyle="normal" />
 
                 <Button

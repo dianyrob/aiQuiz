@@ -10,7 +10,7 @@
     android:background="@drawable/fondo2">
 
 
-<ScrollView
+    <ScrollView
         android:id="@+id/scrollviewquiz"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -34,6 +34,9 @@
                     android:layout_gravity="center_horizontal"
                     app:srcCompat="@drawable/topic1" />
 
+
+
+
                 <TextView
                     android:id="@+id/Respuestas"
                     android:layout_width="wrap_content"
@@ -46,6 +49,7 @@
                     android:textAlignment="textStart"
                     android:textColor="#FFFFFF"
                     android:textSize="20sp"
+                    android:justificationMode="inter_word"
                     android:textStyle="normal" />
 
                 <Button
