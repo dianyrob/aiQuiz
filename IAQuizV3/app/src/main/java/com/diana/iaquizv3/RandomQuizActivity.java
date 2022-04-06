@@ -30,6 +30,8 @@ public class RandomQuizActivity extends AppCompatActivity {
     int[] quest={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
     Questions1 q1 = new Questions1();
     QuestionSettings qSet = new QuestionSettings();
+    DataStorage da = new DataStorage();
+    public String name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,10 +39,11 @@ public class RandomQuizActivity extends AppCompatActivity {
         setContentView(R.layout.activity_random_quiz);
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
+
+
         i=new Intent(RandomQuizActivity.this, ScoreActivity.class);
         Quest=(TextView) findViewById(R.id.Respuestas);
         //qNum=(TextView) findViewById();
-        qNum=(TextView) findViewById(R.id.question);
         a=(Button)findViewById(R.id.a1);
         b=(Button)findViewById(R.id.b1);
         c=(Button)findViewById(R.id.c1);
@@ -127,7 +130,7 @@ public class RandomQuizActivity extends AppCompatActivity {
     }
 
     public void getQuestion(int question){
-        int quest = question + 1;
+        int quest = question;
         int noQuest = questions + 1;
         switch (quest){
             case 1:

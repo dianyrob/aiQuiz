@@ -1,13 +1,21 @@
 package com.diana.iaquizv3;
 
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AlertDialog.Builder;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.text.Editable;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 public class ModulosActivity extends AppCompatActivity {
 
@@ -17,7 +25,6 @@ public class ModulosActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_modulos);
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-
     }
 
     public void salir(View v){
@@ -67,5 +74,6 @@ public class ModulosActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    //public void quit(View v){finish();}
+
+
 }

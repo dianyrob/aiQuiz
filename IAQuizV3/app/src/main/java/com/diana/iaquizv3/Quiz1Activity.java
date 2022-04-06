@@ -1,18 +1,22 @@
 package com.diana.iaquizv3;
 
 import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AlertDialog.Builder;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ScrollView;
 import android.widget.TextView;
+
 
 import java.util.Random;
 
@@ -29,12 +33,18 @@ public class Quiz1Activity extends AppCompatActivity {
     long startTime=0,endTime=0;
     Questions1 q1 = new Questions1();
     QuestionSettings qSet = new QuestionSettings();
+    DataStorage da = new DataStorage();
+    public String name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz1);
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
+        name = da.getUsername();
+        if(name==null)
+            qSet.requestName(Quiz1Activity.this);
 
         i=new Intent(Quiz1Activity.this, ScoreActivity.class);
         Quest=(TextView) findViewById(R.id.Respuestas);
@@ -52,11 +62,10 @@ public class Quiz1Activity extends AppCompatActivity {
         sig.setEnabled(false);
         qSet.clearColor(a,b,c,d);
         startTime = System.currentTimeMillis()/1000;
-    }
-    @Override
-    public void onBackPressed () {
 
     }
+    @Override
+    public void onBackPressed () { }
 
     public void responder(View v) {
         switch(v.getId()){
@@ -109,6 +118,8 @@ public class Quiz1Activity extends AppCompatActivity {
                 break;
         }
     }
+
+
 
     public void orderQeustions(){
         Boolean ban=true;
