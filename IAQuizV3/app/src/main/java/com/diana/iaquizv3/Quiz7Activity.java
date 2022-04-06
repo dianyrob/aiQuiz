@@ -29,12 +29,19 @@ public class Quiz7Activity extends AppCompatActivity {
     long startTime=0,endTime=0;
     Questions7 q7 = new Questions7();
     QuestionSettings qSet = new QuestionSettings();
+    DataStorage da = new DataStorage();
+    public String name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz7);
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
+        name = da.getUsername();
+        if(name==null)
+            qSet.requestName(Quiz7Activity.this);
+
         i=new Intent(Quiz7Activity.this, ScoreActivity.class);
         Quest=(TextView) findViewById(R.id.Respuestas);
         //qNum=(TextView) findViewById();

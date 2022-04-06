@@ -30,12 +30,18 @@ public class Quiz2Activity extends AppCompatActivity {
     long startTime=0,endTime=0;
     Questions2 q2 = new Questions2();
     QuestionSettings qSet = new QuestionSettings();
-    
+    DataStorage da = new DataStorage();
+    public String name;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz2);
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
+        name = da.getUsername();
+        if(name==null)
+            qSet.requestName(Quiz2Activity.this);
 
         i=new Intent(Quiz2Activity.this, ScoreActivity.class);
         Quest=(TextView) findViewById(R.id.Respuestas);

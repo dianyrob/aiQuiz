@@ -1,12 +1,20 @@
 package com.diana.iaquizv3;
 
+import android.app.Activity;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 import android.graphics.Color;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ScrollView;
 
+import androidx.appcompat.app.AlertDialog.Builder;
+
 public class QuestionSettings {
     ScrollView sv;
+    Activity ActivityName;
+    DataStorage da = new DataStorage();
 
     public void clearColor(Button a, Button b, Button c, Button d){
         a.setBackgroundColor(Color.LTGRAY);
@@ -89,5 +97,25 @@ public class QuestionSettings {
     public void setColorDg(Button d){
         d.setTextColor(Color.BLACK);
         d.setBackgroundColor(Color.parseColor("#58D8D0"));
+    }
+
+    public void requestName(Activity ActivityName){
+        final EditText input = new EditText(ActivityName);
+        new Builder(ActivityName)
+                .setTitle("AI Trainer")
+                .setMessage("Enter your firstname")
+                .setView(input)
+                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int whichButton) {
+                        String username = input.getText().toString();
+                        da.setUsername(username);
+                        // deal with the editable
+                    }
+                })
+                .setNegativeButton("Cancel", new OnClickListener() {
+                    public void onClick(DialogInterface dialog, int whichButton) {
+                        // Do nothing.
+                    }
+                }).show();
     }
 }
