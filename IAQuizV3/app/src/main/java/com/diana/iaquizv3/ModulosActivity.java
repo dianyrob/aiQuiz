@@ -31,17 +31,20 @@ public class ModulosActivity extends AppCompatActivity {
         if(v.getId() == R.id.Topic1){
             Intent intent = new Intent(ModulosActivity.this, Topic1Activity.class);
             startActivity(intent);
-        }if(v.getId() == R.id.test1){
+        }else if(v.getId() == R.id.test1){
             Intent intent = new Intent(ModulosActivity.this, Quiz1Activity.class);
             startActivity(intent);
         }else if(v.getId() == R.id.Topic2){
             Intent intent = new Intent(ModulosActivity.this, Topic2Activity.class);
             startActivity(intent);
-        }if(v.getId() == R.id.test2){
+        }else if(v.getId() == R.id.test2){
             Intent intent = new Intent(ModulosActivity.this, Quiz2Activity.class);
             startActivity(intent);
         }else if(v.getId() == R.id.Topic3) {
             Intent intent = new Intent(ModulosActivity.this, Topic3Activity.class);
+            startActivity(intent);
+        }else if(v.getId() == R.id.test3){
+            Intent intent = new Intent(ModulosActivity.this, Quiz2Activity.class);
             startActivity(intent);
         }else if(v.getId() == R.id.Topic4) {
             Intent intent = new Intent(ModulosActivity.this, Topic4Activity.class);
