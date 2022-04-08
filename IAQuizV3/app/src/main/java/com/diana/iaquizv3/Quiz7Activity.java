@@ -24,6 +24,7 @@ public class Quiz7Activity extends AppCompatActivity {
     int calificacion=0;
     int ra=0,rb=0,rc=0,rd=0;
     int questions=0,totalQuestions=41;
+    int questionsLimit=40;
     Intent i;
     int[] quest={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
     long startTime=0,endTime=0;
@@ -86,7 +87,7 @@ public class Quiz7Activity extends AppCompatActivity {
                 break;
             case R.id.sig1:
                 questions+=1;
-                if(questions<totalQuestions){
+                if(questions<questionsLimit){
                     getQuestion(quest[questions]);;
                     qSet.clearColor(a,b,c,d);
                     qSet.habilitar(a,b,c,d,sig,sv);
@@ -94,7 +95,7 @@ public class Quiz7Activity extends AppCompatActivity {
                     endTime = (System.currentTimeMillis()/1000) - startTime;
                     calificacion=ra+rb+rc+rd;
                     i.putExtra("calificacion",calificacion);
-                    i.putExtra("total",totalQuestions);
+                    i.putExtra("total",questionsLimit);
                     i.putExtra("dur",endTime);
                     startActivity(i);
                     finish();
@@ -106,7 +107,7 @@ public class Quiz7Activity extends AppCompatActivity {
                 i=new Intent(Quiz7Activity.this, ScoreActivity.class);
                 i.putExtra("dur",endTime);
                 i.putExtra("calificacion",calificacion);
-                i.putExtra("total",totalQuestions);
+                i.putExtra("total",questionsLimit);
                 startActivity(i);
                 finish();
                 break;
@@ -141,131 +142,7 @@ public class Quiz7Activity extends AppCompatActivity {
     public void getQuestion(int question){
         int quest = question;
         int noQuest = questions + 1;
-        switch (quest){
-            case 1:
-                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
-                break;
-            case 2:
-                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
-                break;
-            case 3:
-                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
-                break;
-            case 4:
-                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
-                break;
-            case 5:
-                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
-                break;
-            case 6:
-                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
-                break;
-            case 7:
-                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
-                break;
-            case 8:
-                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
-                break;
-            case 9:
-                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
-                break;
-            case 10:
-                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
-                break;
-            case 11:
-                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
-                break;
-            case 12:
-                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
-                break;
-            case 13:
-                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
-                break;
-            case 14:
-                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
-                break;
-            case 15:
-                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
-                break;
-            case 16:
-                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
-                break;
-            case 17:
-                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
-                break;
-            case 18:
-                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
-                break;
-            case 19:
-                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
-                break;
-            case 20:
-                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
-                break;
-            case 21:
-                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
-                break;
-            case 22:
-                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
-                break;
-            case 23:
-                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
-                break;
-            case 24:
-                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
-                break;
-            case 25:
-                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
-                break;
-            case 26:
-                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
-                break;
-            case 27:
-                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
-                break;
-            case 28:
-                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
-                break;
-            case 29:
-                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
-                break;
-            case 30:
-                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
-                break;
-            case 31:
-                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
-                break;
-            case 32:
-                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
-                break;
-            case 33:
-                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
-                break;
-            case 34:
-                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
-                break;
-            case 35:
-                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
-                break;
-            case 36:
-                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
-                break;
-            case 37:
-                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
-                break;
-            case 38:
-                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
-                break;
-            case 39:
-                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
-                break;
-            case 40:
-                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
-                break;
-            case 41:
-                q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
-                break;
-        }
+        q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
     }
 
     public void correctQuestion(int question, String opt){

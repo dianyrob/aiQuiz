@@ -371,6 +371,213 @@ public class Questions1 {
                 c.setVisibility(View.VISIBLE);
                 d.setVisibility(View.VISIBLE);
                 break;
+            case 41:
+                Quest.setText(questions+". Select the sentence best describe artificial intelligence:");
+                a.setText("A) The art of creating programs that perform functions that required intelligence when performed by people");
+                b.setText("B) The art of creating machines that perform functions that required intelligence when performed by people");
+                c.setText("C) The art of creating programs that perform functions that required intelligence when performed by machines");
+                d.setText("D) All of the above");
+                c.setVisibility(View.VISIBLE);
+                d.setVisibility(View.VISIBLE);
+                break;
+            case 42:
+                Quest.setText(questions+". Select on or more of the applications of AI:");
+                a.setText("A) Computer Vision");
+                b.setText("B) Reasoning and Logic");
+                c.setText("C) Speech Processing");
+                d.setText("D) All of the above");
+                c.setVisibility(View.VISIBLE);
+                d.setVisibility(View.VISIBLE);
+                break;
+            case 43:
+                Quest.setText(questions+". Select AI types:");
+                a.setText("A) Narrow, General, Artificial");
+                b.setText("B) Agile, Narrow, Super");
+                c.setText("C) Super, Narrow, Agile");
+                d.setText("D) Narrow, General, Agile");
+                c.setVisibility(View.VISIBLE);
+                d.setVisibility(View.VISIBLE);
+                break;
+            case 44:
+                Quest.setText(questions+". Select the option that best describe supervise learning?");
+                a.setText("A) The model learns from labeled data during the training phase");
+                b.setText("B) The model learns from non-specific data during the training phase");
+                c.setText("C) The model learns from labeled data during the Testing phase");
+                d.setText("D) The model learns from labeled data during the UAT phase");
+                c.setVisibility(View.VISIBLE);
+                d.setVisibility(View.VISIBLE);
+                break;
+            case 45:
+                Quest.setText(questions+". How does ML algorithms are categorized?");
+                a.setText("A) Supervised Learning and Reinforcement learning ");
+                b.setText("B) Reinforcement learning");
+                c.setText("C) Unsupervised Learning, Supervise Learning");
+                d.setText("D) Supervised Learning, Unsupervised Learning and Reinforcement Learning");
+                c.setVisibility(View.VISIBLE);
+                d.setVisibility(View.VISIBLE);
+                break;
+            case 46:
+                Quest.setText(questions+". Select some common algorithms:");
+                a.setText("A) Decision Tree");
+                b.setText("B) Random Forest");
+                c.setText("C) Support Vector Machine");
+                d.setText("D) All of the above");
+                c.setVisibility(View.VISIBLE);
+                d.setVisibility(View.VISIBLE);
+                break;
+            case 47:
+                Quest.setText(questions+". How Supervised Learning problem solved is divided?");
+                a.setText("A) Classification and Retesting");
+                b.setText("B) Classification and Regression");
+                c.setText("C) Classification and Revision");
+                d.setText("D) All of the above");
+                c.setVisibility(View.VISIBLE);
+                d.setVisibility(View.VISIBLE);
+                break;
+            case 48:
+                Quest.setText(questions+". MAE is stand for?");
+                a.setText("A) Mind Absolute errors");
+                b.setText("B) Mean Absolute Error");
+                c.setText("C) Meaning of Absolution Error");
+                d.setText("D) None of the above");
+                c.setVisibility(View.VISIBLE);
+                d.setVisibility(View.VISIBLE);
+                break;
+            case 49:
+                Quest.setText(questions+". Select which is true about Mean Absolute Error (MAE):");
+                a.setText("A) Difference between predicated and actual values");
+                b.setText("B) Difference between new data and stored data");
+                c.setText("C) Difference between estimated data and actual value");
+                d.setText("D) None of the above");
+                c.setVisibility(View.VISIBLE);
+                d.setVisibility(View.VISIBLE);
+                break;
+            case 50:
+                Quest.setText(questions+". Select the most accurate definition of Unsupervised Learning:");
+                a.setText("A) This is based on data labeled ");
+                b.setText("B) This kind of ML where no labeled data is provided explicitly");
+                c.setText("C) This kind of ML is for Data that is available all the time and easily labeled");
+                d.setText("D) None of the above");
+                c.setVisibility(View.VISIBLE);
+                d.setVisibility(View.VISIBLE);
+                break;
+            case 51:
+                Quest.setText(questions+". Which is true about Unsupervised Learning?");
+                a.setText("A) Model learns alone");
+                b.setText("B) Model needs training ");
+                c.setText("C) Model learns with labels from data");
+                d.setText("D) Not used in Pattern detection");
+                c.setVisibility(View.VISIBLE);
+                d.setVisibility(View.VISIBLE);
+                break;
+            case 52:
+                Quest.setText(questions+". Select when Unsupervised Learning is used");
+                a.setText("A) Computer Vision");
+                b.setText("B) Exploratory Testing");
+                c.setText("C) Pattern detection");
+                d.setText("D) Descriptive modeling");
+                c.setVisibility(View.VISIBLE);
+                d.setVisibility(View.VISIBLE);
+                break;
+            case 53:
+                Quest.setText(questions+". Unsupervised learning is classified in two methods, select them:");
+                a.setText("A) Clustering and Labeled Data");
+                b.setText("B) Clustering and Association");
+                c.setText("C) Clustering and Recommendations");
+                d.setText("D) None of the above");
+                c.setVisibility(View.VISIBLE);
+                d.setVisibility(View.VISIBLE);
+                break;
+            case 54:
+                Quest.setText(questions+". RL is stand for?");
+                a.setText("A) Red Learning");
+                b.setText("B) Retention Learning");
+                c.setText("C) Reinforcement Learning");
+                d.setText("D) Reprocess Learning");
+                c.setVisibility(View.VISIBLE);
+                d.setVisibility(View.VISIBLE);
+                break;
+            case 55:
+                Quest.setText(questions+". How RL works?");
+                a.setText("A) The agent learns from the environment in an iterative manner ");
+                b.setText("B) The agent learns from the programmer in an iterative manner ");
+                c.setText("C) The agent study from the environment in an iterative manner");
+                d.setText("D) None of the above");
+                c.setVisibility(View.VISIBLE);
+                d.setVisibility(View.VISIBLE);
+                break;
+            case 56:
+                Quest.setText(questions+". Select an example when RL is used?");
+                a.setText("A) a.\tRobotic vision ");
+                b.setText("B) b.\tPattern detection");
+                c.setText("C) c.\tVision improvements ");
+                d.setText("D) d.\tMath solutions");
+                c.setVisibility(View.VISIBLE);
+                d.setVisibility(View.VISIBLE);
+                break;
+            case 57:
+                Quest.setText(questions+". DL is stand for?");
+                a.setText("A) Detail Learning");
+                b.setText("B) Duplicate Learning");
+                c.setText("C) Deep Learning");
+                d.setText("D) Deeper Learning");
+                c.setVisibility(View.VISIBLE);
+                d.setVisibility(View.VISIBLE);
+                break;
+            case 58:
+                Quest.setText(questions+". Main difference between ML and DL ");
+                a.setText("A) In ML  feature extraction is automatic, DL detects the features manually");
+                b.setText("B) In ML, feature extraction is manual whereas DL detects the features on its own");
+                c.setText("C) In ML, testing is manual whereas DL is automatic");
+                d.setText("D) All of the above");
+                c.setVisibility(View.VISIBLE);
+                d.setVisibility(View.VISIBLE);
+                break;
+            case 59:
+                Quest.setText(questions+". ANN is stand for?");
+                a.setText("A) Art Neural Net");
+                b.setText("B) Artificial Neural Network");
+                c.setText("C) Artificial Neural Neutral");
+                d.setText("D) Artificial Network Neuron");
+                c.setVisibility(View.VISIBLE);
+                d.setVisibility(View.VISIBLE);
+                break;
+            case 60:
+                Quest.setText(questions+". Neural Networks for DL are?");
+                a.setText("A) CNN and SNN");
+                b.setText("B) RNN and PNN");
+                c.setText("C) CNN and RNN");
+                d.setText("D) CNN and RNT");
+                c.setVisibility(View.VISIBLE);
+                d.setVisibility(View.VISIBLE);
+                break;
+            case 61:
+                Quest.setText(questions+". CRISP-DM stand for");
+                a.setText("A) The Cross Industry Standard Process for Data Mining");
+                b.setText("B) The Code Industry Standard Process for Data Model");
+                c.setText("C) The Cross Industry Stand Process for Data Mining");
+                d.setText("D) The Cross Industry Standard Process for Data Model");
+                c.setVisibility(View.VISIBLE);
+                d.setVisibility(View.VISIBLE);
+                break;
+            case 62:
+                Quest.setText(questions+". Is CRISP-DM a process for ML lifecycle");
+                a.setText("A) True");
+                b.setText("B) False");
+                c.setText("");
+                d.setText("");
+                c.setVisibility(View.GONE);
+                d.setVisibility(View.GONE);
+                break;
+            case 63:
+                Quest.setText(questions+". Which is not part of the CRISP-DM framework?");
+                a.setText("A) Development");
+                b.setText("B) Design");
+                c.setText("C) Data Acquisition");
+                d.setText("D) Optimization");
+                c.setVisibility(View.VISIBLE);
+                d.setVisibility(View.VISIBLE);
+                break;
         }
     }
 }

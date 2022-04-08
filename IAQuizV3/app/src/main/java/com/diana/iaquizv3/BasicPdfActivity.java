@@ -28,8 +28,8 @@ public class BasicPdfActivity extends AppCompatActivity {
 
 
         PDFView pdfView = findViewById(R.id.pdfView);
-        pdfView.fromAsset("intro.pdf")
-                .pages(0,1,2,3,4,5,6,7,8) // all pages are displayed by default
+        pdfView.fromAsset("chapter1.pdf")
+                //.pages(0,1,2,3,4,5,6,7,8) // all pages are displayed by default
                 .enableSwipe(true) // allows to block changing pages using swipe
                 .swipeHorizontal(false)
                 .enableDoubletap(true)
