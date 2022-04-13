@@ -17,11 +17,12 @@ import java.text.DecimalFormat;
 public class ScoreActivity extends AppCompatActivity {
     Intent recibe, x;
     Bundle bolsa;
-    TextView scr,dur,resp;
+    TextView scr,dur,resp,thename;
     ImageView reintentar;
     int calif=0,total=0;
     long tiempo=0;
     DataStorage da = new DataStorage();
+    QuestionSettings qSet = new QuestionSettings();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,13 +43,16 @@ public class ScoreActivity extends AppCompatActivity {
         scr=(TextView)findViewById(R.id.score);
         dur=(TextView)findViewById(R.id.duration);
         resp = (TextView)findViewById(R.id.Respuestas);
+        thename = (TextView)findViewById(R.id.Name);
         String sco= String.valueOf(calif);
         String tot=String.valueOf(total);
         scr.setText(sco+ " of "+tot);
         String duracionSec = String.valueOf(tiempo);
+
         dur.setText("Your Time: "+duracionSec+ " sec");
         String name = da.getUsername();
-        resp.setText("Correct answers of "+ name.toUpperCase() + ":");
+        resp.setText("Your correct answers were:");
+        thename.setText(name.toUpperCase());
 
         //x=new Intent(ScoreActivity.this, MainActivity.class);
         reintentar=(ImageView)findViewById(R.id.Reintentar);
@@ -63,6 +67,10 @@ public class ScoreActivity extends AppCompatActivity {
     }
     @Override
     public void onBackPressed () { }
+
+    public void update(){
+        qSet.requestName(ScoreActivity.this);
+    }
 
     public void salir(View v){
         finish();

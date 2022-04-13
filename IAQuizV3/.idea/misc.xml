@@ -13,7 +13,7 @@
         <entry key="app/src/main/res/layout/activity_basic_pdf.xml" value="0.11" />
         <entry key="app/src/main/res/layout/activity_basic_quiz.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.125" />
-        <entry key="app/src/main/res/layout/activity_modulos.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_modulos.xml" value="0.165" />
         <entry key="app/src/main/res/layout/activity_quiz1.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_quiz2.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_quiz3.xml" value="0.1" />
@@ -31,6 +31,7 @@
         <entry key="app/src/main/res/layout/activity_topic5.xml" value="0.1296875" />
         <entry key="app/src/main/res/layout/activity_topic6.xml" value="0.1296875" />
         <entry key="app/src/main/res/layout/activity_topic7.xml" value="0.1" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1045" />
       </map>
     </option>
   </component>
