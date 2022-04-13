@@ -15,16 +15,20 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 public class ModulosActivity extends AppCompatActivity {
-
+    public String name;
+    ScrollView sv;
+    QuestionSettings qSet = new QuestionSettings();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_modulos);
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        sv = (ScrollView) findViewById(R.id.modulos);
     }
 
     public void salir(View v){
@@ -77,6 +81,8 @@ public class ModulosActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-
+    public void scrolldown(View v){
+        sv.fullScroll(ScrollView.FOCUS_DOWN);
+    }
 
 }

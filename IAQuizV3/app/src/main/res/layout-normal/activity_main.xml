@@ -25,23 +25,23 @@
 
         <ImageView
             android:id="@+id/imgtext1"
-            android:layout_width="wrap_content"
+            android:layout_width="400dp"
             android:layout_height="wrap_content"
             android:layout_above="@+id/orangeline"
             android:layout_centerHorizontal="true"
             android:paddingLeft="70dp"
-            android:paddingRight="60dp"
+            android:paddingRight="50dp"
+            android:paddingTop="120dp"
             app:srcCompat="@drawable/text1" />
 
         <ImageView
             android:id="@+id/text2"
-            android:layout_width="wrap_content"
+            android:layout_width="650dp"
             android:layout_height="wrap_content"
             android:layout_above="@+id/btntesting"
             android:layout_centerHorizontal="true"
-            android:paddingBottom="30dp"
             android:paddingLeft="70dp"
-            android:paddingRight="120dp"
+            android:paddingRight="100dp"
             app:srcCompat="@drawable/text2" />
 
         <ImageView
@@ -75,7 +75,7 @@
             android:layout_above="@+id/btnbasic"
             android:layout_alignParentStart="true"
             android:layout_centerHorizontal="true"
-            android:paddingBottom="180dp"
+            android:paddingBottom="240dp"
             android:paddingLeft="70dp"
             app:srcCompat="@drawable/orangeline"
             tools:ignore="SpeakableTextPresentCheck" />

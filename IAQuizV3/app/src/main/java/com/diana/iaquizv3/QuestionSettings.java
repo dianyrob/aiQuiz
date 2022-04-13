@@ -1,8 +1,12 @@
 package com.diana.iaquizv3;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 import android.graphics.Color;
 import android.widget.Button;
 import android.widget.EditText;
@@ -10,11 +14,13 @@ import android.widget.ImageView;
 import android.widget.ScrollView;
 
 import androidx.appcompat.app.AlertDialog.Builder;
+import androidx.appcompat.app.AppCompatActivity;
 
-public class QuestionSettings {
+public class QuestionSettings extends AppCompatActivity {
     ScrollView sv;
     Activity ActivityName;
     DataStorage da = new DataStorage();
+    SharedPreferences prefe;
 
     public void clearColor(Button a, Button b, Button c, Button d){
         a.setBackgroundColor(Color.LTGRAY);
@@ -99,11 +105,11 @@ public class QuestionSettings {
         d.setBackgroundColor(Color.parseColor("#58D8D0"));
     }
 
-    public void requestName(Activity ActivityName){
+    public void requestName(final Activity ActivityName){
         final EditText input = new EditText(ActivityName);
-        new Builder(ActivityName)
-                .setTitle("AI Trainer")
-                .setMessage("Enter your firstname")
+        new Builder(ActivityName,R.style.AlertDialogTheme)
+                .setTitle("Welcome to AI Trainer")
+                .setMessage("Please enter your name:")
                 .setView(input)
                 .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int whichButton) {
@@ -111,11 +117,23 @@ public class QuestionSettings {
                         da.setUsername(username);
                         // deal with the editable
                     }
-                })
-                .setNegativeButton("Cancel", new OnClickListener() {
-                    public void onClick(DialogInterface dialog, int whichButton) {
-                        // Do nothing.
-                    }
                 }).show();
     }
+
+     /*public void setName(){
+        String nam=da.getUsername();
+        SharedPreferences preferencias=getSharedPreferences("datos", Context.MODE_PRIVATE);
+        Editor editor=preferencias.edit();
+        editor.putString("name", nam);
+        editor.commit();
+    }
+
+   public String reviewName(){
+        String name=null;
+        try{
+            name=prefe.getString("name", "");
+        }catch (Exception ignoring){ }
+        return name;
+    }*/
+
 }
