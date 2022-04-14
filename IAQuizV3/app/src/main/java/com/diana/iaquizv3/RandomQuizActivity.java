@@ -23,12 +23,28 @@ public class RandomQuizActivity extends AppCompatActivity {
     TextView Quest,qNum;
     Button a,b,c,d;
     ImageView sig,ter;
-    int calificacion=0;
+    int calificacion=0, populate = 0;
     int ra=0,rb=0,rc=0,rd=0;
     int questions=0,totalQuestions=40;
+    int questionsLimit=70;
     Intent i;
-    int[] quest={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+    String correct = null,selected = null;
+    long startTime=0,endTime=0;
+    int[] quest=new int[70];
+    int[] t1 = new int[63];
+    int[] t2 = new int[59];
+    int[] t3 = new int[129];
+    int[] t4 = new int[129];//missing
+    int[] t5 = new int[38];
+    int[] t6 = new int[41];
+    int[] t7 = new int[41];
     Questions1 q1 = new Questions1();
+    Questions2 q2 = new Questions2();
+    Questions3 q3 = new Questions3();
+    //Questions4 q4 = new Questions4();
+    Questions5 q5 = new Questions5();
+    Questions6 q6 = new Questions6();
+    Questions7 q7 = new Questions7();
     QuestionSettings qSet = new QuestionSettings();
     DataStorage da = new DataStorage();
     public String name;
@@ -39,7 +55,9 @@ public class RandomQuizActivity extends AppCompatActivity {
         setContentView(R.layout.activity_random_quiz);
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-
+        name = da.getUsername();
+        if(name==null)
+            qSet.requestName(RandomQuizActivity.this);
 
         i=new Intent(RandomQuizActivity.this, ScoreActivity.class);
         Quest=(TextView) findViewById(R.id.Respuestas);
@@ -51,53 +69,80 @@ public class RandomQuizActivity extends AppCompatActivity {
         sv = (ScrollView) findViewById(R.id.scrollviewquiz);
         sig=(ImageView) findViewById(R.id.sig1);
         ter=(ImageView) findViewById(R.id.ter);
-        orderQeustions();
+        t1 = orderQeustions(t1.length,t1);
+        t2 = orderQeustions(t2.length,t2);
+        t3 = orderQeustions(t3.length,t3);
+        t4 = orderQeustions(t4.length,t4);
+        t5 = orderQeustions(t5.length,t5);
+        t6 = orderQeustions(t6.length,t6);
+        t7 = orderQeustions(t7.length,t7);
+        fillQuest(0,t1);
+        fillQuest(10,t2);
+        fillQuest(20,t3);
+        fillQuest(30,t4);
+        fillQuest(40,t5);
+        fillQuest(50,t6);
+        fillQuest(60,t7);
+
         getQuestion(quest[questions]);
         sig.setEnabled(false);
         qSet.clearColor(a,b,c,d);
+        startTime = System.currentTimeMillis()/1000;
     }
+    public void fillQuest(int startVal, int[] testQuestion){
+        for(int i=0;i<10;i++){
+            quest[startVal]=testQuestion[i];
+            startVal++;
+        }
+    }
+
+
 
     public void responder(View v) {
         switch(v.getId()){
             case R.id.a1:
                 qSet.deshabilitar(a,b,c,d,sig);
-                correctQuestion(quest[questions],"a");
+                selected = "a";
+                setCorrect(correct,selected);
                 break;
             case R.id.b1:
                 qSet.deshabilitar(a,b,c,d,sig);
-                correctQuestion(quest[questions],"b");
-                calificacion=0;
+                selected = "b";
+                setCorrect(correct,selected);
                 break;
             case R.id.c1:
                 qSet.deshabilitar(a,b,c,d,sig);
-                correctQuestion(quest[questions],"c");
-                calificacion=0;
+                selected = "c";
+                setCorrect(correct,selected);
                 break;
             case R.id.d1:
                 qSet.deshabilitar(a,b,c,d,sig);
-                correctQuestion(quest[questions],"d");
-                calificacion=1;
+                selected = "d";
+                setCorrect(correct,selected);
                 break;
             case R.id.sig1:
                 questions+=1;
-                if(questions<totalQuestions){
+                if(questions<questionsLimit){
                     getQuestion(quest[questions]);;
                     qSet.clearColor(a,b,c,d);
                     qSet.habilitar(a,b,c,d,sig,sv);
                 }else{
+                    endTime = (System.currentTimeMillis()/1000) - startTime;
                     calificacion=ra+rb+rc+rd;
                     i.putExtra("calificacion",calificacion);
-                    i.putExtra("total",totalQuestions);
+                    i.putExtra("total",questionsLimit);
+                    i.putExtra("dur",endTime);
                     startActivity(i);
                     finish();
-
                 }
                 break;
             case R.id.ter:
+                endTime = (System.currentTimeMillis()/1000) - startTime;
                 calificacion=ra+rb+rc+rd;
                 i=new Intent(RandomQuizActivity.this, ScoreActivity.class);
+                i.putExtra("dur",endTime);
                 i.putExtra("calificacion",calificacion);
-                i.putExtra("total",totalQuestions);
+                i.putExtra("total",questionsLimit);
                 startActivity(i);
                 finish();
                 break;
@@ -106,19 +151,20 @@ public class RandomQuizActivity extends AppCompatActivity {
         }
     }
 
-    public void orderQeustions(){
+    public int[] orderQeustions(int totalQ, int[] test){
+        int[] quest = test;
         Boolean ban=true;
         Random rnd = new Random();
         int rndNum=0,pos=0;
-        for(int i=1;i<=totalQuestions;i++){
-            rndNum=(rnd.nextInt(totalQuestions-1+1)+1);
+        for(int i=1;i<=totalQ;i++){
+            rndNum=(rnd.nextInt(totalQ-1+1)+1);
             while(ban==true){
                 pos=rndNum-1;
                 if(quest[pos]==0){
                     quest[pos]=i;
                     ban=false;
                 }else{
-                    if(rndNum==totalQuestions){
+                    if(rndNum==totalQ){
                         rndNum=1;
                     }else{
                         rndNum+=1;
@@ -127,333 +173,58 @@ public class RandomQuizActivity extends AppCompatActivity {
             };
             ban=true;
         }
+        return quest;
     }
 
     public void getQuestion(int question){
         int quest = question;
         int noQuest = questions + 1;
-        switch (quest){
+        switch (noQuest){
             case 1:
-                q1.fillQuestion(Quest, a, b, c, d, noQuest, quest);
-                break;
             case 2:
-                q1.fillQuestion(Quest, a, b, c, d, noQuest, quest);
-                break;
             case 3:
-                q1.fillQuestion(Quest, a, b, c, d, noQuest, quest);
-                break;
             case 4:
-                q1.fillQuestion(Quest, a, b, c, d, noQuest, quest);
-                break;
             case 5:
-                q1.fillQuestion(Quest, a, b, c, d, noQuest, quest);
-                break;
             case 6:
-                q1.fillQuestion(Quest, a, b, c, d, noQuest, quest);
-                break;
             case 7:
-                q1.fillQuestion(Quest, a, b, c, d, noQuest, quest);
-                break;
             case 8:
-                q1.fillQuestion(Quest, a, b, c, d, noQuest, quest);
-                break;
             case 9:
-                q1.fillQuestion(Quest, a, b, c, d, noQuest, quest);
-                break;
             case 10:
-                q1.fillQuestion(Quest, a, b, c, d, noQuest, quest);
+                correct = q1.fillQuestion(Quest, a, b, c, d, noQuest, quest);
                 break;
             case 11:
-                qNum.setText(questions+".");
-                Quest.setText(questions+". These are a few ways in which AI can be categorized: Supervised Learning, Unsupervised Learning, Reinforcement Learning ");
-                a.setText("A) True");
-                b.setText("B) False");
-                c.setText("");
-                d.setText("");
-                c.setVisibility(View.GONE);
-                d.setVisibility(View.GONE);
-                break;
             case 12:
-                qNum.setText(questions+".");
-                Quest.setText(questions+". In this kind of learning, the model learns from labeled data during the training phase. The labeled data acts as a trainer/supervisor for the mapping function which infers the relationship between input data and the output label during the training. During the testing phase, the mapping function is then applied to a new set of unseen data to predict the output which is also labeled. The model is deployed once the output accuracy level is satisfactory. ");
-                a.setText("A) Supervised Learning");
-                b.setText("B) Unsupervised Learning");
-                c.setText("C) Machine Learning");
-                d.setText("D) Artificial Intelligence");
-                c.setVisibility(View.VISIBLE);
-                d.setVisibility(View.VISIBLE);
-                break;
             case 13:
-                qNum.setText(questions+".");
-                Quest.setText(questions+". Problems solved by Supervised Learning are further divided into two categories: ");
-                a.setText("A) Classification and Deep Learning");
-                b.setText("B) Classification and Regression");
-                c.setText("C) Deed Learning and Regression");
-                d.setText("D) Machine Learning and Deep Learning");
-                c.setVisibility(View.VISIBLE);
-                d.setVisibility(View.VISIBLE);
-                break;
             case 14:
-                qNum.setText(questions+".");
-                Quest.setText(questions+". Is the category when the problem requires classifying an input into one of a few pre-decided classes, supervised learning is used. This kind of model is used when the output data is discrete or when the output falls among the number of classes fed during training. ");
-                a.setText("A) Classification");
-                b.setText("B) Regression");
-                c.setText("C) Deep Learning");
-                d.setText("D) Artificial Intelligence");
-                c.setVisibility(View.VISIBLE);
-                d.setVisibility(View.VISIBLE);
-                break;
             case 15:
-                qNum.setText(questions+".");
-                Quest.setText(questions+". Some of the commonly used algorithms for classification are logistic regression, nearest neighbor, support vector machine, and neural nets. ");
-                a.setText("A) True");
-                b.setText("B) False");
-                c.setText("");
-                d.setText("");
-                c.setVisibility(View.GONE);
-                d.setVisibility(View.GONE);
-                break;
             case 16:
-                qNum.setText(questions+".");
-                Quest.setText(questions+". Is the category is used when the output data is continuous or numeric in nature, e.g., predicting the age/weight of a person, predicting the future price of the stock, etc.");
-                a.setText("A) Classification");
-                b.setText("B) Regression");
-                c.setText("C) Deep Learning");
-                d.setText("D) Artificial Intelligence");
-                c.setVisibility(View.VISIBLE);
-                d.setVisibility(View.VISIBLE);
-                break;
             case 17:
-                qNum.setText(questions+".");
-                Quest.setText(questions+". Clean, labeled data are not readily available all the time, so that certain problems need to be solved without an explicitly labeled training set. This kind of ML where no labeled data is provided explicitly is called:");
-                a.setText("A) Supervised Learning");
-                b.setText("B) Unsupervised Learning");
-                c.setText("C) Machine Learning");
-                d.setText("D) Artificial Intelligence");
-                c.setVisibility(View.VISIBLE);
-                d.setVisibility(View.VISIBLE);
-                break;
             case 18:
-                qNum.setText(questions+".");
-                Quest.setText(questions+". Unsupervised Learning is further classified in the following two methods, based on the type of outputs:");
-                a.setText("A) Classification and Regression");
-                b.setText("B) Regression and Association ");
-                c.setText("C) Clustering and Association ");
-                d.setText("D) Association and Classification");
-                c.setVisibility(View.VISIBLE);
-                d.setVisibility(View.VISIBLE);
-                break;
             case 19:
-                qNum.setText(questions+".");
-                Quest.setText(questions+". This Unsupervised Learning model groups the input data based on some common characteristics or attributes. Input data with similar attributes (not labeled) are grouped in one cluster. Thus, the outputs are clusters of input data. For instance, customer segmentation in market analysis. ");
-                a.setText("A) Classification");
-                b.setText("B) Clustering");
-                c.setText("C) Regression");
-                d.setText("D) Association");
-                c.setVisibility(View.VISIBLE);
-                d.setVisibility(View.VISIBLE);
-                break;
             case 20:
-                qNum.setText(questions+".");
-                Quest.setText(questions+". Association Rule Mining finds interesting relationships or dependencies among the data attributes. The discovery of interesting associations provides a source of information often used for decision making. ");
-                a.setText("A) Classification");
-                b.setText("B) Clustering");
-                c.setText("C) Regression");
-                d.setText("D) Association");
-                c.setVisibility(View.VISIBLE);
-                d.setVisibility(View.VISIBLE);
+                correct = q2.fillQuestion(Quest, a, b, c, d, noQuest, quest);
                 break;
             case 21:
-                qNum.setText(questions+".");
-                Quest.setText(questions+". It is a type of ML where an agent (algorithm) learns by interacting with the environment in an iterative manner and thereby learns from experience. The agent is rewarded when it makes a right decision and penalized when it makes a wrong one. This reward and penalty-based learning is thus defined as:");
-                a.setText("A) Supervised Learning");
-                b.setText("B) Unsupervised Learning");
-                c.setText("C) Reinforcement Learning");
-                d.setText("D) Deep Learning");
-                c.setVisibility(View.VISIBLE);
-                d.setVisibility(View.VISIBLE);
-                break;
             case 22:
-                qNum.setText(questions+".");
-                Quest.setText(questions+". This type of learning refers to the systems gaining experience from massive data sets. It uses Artificial Neural Networks (ANN) to analyze large data sets, e.g. Autonomous Vehicles, Large Text Processing, and Computer Vision applications among others");
-                a.setText("A) Supervised Learning");
-                b.setText("B) Unsupervised Learning");
-                c.setText("C) Reinforcement Learning");
-                d.setText("D) Deep Learning");
-                c.setVisibility(View.VISIBLE);
-                d.setVisibility(View.VISIBLE);
-                break;
             case 23:
-                qNum.setText(questions+".");
-                Quest.setText(questions+". Deep Learning uses the same types of learning (Supervised, Unsupervised and Reinforcement Learning) as ML. ");
-                a.setText("A) True");
-                b.setText("B) False");
-                c.setText("");
-                d.setText("");
-                c.setVisibility(View.GONE);
-                d.setVisibility(View.GONE);
-                break;
             case 24:
-                qNum.setText(questions+".");
-                Quest.setText(questions+". Deep Learning uses different types of learning (Supervised, Unsupervised and Reinforcement Learning) as ML. ");
-                a.setText("A) True");
-                b.setText("B) False");
-                c.setText("");
-                d.setText("");
-                c.setVisibility(View.GONE);
-                d.setVisibility(View.GONE);
-                break;
             case 25:
-                qNum.setText(questions+".");
-                Quest.setText(questions+". These are inspired by the architecture of the human brain. ‘Neurons’, as the basic unit of ANN, act upon the input stimulus and produce the output signal. The input goes through \n" +
-                        "the layers of activation functions to generate the output. These layers form a mesh like network. \n");
-                a.setText("A) Artificial Neuronal Networks");
-                b.setText("B) Deep Neuronal Network");
-                c.setText("C) Convolutional Neuronal Network");
-                d.setText("D) Recurrent Neuronal Network");
-                c.setVisibility(View.VISIBLE);
-                d.setVisibility(View.VISIBLE);
-                break;
             case 26:
-                qNum.setText(questions+".");
-                Quest.setText(questions+". Is a type of neural networks?");
-                a.setText("A) Deep Neuronal Network");
-                b.setText("B) Convolutional Neuronal Network");
-                c.setText("D) Recurrent Neuronal Network");
-                d.setText("E) All of the above");
-                c.setVisibility(View.VISIBLE);
-                d.setVisibility(View.VISIBLE);
-                break;
             case 27:
-                qNum.setText(questions+".");
-                Quest.setText(questions+". Is an Artificial Neuronal Network with two or more hidden layers?");
-                a.setText("A) Deep Neuronal Network");
-                b.setText("B) Convolutional Neuronal Network");
-                c.setText("C) Recurrent Neuronal Network");
-                d.setText("D) None of the above");
-                c.setVisibility(View.VISIBLE);
-                d.setVisibility(View.VISIBLE);
-                break;
             case 28:
-                qNum.setText(questions+".");
-                Quest.setText(questions+". Is an Artificial Neuronal Network that emerged from the study of the brain’s visual cortex, and they have been used in image recognition since the 1980s. Unlike other neural networks, this works directly on input images without serializing/ vectorizing an input image and extracting features by filters:");
-                a.setText("A) Deep Neuronal Network");
-                b.setText("B) Convolutional Neuronal Network");
-                c.setText("C) Recurrent Neuronal Network");
-                d.setText("D)None of the above");
-                c.setVisibility(View.VISIBLE);
-                d.setVisibility(View.VISIBLE);
-                break;
             case 29:
-                qNum.setText(questions+".");
-                Quest.setText(questions+". These ANNs can predict the future of time series problems. They follow a sequential approach on series of input data of arbitrary length rather than inputs of fixed length as in other neural networks. Each input and output are independent of all the other layers. The feedback from the output layer is fed to the same network recurrently, till the right level of confidence is achieved:");
-                a.setText("A) Deep Neuronal Network");
-                b.setText("B) Convolutional Neuronal Network");
-                c.setText("C) Recurrent Neuronal Network");
-                d.setText("D) None of the above");
-                c.setVisibility(View.VISIBLE);
-                d.setVisibility(View.VISIBLE);
-                break;
             case 30:
-                qNum.setText(questions+".");
-                Quest.setText(questions+". Which is CRISP-DM?");
-                a.setText("A) Cross Industry Standard Process for the Data Mining ");
-                b.setText("B) Critical Industry Size Process for the Deep Mining");
-                c.setText("C) Cross Industry Selection Product for the Data Mining");
-                d.setText("D) Critical Industry Standard Process for Deep Mining");
-                c.setVisibility(View.VISIBLE);
-                d.setVisibility(View.VISIBLE);
+                correct = q3.fillQuestion(Quest, a, b, c, d, noQuest, quest);
                 break;
             case 31:
-                qNum.setText(questions+".");
-                Quest.setText(questions+". CRISP-DM has traditionally six stages in the data mining life cycle. It has been customized to meet the requirements of ML projects, by adding a seventh stage. ");
-                a.setText("A) True");
-                b.setText("B) False");
-                c.setText("");
-                d.setText("");
-                c.setVisibility(View.GONE);
-                d.setVisibility(View.GONE);
-                break;
             case 32:
-                qNum.setText(questions+".");
-                Quest.setText(questions+". CRISP-DM has traditionally eight stages in the data mining life cycle. It has been customized to meet the requirements of ML projects, by adding a eighth stage.");
-                a.setText("A) True");
-                b.setText("B) False");
-                c.setText("");
-                d.setText("");
-                c.setVisibility(View.GONE);
-                d.setVisibility(View.GONE);
-                break;
             case 33:
-                qNum.setText(questions+".");
-                Quest.setText(questions+". Are some of the stages of the CRISP-DM framework for ML?");
-                a.setText("A) Data acquisition and Data preparation ");
-                b.setText("B) Modeling and Evaluation ");
-                c.setText("C) Deployment, Operations and Optimization ");
-                d.setText("D) All of the above");
-                c.setVisibility(View.VISIBLE);
-                d.setVisibility(View.VISIBLE);
-                break;
             case 34:
-                qNum.setText(questions+".");
-                Quest.setText(questions+". This stage gathers data from all internal and external sources (for example databases, CSV files, social media, etc.):");
-                a.setText("A) Data acquisition");
-                b.setText("B) Data preparation ");
-                c.setText("C) Modeling");
-                d.setText("D) Evaluation ");
-                c.setVisibility(View.VISIBLE);
-                d.setVisibility(View.VISIBLE);
-                break;
             case 35:
-                qNum.setText(questions+".");
-                Quest.setText(questions+". This stage cleans the raw data and reshape it. New attributes are created with feature engineering, a process for creating new variables from existing data. ");
-                a.setText("A) Data acquisition");
-                b.setText("B) Data preparation ");
-                c.setText("C) Modeling");
-                d.setText("D) Evaluation ");
-                c.setVisibility(View.VISIBLE);
-                d.setVisibility(View.VISIBLE);
-                break;
             case 36:
-                qNum.setText(questions+".");
-                Quest.setText(questions+". This stage selects the model or algorithm, divide the available data into training set and testing set. Models are obtained by executing ML algorithms on the training data set. Use the testing data set to evaluate and enhance the performance of the model until satisfactory performance is achieved. ");
-                a.setText("A) Data acquisition");
-                b.setText("B) Data preparation ");
-                c.setText("C) Modeling");
-                d.setText("D) Evaluation ");
-                c.setVisibility(View.VISIBLE);
-                d.setVisibility(View.VISIBLE);
-                break;
             case 37:
-                qNum.setText(questions+".");
-                Quest.setText(questions+". This stage evaluates the model on various metrics (discussed in 3.2 Metrics) and baseline it before it goes for final deployment. ");
-                a.setText("A) Data acquisition");
-                b.setText("B) Data preparation ");
-                c.setText("C) Modeling");
-                d.setText("D) Evaluation ");
-                c.setVisibility(View.VISIBLE);
-                d.setVisibility(View.VISIBLE);
-                break;
             case 38:
-                qNum.setText(questions+".");
-                Quest.setText(questions+". This stage deploys and monitor the baselined model for metrics in the production environment.");
-                a.setText("A) Data preparation ");
-                b.setText("B) Modeling");
-                c.setText("C) Evaluation ");
-                d.setText("D) Deployment");
-                c.setVisibility(View.VISIBLE);
-                d.setVisibility(View.VISIBLE);
-                break;
             case 39:
-                qNum.setText(questions+".");
-                Quest.setText(questions+". This stage carries out regular maintenance and operations. Regenerate and refine the model when the metrics fall below a certain threshold. ");
-                a.setText("A) Evaluation");
-                b.setText("B) Deployment");
-                c.setText("C) Operations");
-                d.setText("D) Optimization");
-                c.setVisibility(View.VISIBLE);
-                d.setVisibility(View.VISIBLE);
-                break;
             case 40:
                 qNum.setText(questions+".");
                 Quest.setText(questions+". In this stage deployed solution may be replaced due to concept, as better algorithms become available, or because of some major failures in performance. ");
@@ -464,256 +235,68 @@ public class RandomQuizActivity extends AppCompatActivity {
                 c.setVisibility(View.VISIBLE);
                 d.setVisibility(View.VISIBLE);
                 break;
-        }
-    }
-
-    public void correctQuestion(int question, String opt){
-        AlertDialog.Builder builder = new AlertDialog.Builder(RandomQuizActivity.this);
-        AlertDialog alert;
-        WindowManager.LayoutParams wmlp;
-        switch (question){
-            case 1:
-                qSet.correctB(a,b,c,d,sv);
-                if(opt.equals("b")){
-                    rc+=1;
-                }
+            case 41:
+            case 42:
+            case 43:
+            case 44:
+            case 45:
+            case 46:
+            case 47:
+            case 48:
+            case 49:
+            case 50:
+                correct = q5.fillQuestion(Quest, a, b, c, d, noQuest, quest);
                 break;
-            case 2:
-                qSet.correctD(a,b,c,d,sv);
-                if(opt.equals("d")){
-                    ra+=1;
-                }
+            case 51:
+            case 52:
+            case 53:
+            case 54:
+            case 55:
+            case 56:
+            case 57:
+            case 58:
+            case 59:
+            case 60:
+                correct = q6.fillQuestion(Quest, a, b, c, d, noQuest, quest);
                 break;
-            case 3:
-                qSet.correctD(a,b,c,d,sv);
-                if(opt.equals("d")){
-                    rb+=1;
-                }
-                break;
-            case 4:
-                qSet.correctB(a,b,c,d,sv);
-                if(opt.equals("b")){
-                    ra+=1;
-                }
-                break;
-            case 5:
-                qSet.correctC(a,b,c,d,sv);
-                if(opt.equals("c")){
-                    rb+=1;
-                }
-                break;
-            case 6:
-                qSet.correctD(a,b,c,d,sv);
-                if(opt.equals("d")){
-                    rb+=1;
-                }
-                break;
-            case 7:
-                qSet.correctC(a,b,c,d,sv);
-                if(opt.equals("c")){
-                    ra+=1;
-                }
-                break;
-            case 8:
-                qSet.correctA(a,b,c,d,sv);
-                if(opt.equals("a")){
-                    rc+=1;
-                }
-                break;
-            case 9:
-                qSet.correctB(a,b,c,d,sv);
-                if(opt.equals("b")){
-                    rd+=1;
-                }
-                break;
-            case 10:
-                qSet.correctA(a,b,c,d,sv);
-                if(opt.equals("a")){
-                    ra+=1;
-                }
-                break;
-            case 11:
-                qSet.correctB(a,b,c,d,sv);
-                if(opt.equals("b")){
-                    rb+=1;
-                }
-                break;
-            case 12:
-                qSet.correctA(a,b,c,d,sv);
-                if(opt.equals("a")){
-                    ra+=1;
-                }
-                break;
-            case 13:
-                qSet.correctB(a,b,c,d,sv);
-                if(opt.equals("b")){
-                    rb+=1;
-                }
-                break;
-            case 14:
-                qSet.correctA(a,b,c,d,sv);
-                if(opt.equals("a")){
-                    rd+=1;
-                }
-                break;
-            case 15:
-                qSet.correctA(a,b,c,d,sv);
-                if(opt.equals("a")){
-                    rc+=1;
-                }
-                break;
-            case 16:
-                qSet.correctB(a,b,c,d,sv);
-                if(opt.equals("b")){
-                    ra+=1;
-                }
-                break;
-            case 17:
-                qSet.correctB(a,b,c,d,sv);
-                if(opt.equals("b")){
-                    rb+=1;
-                }
-                break;
-            case 18:
-                qSet.correctC(a,b,c,d,sv);
-                if(opt.equals("c")){
-                    ra+=1;
-                }
-                break;
-            case 19:
-                qSet.correctB(a,b,c,d,sv);
-                if(opt.equals("b")){
-                    rb+=1;
-                }
-                break;
-            case 20:
-                qSet.correctD(a,b,c,d,sv);
-                if(opt.equals("d")){
-                    ra+=1;
-                }
-                break;
-            case 21:
-                qSet.correctC(a,b,c,d,sv);
-                if(opt.equals("c")){
-                    rb+=1;
-                }
-                break;
-            case 22:
-                qSet.correctD(a,b,c,d,sv);
-                if(opt.equals("d")){
-                    ra+=1;
-                }
-                break;
-            case 23:
-                qSet.correctA(a,b,c,d,sv);
-                if(opt.equals("a")){
-                    rb+=1;
-                }
-                break;
-            case 24:
-                qSet.correctB(a,b,c,d,sv);
-                if(opt.equals("b")){
-                    ra+=1;
-                }
-                break;
-            case 25:
-                qSet.correctA(a,b,c,d,sv);
-                if(opt.equals("a")){
-                    rb+=1;
-                }
-                break;
-            case 26:
-                qSet.correctD(a,b,c,d,sv);
-                if(opt.equals("d")){
-                    ra+=1;
-                }
-                break;
-            case 27:
-                qSet.correctA(a,b,c,d,sv);
-                if(opt.equals("a")){
-                    rb+=1;
-                }
-                break;
-            case 28:
-                qSet.correctB(a,b,c,d,sv);
-                if(opt.equals("b")){
-                    ra+=1;
-                }
-                break;
-            case 29:
-                qSet.correctC(a,b,c,d,sv);
-                if(opt.equals("c")){
-                    rb+=1;
-                }
-                break;
-            case 30:
-                qSet.correctA(a,b,c,d,sv);
-                if(opt.equals("a")){
-                    ra+=1;
-                }
-                break;
-            case 31:
-                qSet.correctA(a,b,c,d,sv);
-                if(opt.equals("a")){
-                    rb+=1;
-                }
-                break;
-            case 32:
-                qSet.correctB(a,b,c,d,sv);
-                if(opt.equals("b")){
-                    rb+=1;
-                }
-                break;
-            case 33:
-                qSet.correctD(a,b,c,d,sv);
-                if(opt.equals("d")){
-                    ra+=1;
-                }
-                break;
-            case 34:
-                qSet.correctA(a,b,c,d,sv);
-                if(opt.equals("a")){
-                    rb+=1;
-                }
-                break;
-            case 35:
-                qSet.correctB(a,b,c,d,sv);
-                if(opt.equals("b")){
-                    ra+=1;
-                }
-                break;
-            case 36:
-                qSet.correctD(a,b,c,d,sv);
-                if(opt.equals("d")){
-                    rb+=1;
-                }
-                break;
-            case 37:
-                qSet.correctC(a,b,c,d,sv);
-                if(opt.equals("c")){
-                    ra+=1;
-                }
-                break;
-            case 38:
-                qSet.correctD(a,b,c,d,sv);
-                if(opt.equals("d")){
-                    rb+=1;
-                }
-                break;
-            case 39:
-                qSet.correctC(a,b,c,d,sv);
-                if(opt.equals("c")){
-                    ra+=1;
-                }
-                break;
-            case 40:
-                qSet.correctD(a,b,c,d,sv);
-                if(opt.equals("d")){
-                    rb+=1;
-                }
+            case 61:
+            case 62:
+            case 63:
+            case 64:
+            case 65:
+            case 66:
+            case 67:
+            case 68:
+            case 69:
+            case 70:
+                correct = q7.fillQuestion(Quest, a, b, c, d, noQuest, quest);
                 break;
         }
     }
 
+    public void setCorrect(String opt, String selected){
+        switch (opt){
+            case "a":
+                qSet.correctA(a,b,c,d,sv);
+                if(opt.equals(selected))
+                    ra+=1;
+                break;
+            case "b":
+                qSet.correctB(a,b,c,d,sv);
+                if(opt.equals(selected))
+                    rb += 1;
+                break;
+            case "c":
+                qSet.correctC(a,b,c,d,sv);
+                if(opt.equals(selected))
+                    rc += 1;
+                break;
+            case "d":
+                qSet.correctD(a,b,c,d,sv);
+                if(opt.equals(selected))
+                    rd += 1;
+                break;
+        }
+    }
 
 }

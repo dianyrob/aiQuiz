@@ -6,7 +6,8 @@ import android.widget.TextView;
 
 public class Questions2 {
 
-    public void fillQuestion(TextView Quest, Button a, Button b, Button c, Button d, int questions, int question){
+    public String fillQuestion(TextView Quest, Button a, Button b, Button c, Button d, int questions, int question){
+        String correct = null;
         switch (question){
             case 1:
                 Quest.setText(questions+". How can be performed the testing of AI Systems?");
@@ -16,6 +17,7 @@ public class Questions2 {
                 d.setText("D) All of the above");
                 c.setVisibility(View.VISIBLE);
                 d.setVisibility(View.VISIBLE);
+                correct = "d";
                 break;
             case 2:
                 Quest.setText(questions+". While testing AI Systems we will treat the algorithm as a black box and look at testing as part of system testing");
@@ -25,6 +27,7 @@ public class Questions2 {
                 d.setText("");
                 c.setVisibility(View.GONE);
                 d.setVisibility(View.GONE);
+                correct = "a";
                 break;
             case 3:
                 Quest.setText(questions+". While testing AI Systems we won’t treat the algorithm as a black box and look at testing as part of system testing ");
@@ -34,6 +37,7 @@ public class Questions2 {
                 d.setText("");
                 c.setVisibility(View.GONE);
                 d.setVisibility(View.GONE);
+                correct = "b";
                 break;
             case 4:
                 Quest.setText(questions+". Testing AI systems is a two-stage process: Testing the trained model and Testing the integrated system.");
@@ -43,6 +47,7 @@ public class Questions2 {
                 d.setText("");
                 c.setVisibility(View.GONE);
                 d.setVisibility(View.GONE);
+                correct = "a";
                 break;
             case 5:
                 Quest.setText(questions+". Testing AI systems is a four-stage process: Testing the trained model, Testing the integrated system, Testing the AI and Testing the non-AI system components.");
@@ -52,6 +57,7 @@ public class Questions2 {
                 d.setText("");
                 c.setVisibility(View.GONE);
                 d.setVisibility(View.GONE);
+                correct = "b";
                 break;
             case 6:
                 Quest.setText(questions+". What kind of testing is done in a trained model?");
@@ -61,6 +67,7 @@ public class Questions2 {
                 d.setText("D) Regression testing");
                 c.setVisibility(View.VISIBLE);
                 d.setVisibility(View.VISIBLE);
+                correct = "b";
                 break;
             case 7:
                 Quest.setText(questions+". What kind of testing is done in integrated system");
@@ -70,6 +77,7 @@ public class Questions2 {
                 d.setText("D) Regression testing");
                 c.setVisibility(View.VISIBLE);
                 d.setVisibility(View.VISIBLE);
+                correct = "a";
                 break;
             case 8:
                 Quest.setText(questions+". In this phase, the trained model is tested. Various metrics are used for evaluation parameters for a trained model to verify how far it has achieved the objectives.");
@@ -79,6 +87,7 @@ public class Questions2 {
                 d.setText("D) Regression testing");
                 c.setVisibility(View.VISIBLE);
                 d.setVisibility(View.VISIBLE);
+                correct = "a";
                 break;
             case 9:
                 Quest.setText(questions+". In this phase, the integration of the trained model with the rest of the system, including all other AI and non-AI components, is tested. Both functional and non-functional tests such as performance tests can be performed");
@@ -88,6 +97,7 @@ public class Questions2 {
                 d.setText("D) Regression testing");
                 c.setVisibility(View.VISIBLE);
                 d.setVisibility(View.VISIBLE);
+                correct = "b";
                 break;
             case 10:
                 Quest.setText(questions+". Since the inputs to the system can be non-textual, unstructured inputs, as well automation support for some of the tests related to the ML part, may be limited, based on the tool being used.");
@@ -97,6 +107,7 @@ public class Questions2 {
                 d.setText("");
                 c.setVisibility(View.GONE);
                 d.setVisibility(View.GONE);
+                correct = "a";
                 break;
             case 11:
                 Quest.setText(questions+". Since the inputs to the system can be non-textual, unstructured inputs, as well automation support for some of the tests related to the ML part, won’t be limited, based on the tool being used.");
@@ -106,6 +117,7 @@ public class Questions2 {
                 d.setText("D) ");
                 c.setVisibility(View.GONE);
                 d.setVisibility(View.GONE);
+                correct = "b";
                 break;
             case 12:
                 Quest.setText(questions+". Testing AI Systems is not deterministic. The results of the test are probabilities");
@@ -115,8 +127,8 @@ public class Questions2 {
                 d.setText("");
                 c.setVisibility(View.GONE);
                 d.setVisibility(View.GONE);
+                correct = "a";
                 break;
-
             case 13:
                 Quest.setText(questions+". Testing AI Systems is deterministic. The results of the test are well defined");
                 a.setText("A) True");
@@ -125,6 +137,7 @@ public class Questions2 {
                 d.setText("");
                 c.setVisibility(View.GONE);
                 d.setVisibility(View.GONE);
+                correct = "b";
                 break;
             case 14:
                 Quest.setText(questions+". Test oracles for AI systems are not easily available");
@@ -134,6 +147,7 @@ public class Questions2 {
                 d.setText("");
                 c.setVisibility(View.GONE);
                 d.setVisibility(View.GONE);
+                correct = "a";
                 break;
             case 15:
                 Quest.setText(questions+". Test oracles for AI systems are easily available");
@@ -143,6 +157,7 @@ public class Questions2 {
                 d.setText("D) ");
                 c.setVisibility(View.GONE);
                 d.setVisibility(View.GONE);
+                correct = "b";
                 break;
             case 16:
                 Quest.setText(questions+". Data are the test cases for the AI");
@@ -152,6 +167,7 @@ public class Questions2 {
                 d.setText("");
                 c.setVisibility(View.GONE);
                 d.setVisibility(View.GONE);
+                correct = "a";
                 break;
             case 17:
                 Quest.setText(questions+". Data are the test cases for the neuronal networks");
@@ -161,6 +177,7 @@ public class Questions2 {
                 d.setText("");
                 c.setVisibility(View.GONE);
                 d.setVisibility(View.GONE);
+                correct = "b";
                 break;
             case 18:
                 Quest.setText(questions+". Data pre-processing and clean up constitute a vital part of AI system testing");
@@ -170,6 +187,7 @@ public class Questions2 {
                 d.setText("");
                 c.setVisibility(View.GONE);
                 d.setVisibility(View.GONE);
+                correct = "a";
                 break;
             case 19:
                 Quest.setText(questions+". Data pre-processing and clean up constitute is not considered as part of AI system testing");
@@ -179,6 +197,7 @@ public class Questions2 {
                 d.setText("");
                 c.setVisibility(View.GONE);
                 d.setVisibility(View.GONE);
+                correct = "b";
                 break;
             case 20:
                 Quest.setText(questions+". The internals of learning systems are generally not easy to understand");
@@ -188,6 +207,7 @@ public class Questions2 {
                 d.setText("");
                 c.setVisibility(View.GONE);
                 d.setVisibility(View.GONE);
+                correct = "a";
                 break;
             case 21:
                 Quest.setText(questions+". The internals of learning systems are very easy to understand");
@@ -197,6 +217,7 @@ public class Questions2 {
                 d.setText("");
                 c.setVisibility(View.GONE);
                 d.setVisibility(View.GONE);
+                correct = "b";
                 break;
             case 22:
                 Quest.setText(questions+". The explainability of the results is difficult for ML and nearly impossible for DL systems");
@@ -206,6 +227,7 @@ public class Questions2 {
                 d.setText("");
                 c.setVisibility(View.GONE);
                 d.setVisibility(View.GONE);
+                correct = "a";
                 break;
             case 23:
                 Quest.setText(questions+". The explainability of the results is easy for ML and very possible for DL systems");
@@ -215,6 +237,7 @@ public class Questions2 {
                 d.setText("");
                 c.setVisibility(View.GONE);
                 d.setVisibility(View.GONE);
+                correct = "b";
                 break;
             case 24:
                 Quest.setText(questions+". AI systems logic is generated based on the data used to train the model");
@@ -224,6 +247,7 @@ public class Questions2 {
                 d.setText("");
                 c.setVisibility(View.GONE);
                 d.setVisibility(View.GONE);
+                correct = "a";
                 break;
             case 25:
                 Quest.setText(questions+". AI Systems logic is not generated based on the data used to train the model");
@@ -233,6 +257,7 @@ public class Questions2 {
                 d.setText("");
                 c.setVisibility(View.GONE);
                 d.setVisibility(View.GONE);
+                correct = "b";
                 break;
             case 26:
                 Quest.setText(questions+". AI Systems logic is not available for examination, especially neural nets. This makes it difficult to understand why a particular output was produced. A correct or desired answer doesn’t guarantee correct functioning.");
@@ -242,6 +267,7 @@ public class Questions2 {
                 d.setText("");
                 c.setVisibility(View.GONE);
                 d.setVisibility(View.GONE);
+                correct = "a";
                 break;
             case 27:
                 Quest.setText(questions+". AI Systems logic is always available for examination, especially neural nets. This makes it difficult to understand why a particular output was produced. A correct or desired answer doesn’t guarantee correct functioning.");
@@ -251,6 +277,7 @@ public class Questions2 {
                 d.setText("");
                 c.setVisibility(View.GONE);
                 d.setVisibility(View.GONE);
+                correct = "b";
                 break;
             case 28:
                 Quest.setText(questions+". Testing in the offline phase is an additional step which requires specialized skills and techniques for testing the trained model");
@@ -260,6 +287,7 @@ public class Questions2 {
                 d.setText("");
                 c.setVisibility(View.GONE);
                 d.setVisibility(View.GONE);
+                correct = "a";
                 break;
             case 29:
                 Quest.setText(questions+". Testing in the offline phase is an step which anyone can do without specialized skills and techniques for testing the trained model");
@@ -269,6 +297,7 @@ public class Questions2 {
                 d.setText("");
                 c.setVisibility(View.GONE);
                 d.setVisibility(View.GONE);
+                correct = "b";
                 break;
             case 30:
                 Quest.setText(questions+". Testing in the online phase requires a deep understanding of how AI systems work and how to integrate these with other AI and non-AI systems. As a consequence, it calls for an increased for diverse test design techniques.");
@@ -278,6 +307,7 @@ public class Questions2 {
                 d.setText("");
                 c.setVisibility(View.GONE);
                 d.setVisibility(View.GONE);
+                correct = "a";
                 break;
             case 31:
                 Quest.setText(questions+". Testing in the online phase requires a deep understanding of how AI systems work and how to integrate these with other AI and non-AI systems. As a consequence, it calls for a decreased for test design techniques.");
@@ -287,6 +317,7 @@ public class Questions2 {
                 d.setText("");
                 c.setVisibility(View.GONE);
                 d.setVisibility(View.GONE);
+                correct = "b";
                 break;
             case 32:
                 Quest.setText(questions+". Black-box testing methods and conventional testing are also applicable to AI based systems testing");
@@ -296,6 +327,7 @@ public class Questions2 {
                 d.setText("");
                 c.setVisibility(View.GONE);
                 d.setVisibility(View.GONE);
+                correct = "a";
                 break;
             case 33:
                 Quest.setText(questions+". Black-box testing methods and conventional testing are not applicable to AI based systems testing");
@@ -305,6 +337,7 @@ public class Questions2 {
                 d.setText("");
                 c.setVisibility(View.GONE);
                 d.setVisibility(View.GONE);
+                correct = "b";
                 break;
             case 34:
                 Quest.setText(questions+". Similar to non-AI systems, both functional and non-functional tests need to be executed for AI systems");
@@ -314,6 +347,7 @@ public class Questions2 {
                 d.setText("");
                 c.setVisibility(View.GONE);
                 d.setVisibility(View.GONE);
+                correct = "a";
                 break;
             case 35:
                 Quest.setText(questions+". Functional and non-functional tests are not required to be executed for AI systems ");
@@ -323,6 +357,7 @@ public class Questions2 {
                 d.setText("");
                 c.setVisibility(View.GONE);
                 d.setVisibility(View.GONE);
+                correct = "b";
                 break;
             case 36:
                 Quest.setText(questions+". Online phase testing can be performed as normal black-box system and system integration testing without worrying whether there are one or more AI components in the mix.");
@@ -332,6 +367,7 @@ public class Questions2 {
                 d.setText("");
                 c.setVisibility(View.GONE);
                 d.setVisibility(View.GONE);
+                correct = "a";
                 break;
             case 37:
                 Quest.setText(questions+". Online phase testing cannot be performed as normal black-box system and system integration testing without worrying whether there are one or more AI components in the mix.");
@@ -341,6 +377,7 @@ public class Questions2 {
                 d.setText("");
                 c.setVisibility(View.GONE);
                 d.setVisibility(View.GONE);
+                correct = "b";
                 break;
             case 38:
                 Quest.setText(questions+". The behaviors of Learning Systems depend on the input data");
@@ -350,6 +387,7 @@ public class Questions2 {
                 d.setText("");
                 c.setVisibility(View.GONE);
                 d.setVisibility(View.GONE);
+                correct = "a";
                 break;
             case 39:
                 Quest.setText(questions+". The behaviors of Learning Systems depend on the tester experience");
@@ -359,6 +397,7 @@ public class Questions2 {
                 d.setText("");
                 c.setVisibility(View.GONE);
                 d.setVisibility(View.GONE);
+                correct = "b";
                 break;
             case 40:
                 Quest.setText(questions+". Different data used in the testing will lead to potentially different behaviors");
@@ -368,6 +407,7 @@ public class Questions2 {
                 d.setText("");
                 c.setVisibility(View.GONE);
                 d.setVisibility(View.GONE);
+                correct = "a";
                 break;
             case 41:
                 Quest.setText(questions+". Different data used in the testing will lead to the same behaviors ");
@@ -377,6 +417,7 @@ public class Questions2 {
                 d.setText("");
                 c.setVisibility(View.GONE);
                 d.setVisibility(View.GONE);
+                correct = "b";
                 break;
             case 42:
                 Quest.setText(questions+". For AI systems, test data = test cases");
@@ -386,6 +427,7 @@ public class Questions2 {
                 d.setText("");
                 c.setVisibility(View.GONE);
                 d.setVisibility(View.GONE);
+                correct = "a";
                 break;
             case 43:
                 Quest.setText(questions+". For AI systems, test data = the user requirements ");
@@ -395,6 +437,7 @@ public class Questions2 {
                 d.setText("");
                 c.setVisibility(View.GONE);
                 d.setVisibility(View.GONE);
+                correct = "b";
                 break;
             case 44:
                 Quest.setText(questions+". Some of the important characteristics from the AI testing perspective are:");
@@ -404,6 +447,7 @@ public class Questions2 {
                 d.setText("D) All of the above");
                 c.setVisibility(View.VISIBLE);
                 d.setVisibility(View.VISIBLE);
+                correct = "d";
                 break;
             case 45:
                 Quest.setText(questions+". While evaluating AI Systems, this characteristic is one of the most important parameters for accepting a solution.");
@@ -413,6 +457,7 @@ public class Questions2 {
                 d.setText("D) Functional suitability ");
                 c.setVisibility(View.VISIBLE);
                 d.setVisibility(View.VISIBLE);
+                correct = "d";
                 break;
             case 46:
                 Quest.setText(questions+". While evaluating AI Systems, this characteristic includes functional correctness, completeness and appropriateness are expected with some sort of error estimation to quantitatively measure the system");
@@ -422,6 +467,7 @@ public class Questions2 {
                 d.setText("D) Maintainability ");
                 c.setVisibility(View.VISIBLE);
                 d.setVisibility(View.VISIBLE);
+                correct = "a";
                 break;
             case 47:
                 Quest.setText(questions+". While evaluating AI Systems, this characteristic is the availability of the system during normal operations");
@@ -431,6 +477,7 @@ public class Questions2 {
                 d.setText("D) Maintainability ");
                 c.setVisibility(View.VISIBLE);
                 d.setVisibility(View.VISIBLE);
+                correct = "c";
                 break;
             case 48:
                 Quest.setText(questions+". While evaluating AI Systems, this characteristic where the fault tolerance of the system should be high enough to handle corrupt data, incomplete, or irrelevant data without breaking down ");
@@ -440,6 +487,7 @@ public class Questions2 {
                 d. setText("D) Maintainability ");
                 c.setVisibility(View.VISIBLE);
                 d.setVisibility(View.VISIBLE);
+                correct = "b";
                 break;
             case 49:
                 Quest.setText(questions+". While evaluating AI Systems, this characteristic includes the Time behavior and the Resource utilization");
@@ -449,6 +497,7 @@ public class Questions2 {
                 d.setText("D) Maintainability ");
                 c.setVisibility(View.VISIBLE);
                 d.setVisibility(View.VISIBLE);
+                correct = "c";
                 break;
             case 50:
                 Quest.setText(questions+". Is how quickly the system responds to the demands made from it?");
@@ -458,6 +507,7 @@ public class Questions2 {
                 d.setText("D) Time behavior");
                 c.setVisibility(View.VISIBLE);
                 d.setVisibility(View.VISIBLE);
+                correct = "d";
                 break;
             case 51:
                 Quest.setText(questions+". Is which and how many resources are used by the system to perform a function?");
@@ -467,6 +517,7 @@ public class Questions2 {
                 d.setText("D) Time behavior");
                 c.setVisibility(View.VISIBLE);
                 d.setVisibility(View.VISIBLE);
+                correct = "c";
                 break;
             case 52:
                 Quest.setText(questions+". While evaluating AI Systems, this characteristic includes the Analyzability and Testability");
@@ -476,6 +527,7 @@ public class Questions2 {
                 d.setText("D) Maintainability ");
                 c.setVisibility(View.VISIBLE);
                 d.setVisibility(View.VISIBLE);
+                correct = "d";
                 break;
             case 53:
                 Quest.setText(questions+". Refers to the ability to be able to understand why the system took the decision that it took.");
@@ -485,6 +537,7 @@ public class Questions2 {
                 d.setText("D) Maintainability ");
                 c.setVisibility(View.VISIBLE);
                 d.setVisibility(View.VISIBLE);
+                correct = "b";
                 break;
             case 54:
                 Quest.setText(questions+". Time and space complexity");
@@ -494,6 +547,7 @@ public class Questions2 {
                 d.setText("D) Testability ");
                 c.setVisibility(View.VISIBLE);
                 d.setVisibility(View.VISIBLE);
+                correct = "c";
                 break;
             case 55:
                 Quest.setText(questions+". The ability of the system to handle more load by adding additional resources to it");
@@ -503,6 +557,7 @@ public class Questions2 {
                 d.setText("D) Testability ");
                 c.setVisibility(View.VISIBLE);
                 d.setVisibility(View.VISIBLE);
+                correct = "a";
                 break;
             case 56:
                 Quest.setText(questions+". The ability of the system to continuously learn from new data, especially from real time environment data");
@@ -512,6 +567,7 @@ public class Questions2 {
                 d.setText("D) Continuous learning ");
                 c.setVisibility(View.VISIBLE);
                 d.setVisibility(View.VISIBLE);
+                correct = "d";
                 break;
             case 57:
                 Quest.setText(questions+". This characteristic Is the ability to comprehend or understand. It is basically a combination of reasoning, memory, imagination, and judgment; each of these faculties relies upon the others.");
@@ -521,6 +577,7 @@ public class Questions2 {
                 d.setText("D) Continuous learning ");
                 c.setVisibility(View.VISIBLE);
                 d.setVisibility(View.VISIBLE);
+                correct = "c";
                 break;
             case 58:
                 Quest.setText(questions+". This characteristic is about the principles concerning the distinction between right and wrong or good and bad behavior. The sub-characteristics are: ethics, privacy and human friendliness.");
@@ -530,6 +587,7 @@ public class Questions2 {
                 d.setText("D) Continuous learning ");
                 c.setVisibility(View.VISIBLE);
                 d.setVisibility(View.VISIBLE);
+                correct = "a";
                 break;
             case 59:
                 Quest.setText(questions+". This characteristic is the combination of characteristics or qualities that perform an individual’s distinctive character. The sub-characteristics are: mood, empathy, humor and charisma");
@@ -539,8 +597,9 @@ public class Questions2 {
                 d.setText("D) Personality");
                 c.setVisibility(View.VISIBLE);
                 d.setVisibility(View.VISIBLE);
+                correct = "d";
                 break;
         }
-
+        return correct;
     }
 }
