@@ -19,25 +19,22 @@
             android:orientation="horizontal">
             <ImageView
                 android:id="@+id/logo"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:layout_marginBottom="-90dp"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
                 android:paddingLeft="20dp"
                 android:paddingTop="10dp"
                 app:srcCompat="@drawable/logo" />
 
-
-            <Button
+            <TextView
                 android:id="@+id/update"
-                android:layout_width="180dp"
-                android:layout_height="40dp"
+                android:layout_width="130dp"
+                android:layout_height="70dp"
                 android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:textColor="#FFFFFF"
+                android:text="Update your name"
+                android:textSize="14sp"/>
 
-                android:layout_marginTop="20dp"
-                android:background="#58D8D0"
-                android:textColor="#000000"
-                android:textSize="14sp"
-                android:text="Update your name"/>
         </RelativeLayout>
     </LinearLayout>
 

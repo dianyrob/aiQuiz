@@ -7,6 +7,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.text.SpannableString;
+import android.text.style.UnderlineSpan;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
@@ -32,6 +34,11 @@ public class ScoreActivity extends AppCompatActivity {
 
         DecimalFormat format = new DecimalFormat();
         format.setMaximumFractionDigits(2); //Define 2 decimales.
+
+        TextView textView = (TextView) findViewById(R.id.update);
+        SpannableString mitextoU = new SpannableString("Update your name");
+        mitextoU.setSpan(new UnderlineSpan(), 0, mitextoU.length(), 0);
+        textView.setText(mitextoU);
 
 
         x=new Intent(ScoreActivity.this, MainActivity.class);
