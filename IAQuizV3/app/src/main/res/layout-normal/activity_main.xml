@@ -18,9 +18,10 @@
         <ImageView
             android:id="@+id/logo"
             android:layout_width="150dp"
-            android:layout_height="100dp"
-            android:layout_above="@+id/imgtext1"
+            android:layout_height="300dp"
+            android:layout_above="@+id/orangeline"
             android:paddingLeft="70dp"
+            android:paddingBottom="160dp"
             app:srcCompat="@drawable/logo" />
 
         <ImageView
