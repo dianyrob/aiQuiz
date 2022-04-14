@@ -36,6 +36,7 @@ public class Quiz1Activity extends AppCompatActivity {
     QuestionSettings qSet = new QuestionSettings();
     DataStorage da = new DataStorage();
     public String name;
+    String correct = null,selected = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,22 +73,23 @@ public class Quiz1Activity extends AppCompatActivity {
         switch(v.getId()){
             case R.id.a1:
                 qSet.deshabilitar(a,b,c,d,sig);
-                correctQuestion(quest[questions],"a");
+                selected = "a";
+                setCorrect(correct,selected);
                 break;
             case R.id.b1:
                 qSet.deshabilitar(a,b,c,d,sig);
-                correctQuestion(quest[questions],"b");
-                calificacion=0;
+                selected = "b";
+                setCorrect(correct,selected);
                 break;
             case R.id.c1:
                 qSet.deshabilitar(a,b,c,d,sig);
-                correctQuestion(quest[questions],"c");
-                calificacion=0;
+                selected = "c";
+                setCorrect(correct,selected);
                 break;
             case R.id.d1:
                 qSet.deshabilitar(a,b,c,d,sig);
-                correctQuestion(quest[questions],"d");
-                calificacion=1;
+                selected = "d";
+                setCorrect(correct,selected);
                 break;
             case R.id.sig1:
                 questions+=1;
@@ -148,287 +150,31 @@ public class Quiz1Activity extends AppCompatActivity {
     public void getQuestion(int question){
         int quest = question;
         int noQuest = questions + 1;
-        q1.fillQuestion(Quest, a, b, c, d, noQuest, quest);
+        correct = q1.fillQuestion(Quest, a, b, c, d, noQuest, quest);
     }
 
-    public void correctQuestion(int question, String opt){
-        AlertDialog.Builder builder = new AlertDialog.Builder(Quiz1Activity.this);
-        AlertDialog alert;
-        WindowManager.LayoutParams wmlp;
-        switch (question){
-            case 1:
+    public void setCorrect(String opt, String selected){
+        switch (opt){
+            case "a":
+                qSet.correctA(a,b,c,d,sv);
+                if(opt.equals(selected))
+                    ra+=1;
+                break;
+            case "b":
                 qSet.correctB(a,b,c,d,sv);
-                addCountB(opt);
+                if(opt.equals(selected))
+                    rb += 1;
                 break;
-            case 2:
-                qSet.correctD(a,b,c,d,sv);
-                addCountD(opt);
-                break;
-            case 3:
-                qSet.correctD(a,b,c,d,sv);
-                addCountD(opt);
-                break;
-            case 4:
-                qSet.correctB(a,b,c,d,sv);
-                addCountB(opt);
-                break;
-            case 5:
+            case "c":
                 qSet.correctC(a,b,c,d,sv);
-                addCountC(opt);
+                if(opt.equals(selected))
+                    rc += 1;
                 break;
-            case 6:
+            case "d":
                 qSet.correctD(a,b,c,d,sv);
-                addCountD(opt);
+                if(opt.equals(selected))
+                    rd += 1;
                 break;
-            case 7:
-                qSet.correctC(a,b,c,d,sv);
-                addCountC(opt);
-                break;
-            case 8:
-                qSet.correctA(a,b,c,d,sv);
-                addCountA(opt);
-                break;
-            case 9:
-                qSet.correctB(a,b,c,d,sv);
-                addCountB(opt);
-                break;
-            case 10:
-                qSet.correctA(a,b,c,d,sv);
-                addCountA(opt);
-                break;
-            case 11:
-                qSet.correctB(a,b,c,d,sv);
-                addCountB(opt);
-                break;
-            case 12:
-                qSet.correctA(a,b,c,d,sv);
-                addCountA(opt);
-                break;
-            case 13:
-                qSet.correctB(a,b,c,d,sv);
-                addCountB(opt);
-                break;
-            case 14:
-                qSet.correctA(a,b,c,d,sv);
-                addCountA(opt);
-                break;
-            case 15:
-                qSet.correctA(a,b,c,d,sv);
-                addCountA(opt);
-                break;
-            case 16:
-                qSet.correctB(a,b,c,d,sv);
-                addCountB(opt);
-                break;
-            case 17:
-                qSet.correctB(a,b,c,d,sv);
-                addCountB(opt);
-                break;
-            case 18:
-                qSet.correctC(a,b,c,d,sv);
-                addCountC(opt);
-                break;
-            case 19:
-                qSet.correctB(a,b,c,d,sv);
-                addCountB(opt);
-                break;
-            case 20:
-                qSet.correctD(a,b,c,d,sv);
-                addCountD(opt);
-                break;
-            case 21:
-                qSet.correctC(a,b,c,d,sv);
-                addCountC(opt);
-                break;
-            case 22:
-                qSet.correctD(a,b,c,d,sv);
-                addCountD(opt);
-                break;
-            case 23:
-                qSet.correctA(a,b,c,d,sv);
-                addCountA(opt);
-                break;
-            case 24:
-                qSet.correctB(a,b,c,d,sv);
-                addCountB(opt);
-                break;
-            case 25:
-                qSet.correctA(a,b,c,d,sv);
-                addCountA(opt);
-                break;
-            case 26:
-                qSet.correctD(a,b,c,d,sv);
-                addCountD(opt);
-                break;
-            case 27:
-                qSet.correctA(a,b,c,d,sv);
-                addCountA(opt);
-                break;
-            case 28:
-                qSet.correctB(a,b,c,d,sv);
-                addCountB(opt);
-                break;
-            case 29:
-                qSet.correctC(a,b,c,d,sv);
-                addCountC(opt);
-                break;
-            case 30:
-                qSet.correctA(a,b,c,d,sv);
-                addCountA(opt);
-                break;
-            case 31:
-                qSet.correctA(a,b,c,d,sv);
-                addCountA(opt);
-                break;
-            case 32:
-                qSet.correctB(a,b,c,d,sv);
-                addCountB(opt);
-                break;
-            case 33:
-                qSet.correctD(a,b,c,d,sv);
-                addCountD(opt);
-                break;
-            case 34:
-                qSet.correctA(a,b,c,d,sv);
-                addCountA(opt);
-                break;
-            case 35:
-                qSet.correctB(a,b,c,d,sv);
-                addCountB(opt);
-                break;
-            case 36:
-                qSet.correctD(a,b,c,d,sv);
-                addCountD(opt);
-                break;
-            case 37:
-                qSet.correctC(a,b,c,d,sv);
-                addCountC(opt);
-                break;
-            case 38:
-                qSet.correctD(a,b,c,d,sv);
-                addCountD(opt);
-                break;
-            case 39:
-                qSet.correctC(a,b,c,d,sv);
-                addCountC(opt);
-                break;
-            case 40:
-                qSet.correctD(a,b,c,d,sv);
-                addCountD(opt);
-                break;
-            case 41:
-                qSet.correctB(a,b,c,d,sv);
-                addCountB(opt);
-                break;
-            case 42:
-                qSet.correctD(a,b,c,d,sv);
-                addCountD(opt);
-                break;
-            case 43:
-                qSet.correctB(a,b,c,d,sv);
-                addCountB(opt);
-                break;
-            case 44:
-                qSet.correctA(a,b,c,d,sv);
-                addCountA(opt);
-                break;
-            case 45:
-                qSet.correctD(a,b,c,d,sv);
-                addCountD(opt);
-                break;
-            case 46:
-                qSet.correctD(a,b,c,d,sv);
-                addCountD(opt);
-                break;
-            case 47:
-                qSet.correctB(a,b,c,d,sv);
-                addCountB(opt);
-                break;
-            case 48:
-                qSet.correctB(a,b,c,d,sv);
-                addCountB(opt);
-                break;
-            case 49:
-                qSet.correctA(a,b,c,d,sv);
-                addCountA(opt);
-                break;
-            case 50:
-                qSet.correctB(a,b,c,d,sv);
-                addCountB(opt);
-                break;
-            case 51:
-                qSet.correctB(a,b,c,d,sv);
-                addCountB(opt);
-                break;
-            case 52:
-                qSet.correctC(a,b,c,d,sv);
-                addCountC(opt);
-                break;
-            case 53:
-                qSet.correctB(a,b,c,d,sv);
-                addCountB(opt);
-                break;
-            case 54:
-                qSet.correctC(a,b,c,d,sv);
-                addCountC(opt);
-                break;
-            case 55:
-                qSet.correctB(a,b,c,d,sv);
-                addCountB(opt);
-                break;
-            case 56:
-                qSet.correctA(a,b,c,d,sv);
-                addCountA(opt);
-                break;
-            case 57:
-                qSet.correctC(a,b,c,d,sv);
-                addCountC(opt);
-                break;
-            case 58:
-                qSet.correctB(a,b,c,d,sv);
-                addCountB(opt);
-                break;
-            case 59:
-                qSet.correctB(a,b,c,d,sv);
-                addCountB(opt);
-                break;
-            case 60:
-                qSet.correctC(a,b,c,d,sv);
-                addCountC(opt);
-                break;
-            case 61:
-                qSet.correctA(a,b,c,d,sv);
-                addCountA(opt);
-                break;
-            case 62:
-                qSet.correctA(a,b,c,d,sv);
-                addCountA(opt);
-                break;
-            case 63:
-                qSet.correctB(a,b,c,d,sv);
-                addCountB(opt);
-                break;
-        }
-    }
-
-    public void addCountD(String opt) {
-        if (opt.equals("d")) {
-            rd += 1;
-        }
-    }
-    public void addCountC(String opt) {
-        if (opt.equals("c")) {
-            rc += 1;
-        }
-    }
-    public void addCountB(String opt) {
-        if (opt.equals("b")) {
-            rb += 1;
-        }
-    }
-    public void addCountA(String opt){
-        if(opt.equals("a")){
-            ra+=1;
         }
     }
 

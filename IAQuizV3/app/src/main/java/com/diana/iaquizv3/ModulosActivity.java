@@ -59,6 +59,9 @@ public class ModulosActivity extends AppCompatActivity {
         }else if(v.getId() == R.id.Topic6) {
             Intent intent = new Intent(ModulosActivity.this, Topic6Activity.class);
             startActivity(intent);
+        }else if(v.getId() == R.id.test6){
+            Intent intent = new Intent(ModulosActivity.this, Quiz6Activity.class);
+            startActivity(intent);
         }else if(v.getId() == R.id.Topic7) {
             Intent intent = new Intent(ModulosActivity.this, Topic7Activity.class);
             startActivity(intent);
