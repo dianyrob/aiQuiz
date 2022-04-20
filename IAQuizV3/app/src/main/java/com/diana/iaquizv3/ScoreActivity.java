@@ -3,8 +3,10 @@ package com.diana.iaquizv3;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.text.SpannableString;
@@ -25,6 +27,7 @@ public class ScoreActivity extends AppCompatActivity {
     long tiempo=0;
     DataStorage da = new DataStorage();
     QuestionSettings qSet = new QuestionSettings();
+    SharedPreferences prefe;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,7 +60,10 @@ public class ScoreActivity extends AppCompatActivity {
         String duracionSec = String.valueOf(tiempo);
 
         dur.setText("Your Time: "+duracionSec+ " sec");
-        String name = da.getUsername();
+        //String name = da.getUsername();
+        prefe=getSharedPreferences("datos", Context.MODE_PRIVATE);
+        String name = prefe.getString("name","");
+
         resp.setText("Your correct answers were:");
         thename.setText(name.toUpperCase());
 

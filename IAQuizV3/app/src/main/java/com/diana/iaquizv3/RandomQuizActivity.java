@@ -96,7 +96,12 @@ public class RandomQuizActivity extends AppCompatActivity {
         }
     }
 
-
+    @Override
+    public void onBackPressed () {
+        Intent intent = new Intent(RandomQuizActivity.this, ModulosActivity.class);
+        startActivity(intent);
+        finish();
+    }
 
     public void responder(View v) {
         switch(v.getId()){

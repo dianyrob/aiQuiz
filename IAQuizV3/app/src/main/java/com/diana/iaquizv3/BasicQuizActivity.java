@@ -62,9 +62,7 @@ public class BasicQuizActivity extends AppCompatActivity {
         startTime = System.currentTimeMillis()/1000;
     }
     @Override
-    public void onBackPressed () {
-
-    }
+    public void onBackPressed () { }
 
     public void responder(View v) {
         switch(v.getId()){

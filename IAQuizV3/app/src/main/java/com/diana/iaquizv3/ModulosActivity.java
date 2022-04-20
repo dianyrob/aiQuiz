@@ -20,7 +20,9 @@ import android.widget.TextView;
 
 public class ModulosActivity extends AppCompatActivity {
     public String name;
+    int flag = 0;
     ScrollView sv;
+    ImageView btn;
     QuestionSettings qSet = new QuestionSettings();
 
     @Override
@@ -29,6 +31,7 @@ public class ModulosActivity extends AppCompatActivity {
         setContentView(R.layout.activity_modulos);
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         sv = (ScrollView) findViewById(R.id.modulos);
+        btn = (ImageView) findViewById(R.id.more);
     }
 
     public void salir(View v){
@@ -53,8 +56,14 @@ public class ModulosActivity extends AppCompatActivity {
         }else if(v.getId() == R.id.Topic4) {
             Intent intent = new Intent(ModulosActivity.this, Topic4Activity.class);
             startActivity(intent);
+        }else if(v.getId() == R.id.test4){
+            Intent intent = new Intent(ModulosActivity.this, Quiz4Activity.class);
+            startActivity(intent);
         }else if(v.getId() == R.id.Topic5) {
             Intent intent = new Intent(ModulosActivity.this, Topic5Activity.class);
+            startActivity(intent);
+        }else if(v.getId() == R.id.test5){
+            Intent intent = new Intent(ModulosActivity.this, Quiz5Activity.class);
             startActivity(intent);
         }else if(v.getId() == R.id.Topic6) {
             Intent intent = new Intent(ModulosActivity.this, Topic6Activity.class);
@@ -82,10 +91,20 @@ public class ModulosActivity extends AppCompatActivity {
     public void onBackPressed () {
         Intent intent = new Intent(ModulosActivity.this, MainActivity.class);
         startActivity(intent);
+        finish();
     }
 
     public void scrolldown(View v){
-        sv.fullScroll(ScrollView.FOCUS_DOWN);
+        if(flag==0){
+            flag++;
+            sv.fullScroll(ScrollView.FOCUS_DOWN);
+            btn.setImageResource(R.drawable.btnarriba);
+        }else if(flag==1){
+            flag--;
+            sv.fullScroll(ScrollView.FOCUS_UP);
+            btn.setImageResource(R.drawable.btnabajo);
+        }
+
     }
 
 }
