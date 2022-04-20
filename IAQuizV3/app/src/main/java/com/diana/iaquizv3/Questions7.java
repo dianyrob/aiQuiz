@@ -147,7 +147,7 @@ public class Questions7 {
                 d.setText("");
                 c.setVisibility(View.GONE);
                 d.setVisibility(View.GONE);
-                correct = "f";
+                correct = "b";
                 break;
             case 15:
                 Quest.setText(questions+". Production data anonymization/masking has its own challenges; Synthetic data may miss many nuances of real-world data; Image data is harder to produce, are:");

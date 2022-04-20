@@ -4,9 +4,12 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AlertDialog.Builder;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
@@ -37,6 +40,7 @@ public class Quiz1Activity extends AppCompatActivity {
     DataStorage da = new DataStorage();
     public String name;
     String correct = null,selected = null;
+    SharedPreferences prefe;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,9 +48,25 @@ public class Quiz1Activity extends AppCompatActivity {
         setContentView(R.layout.activity_quiz1);
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-        name = da.getUsername();
-        if(name==null)
+        try{
+            prefe=getSharedPreferences("datos", Context.MODE_PRIVATE);
+            name = prefe.getString("name","");
+            if(name.equals("")){
+                qSet.requestName(Quiz1Activity.this);
+                SharedPreferences preferencias=getSharedPreferences("datos", Context.MODE_PRIVATE);
+                Editor editor=preferencias.edit();
+                editor.putString("name", da.getUsername());
+                editor.commit();
+            }
+        }catch (Exception e){
+            //name = da.getUsername();
+            //if(name==null)
             qSet.requestName(Quiz1Activity.this);
+            SharedPreferences preferencias=getSharedPreferences("datos", Context.MODE_PRIVATE);
+            Editor editor=preferencias.edit();
+            editor.putString("name", da.getUsername());
+            editor.commit();
+        }
 
         i=new Intent(Quiz1Activity.this, ScoreActivity.class);
         Quest=(TextView) findViewById(R.id.Respuestas);

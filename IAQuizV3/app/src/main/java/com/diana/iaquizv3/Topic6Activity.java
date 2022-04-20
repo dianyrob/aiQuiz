@@ -42,7 +42,12 @@ public class Topic6Activity extends AppCompatActivity {
                 .load();
 
     }
-
+    @Override
+    public void onBackPressed () {
+        Intent intent = new Intent(Topic6Activity.this, ModulosActivity.class);
+        startActivity(intent);
+        finish();
+    }
     public void option(View v) {
         switch(v.getId()){
             case R.id.back:

@@ -49,7 +49,12 @@ public class Topic1Activity extends AppCompatActivity {
                 .load();
     }
 
-
+    @Override
+    public void onBackPressed () {
+        Intent intent = new Intent(Topic1Activity.this, ModulosActivity.class);
+        startActivity(intent);
+        finish();
+    }
 
     public void option(View v) {
         switch(v.getId()){

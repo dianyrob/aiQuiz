@@ -196,6 +196,14 @@
                                 android:layout_centerHorizontal="true">
 
                                 <ImageView
+                                    android:id="@+id/Topic4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="115dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:onClick="salir"
+                                    app:srcCompat="@drawable/botontopic4" />
+
+                                <ImageView
                                     android:id="@+id/test4"
                                     android:layout_width="400dp"
                                     android:layout_height="100dp"
@@ -204,14 +212,6 @@
                                     android:paddingTop="20dp"
                                     android:paddingRight="30dp"
                                     app:srcCompat="@drawable/evaluacionbutton" />
-
-                                <ImageView
-                                    android:id="@+id/Topic4"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="115dp"
-                                    android:layout_centerHorizontal="true"
-                                    android:onClick="salir"
-                                    app:srcCompat="@drawable/botontopic4" />
 
                             </RelativeLayout>
                         </LinearLayout>

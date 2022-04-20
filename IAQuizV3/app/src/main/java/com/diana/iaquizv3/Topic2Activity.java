@@ -45,6 +45,12 @@ public class Topic2Activity extends AppCompatActivity {
                 .nightMode(false) // toggle night mode
                 .load();
     }
+    @Override
+    public void onBackPressed () {
+        Intent intent = new Intent(Topic2Activity.this, ModulosActivity.class);
+        startActivity(intent);
+        finish();
+    }
 
     public void option(View v) {
         switch(v.getId()){
