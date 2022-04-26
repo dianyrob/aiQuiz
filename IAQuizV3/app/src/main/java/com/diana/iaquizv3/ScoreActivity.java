@@ -80,7 +80,8 @@ public class ScoreActivity extends AppCompatActivity {
     public void onBackPressed () { }
 
     public void showMsg(View v){
-        Toast.makeText(ScoreActivity.this,"The content in this application has been taken from the AIu Artificial Intelligence Certified Tester Syllabus in the next link: https://www.ai-united.org", Toast.LENGTH_LONG).show();
+        //Toast.makeText(ScoreActivity.this,"The content in this application has been taken from the AIu Artificial Intelligence Certified Tester Syllabus in the next link: https://www.ai-united.org", Toast.LENGTH_LONG).show();
+        qSet.showMessage(ScoreActivity.this);
     }
 
     public void update(){
@@ -88,6 +89,7 @@ public class ScoreActivity extends AppCompatActivity {
     }
 
     public void salir(View v){
-        finish();
+        finishAffinity(); System.exit(0);
+        int p = android.os.Process.myPid(); android.os.Process.killProcess(p);
     }
 }
