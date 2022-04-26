@@ -10,18 +10,15 @@ import android.widget.ImageView;
 
 import com.github.barteksc.pdfviewer.PDFView;
 
-//import static com.diana.iaquizv3.R.id.backbtn;
 
 public class Topic4Activity extends AppCompatActivity {
     Intent i;
-    ImageView back,startTest1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_topic4);
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-
 
         PDFView pdfView = findViewById(R.id.pdfView);
         pdfView.fromAsset("chapter4.pdf")

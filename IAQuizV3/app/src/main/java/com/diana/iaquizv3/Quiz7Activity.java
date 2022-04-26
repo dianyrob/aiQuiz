@@ -46,8 +46,6 @@ public class Quiz7Activity extends AppCompatActivity {
 
         i=new Intent(Quiz7Activity.this, ScoreActivity.class);
         Quest=(TextView) findViewById(R.id.Respuestas);
-        //qNum=(TextView) findViewById();
-        //qNum=(TextView) findViewById(R.id.question);
         a=(Button)findViewById(R.id.a1);
         b=(Button)findViewById(R.id.b1);
         c=(Button)findViewById(R.id.c1);

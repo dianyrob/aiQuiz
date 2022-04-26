@@ -35,30 +35,17 @@ public class QuestionSettings extends AppCompatActivity {
 
     public void correctA(Button a, Button b, Button c, Button d, ScrollView sv){
         setColorAg(a);
-        //setColorBr(b);
-        //setColorCr(c);
-        //setColorDr(d);
         sv.fullScroll(ScrollView.FOCUS_DOWN);
     }
     public void correctB(Button a, Button b, Button c, Button d, ScrollView sv){
-        //setColorAr(a);
         setColorBg(b);
-        //setColorCr(c);
-        //setColorDr(d);
-
         sv.fullScroll(ScrollView.FOCUS_DOWN);
     }
     public void correctC(Button a, Button b, Button c, Button d, ScrollView sv){
-        //setColorAr(a);
-        //setColorBr(b);
         setColorCg(c);
-        //setColorDr(d);
         sv.fullScroll(ScrollView.FOCUS_DOWN);
     }
     public void correctD(Button a, Button b, Button c, Button d, ScrollView sv){
-        //setColorAr(a);
-        //setColorBr(b);
-        //setColorCr(c);
         setColorDg(d);
         sv.fullScroll(ScrollView.FOCUS_DOWN);
     }
@@ -79,15 +66,7 @@ public class QuestionSettings extends AppCompatActivity {
         sv.fullScroll(ScrollView.FOCUS_UP);
     }
 
-    /*public void setColorAr(Button a) { a.setBackgroundColor(Color.parseColor("#F9926E")); }
-    public void setColorBr(Button b){
-        b.setBackgroundColor(Color.parseColor("#F9926E"));
-    }
-    public void setColorCr(Button c){
-        c.setBackgroundColor(Color.parseColor("#F9926E"));
-    }
-    public void setColorDr(Button d) { d.setBackgroundColor(Color.parseColor("#F9926E")); }
-    */
+
     public void setColorAg(Button a){
         a.setTextColor(Color.BLACK);
         a.setBackgroundColor(Color.parseColor("#58D8D0"));
@@ -120,20 +99,5 @@ public class QuestionSettings extends AppCompatActivity {
                 }).show();
     }
 
-     /*public void setName(){
-        String nam=da.getUsername();
-        SharedPreferences preferencias=getSharedPreferences("datos", Context.MODE_PRIVATE);
-        Editor editor=preferencias.edit();
-        editor.putString("name", nam);
-        editor.commit();
-    }
-
-   public String reviewName(){
-        String name=null;
-        try{
-            name=prefe.getString("name", "");
-        }catch (Exception ignoring){ }
-        return name;
-    }*/
 
 }

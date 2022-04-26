@@ -15,6 +15,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.DecimalFormat;
 
@@ -38,11 +39,10 @@ public class ScoreActivity extends AppCompatActivity {
         DecimalFormat format = new DecimalFormat();
         format.setMaximumFractionDigits(2); //Define 2 decimales.
 
-        TextView textView = (TextView) findViewById(R.id.update);
-        SpannableString mitextoU = new SpannableString("Update your name");
-        mitextoU.setSpan(new UnderlineSpan(), 0, mitextoU.length(), 0);
-        textView.setText(mitextoU);
-
+        TextView textView = (TextView) findViewById(R.id.about);
+        SpannableString mitexto = new SpannableString("About");
+        mitexto.setSpan(new UnderlineSpan(), 0, mitexto.length(),0);
+        textView.setText(mitexto);
 
         x=new Intent(ScoreActivity.this, MainActivity.class);
         recibe=getIntent();
@@ -60,14 +60,12 @@ public class ScoreActivity extends AppCompatActivity {
         String duracionSec = String.valueOf(tiempo);
 
         dur.setText("Your Time: "+duracionSec+ " sec");
-        //String name = da.getUsername();
         prefe=getSharedPreferences("datos", Context.MODE_PRIVATE);
-        String name = prefe.getString("name","");
+        String name = da.getUsername();
 
         resp.setText("Your correct answers were:");
         thename.setText(name.toUpperCase());
 
-        //x=new Intent(ScoreActivity.this, MainActivity.class);
         reintentar=(ImageView)findViewById(R.id.Reintentar);
         reintentar.setOnClickListener(new OnClickListener() {
             @Override
@@ -80,6 +78,10 @@ public class ScoreActivity extends AppCompatActivity {
     }
     @Override
     public void onBackPressed () { }
+
+    public void showMsg(View v){
+        Toast.makeText(ScoreActivity.this,"The content in this application has been taken from the AIu Artificial Intelligence Certified Tester Syllabus in the next link: https://www.ai-united.org", Toast.LENGTH_LONG).show();
+    }
 
     public void update(){
         qSet.requestName(ScoreActivity.this);

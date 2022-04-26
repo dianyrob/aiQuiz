@@ -41,7 +41,6 @@ public class RandomQuizActivity extends AppCompatActivity {
     Questions1 q1 = new Questions1();
     Questions2 q2 = new Questions2();
     Questions3 q3 = new Questions3();
-    //Questions4 q4 = new Questions4();
     Questions5 q5 = new Questions5();
     Questions6 q6 = new Questions6();
     Questions7 q7 = new Questions7();
