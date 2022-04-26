@@ -12,7 +12,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ScrollView;
+import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AlertDialog.Builder;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -35,6 +37,10 @@ public class QuestionSettings extends AppCompatActivity {
 
     public void correctA(Button a, Button b, Button c, Button d, ScrollView sv){
         setColorAg(a);
+        sv.fullScroll(ScrollView.FOCUS_DOWN);
+    }
+    public void incorrectBtn(Button btn, ScrollView sv){
+        setColorRed(btn);
         sv.fullScroll(ScrollView.FOCUS_DOWN);
     }
     public void correctB(Button a, Button b, Button c, Button d, ScrollView sv){
@@ -71,6 +77,10 @@ public class QuestionSettings extends AppCompatActivity {
         a.setTextColor(Color.BLACK);
         a.setBackgroundColor(Color.parseColor("#58D8D0"));
     }
+    public void setColorRed(Button btn){
+        btn.setTextColor(Color.BLACK);
+        btn.setBackgroundColor(Color.parseColor("#F9926E"));
+    }
     public void setColorBg(Button b){
         b.setTextColor(Color.BLACK);
         b.setBackgroundColor(Color.parseColor("#58D8D0"));
@@ -98,6 +108,17 @@ public class QuestionSettings extends AppCompatActivity {
                     }
                 }).show();
     }
+    public void showMessage(final Activity ActivityName){
+        new Builder(ActivityName,R.style.AlertDialogTheme)
+                .setTitle("About the content in the AI Trainer")
+                .setMessage("The content in this application has been taken from the AIu Artificial Intelligence Certified Tester Syllabus in the next link: https://www.ai-united.org")
+                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int whichButton) {
+                        finish();
+                    }
+                }).show();
+    }
+
 
 
 }

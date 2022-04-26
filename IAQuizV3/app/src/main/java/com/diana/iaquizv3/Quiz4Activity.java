@@ -65,21 +65,25 @@ public class Quiz4Activity extends AppCompatActivity {
                 qSet.deshabilitar(a,b,c,d,sig);
                 selected = "a";
                 setCorrect(correct,selected);
+                setInorrect(correct,selected);
                 break;
             case R.id.b1:
                 qSet.deshabilitar(a,b,c,d,sig);
                 selected = "b";
                 setCorrect(correct,selected);
+                setInorrect(correct,selected);
                 break;
             case R.id.c1:
                 qSet.deshabilitar(a,b,c,d,sig);
                 selected = "c";
                 setCorrect(correct,selected);
+                setInorrect(correct,selected);
                 break;
             case R.id.d1:
                 qSet.deshabilitar(a,b,c,d,sig);
                 selected = "d";
                 setCorrect(correct,selected);
+                setInorrect(correct,selected);
                 break;
             case R.id.sig1:
                 questions+=1;
@@ -164,6 +168,26 @@ public class Quiz4Activity extends AppCompatActivity {
                 qSet.correctD(a,b,c,d,sv);
                 if(opt.equals(selected))
                     rd += 1;
+                break;
+        }
+    }
+    public void setInorrect(String opt, String selected){
+        switch (selected){
+            case "a":
+                if(!opt.equals(selected))
+                    qSet.incorrectBtn(a,sv);
+                break;
+            case "b":
+                if(!opt.equals(selected))
+                    qSet.incorrectBtn(b,sv);
+                break;
+            case "c":
+                if(!opt.equals(selected))
+                    qSet.incorrectBtn(c,sv);
+                break;
+            case "d":
+                if(!opt.equals(selected))
+                    qSet.incorrectBtn(d,sv);
                 break;
         }
     }
