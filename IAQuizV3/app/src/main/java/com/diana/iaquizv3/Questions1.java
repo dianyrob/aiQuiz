@@ -9,7 +9,6 @@ public class Questions1 {
         String correct = null;
         switch (question){
             case 1:
-                //qNum.setText(questions+".");
                 Quest.setText(questions+". Is the intelligence acquired by a machine to solve problems usually solved by humans? ");
                 a.setText("A) Artificial knowledge");
                 b.setText("B) Artificial intelligence");
@@ -20,7 +19,6 @@ public class Questions1 {
                 correct = "b";
                 break;
             case 2:
-                //qNum.setText(questions+".");
                 Quest.setText(questions+". In which sectors is Al playing a leading role?");
                 a.setText("A) Healthcare and manufacturing");
                 b.setText("B) E-commerce and retail");
@@ -252,7 +250,7 @@ public class Questions1 {
                 break;
             case 25:
                 Quest.setText(questions+". These are inspired by the architecture of the human brain. ‘Neurons’, as the basic unit of ANN, act upon the input stimulus and produce the output signal. The input goes through \n" +
-                        "the layers of activation functions to generate the output. These layers form a mesh like network. \n");
+                        "the layers of activation functions to generate the output. These layers form a mesh like network.");
                 a.setText("A) Artificial Neuronal Networks");
                 b.setText("B) Deep Neuronal Network");
                 c.setText("C) Convolutional Neuronal Network");
@@ -372,7 +370,7 @@ public class Questions1 {
                 correct = "c";
                 break;
             case 37:
-                Quest.setText(questions+". This stage evaluates the model on various metrics (discussed in 3.2 Metrics) and baseline it before it goes for final deployment. ");
+                Quest.setText(questions+". This stage evaluates the model on various metrics and baseline it before it goes for final deployment. ");
                 a.setText("A) Data acquisition");
                 b.setText("B) Data preparation ");
                 c.setText("C) Modeling");

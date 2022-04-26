@@ -13,7 +13,6 @@ import com.github.barteksc.pdfviewer.PDFView;
 
 public class Topic6Activity extends AppCompatActivity {
     Intent i;
-    ImageView back,startTest1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

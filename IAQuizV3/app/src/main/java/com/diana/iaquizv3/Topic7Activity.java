@@ -1,7 +1,5 @@
 package com.diana.iaquizv3;
 
-//import static com.diana.iaquizv3.R.id.backbtn;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -15,15 +13,12 @@ import com.github.barteksc.pdfviewer.PDFView;
 public class Topic7Activity extends AppCompatActivity {
 
     Intent i;
-    ImageView back,startTest1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_topic7);
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        //back = (ImageView)findViewById(R.id.backbtn);
-        startTest1 = (ImageView)findViewById(R.id.topictest1);
 
 
         PDFView pdfView = findViewById(R.id.pdfView);

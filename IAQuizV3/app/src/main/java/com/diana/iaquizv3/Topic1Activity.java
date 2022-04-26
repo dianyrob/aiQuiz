@@ -16,17 +16,12 @@ import com.github.barteksc.pdfviewer.PDFView;
 
 public class Topic1Activity extends AppCompatActivity {
     Intent i;
-    ImageView startTest1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_topic1);
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-
-
-        startTest1 = (ImageView)findViewById(R.id.topictest1);
-
 
         PDFView pdfView = findViewById(R.id.pdfView);
         pdfView.fromAsset("chapter1.pdf")
