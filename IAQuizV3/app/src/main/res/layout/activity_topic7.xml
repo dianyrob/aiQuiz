@@ -8,8 +8,6 @@
     tools:context=".Topic7Activity"
     android:background="@drawable/fondo2">
 
-
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -59,15 +57,15 @@
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="-20dp">
+        android:layout_marginBottom="-20dp"
+        android:layout_marginTop="85dp">
 
         <RelativeLayout
             android:id="@+id/textpdf"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:layout_marginTop="90dp">
+            android:paddingRight="20dp">
 
 
             <RelativeLayout
@@ -90,10 +88,5 @@
         </RelativeLayout>
 
     </RelativeLayout>
-
-
-
-
-
 
 </LinearLayout>

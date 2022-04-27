@@ -23,11 +23,11 @@
 
         <ImageView
             android:id="@+id/text1"
-            android:layout_width="wrap_content"
+            android:layout_width="450dp"
             android:layout_height="wrap_content"
-            android:paddingLeft="70dp"
+            android:paddingLeft="60dp"
             android:paddingTop="20dp"
-            app:srcCompat="@drawable/text1" />
+            app:srcCompat="@drawable/text5" />
         <ImageView
             android:id="@+id/orangeline"
             android:layout_width="wrap_content"
@@ -37,27 +37,27 @@
             app:srcCompat="@drawable/orangeline" />
         <ImageView
             android:id="@+id/text2"
-            android:layout_width="wrap_content"
-            android:layout_height="250dp"
-            android:paddingBottom="30dp"
-            android:paddingTop="20dp"
+            android:layout_width="350dp"
+            android:layout_height="350dp"
+            android:paddingBottom="90dp"
+            android:paddingLeft="70dp"
             app:srcCompat="@drawable/text2" />
 
 
         <ImageView
             android:id="@+id/btnbasic"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_gravity="center_horizontal"
             android:onClick="start"
             app:srcCompat="@drawable/btnbasic"
             tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
         <ImageView
             android:id="@+id/btntesting"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_gravity="center_horizontal"
             android:onClick="start"
             app:srcCompat="@drawable/btntesting"
             tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />

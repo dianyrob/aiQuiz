@@ -101,6 +101,7 @@
                                     android:layout_alignParentRight="true"
                                     android:onClick="salir"
                                     android:paddingTop="20dp"
+                                    android:paddingRight="80dp"
                                     app:srcCompat="@drawable/evaluacionbutton" />
 
 
@@ -136,6 +137,7 @@
                                     android:layout_alignParentRight="true"
                                     android:onClick="salir"
                                     android:paddingTop="20dp"
+                                    android:paddingRight="80dp"
                                     app:srcCompat="@drawable/evaluacionbutton" />
 
 
@@ -171,6 +173,7 @@
                                     android:layout_alignParentRight="true"
                                     android:onClick="salir"
                                     android:paddingTop="20dp"
+                                    android:paddingRight="80dp"
                                     app:srcCompat="@drawable/evaluacionbutton" />
 
 
@@ -206,6 +209,7 @@
                                     android:layout_alignParentRight="true"
                                     android:onClick="salir"
                                     android:paddingTop="20dp"
+                                    android:paddingRight="80dp"
                                     app:srcCompat="@drawable/evaluacionbutton" />
 
                             </RelativeLayout>
@@ -240,6 +244,7 @@
                                     android:layout_alignParentRight="true"
                                     android:onClick="salir"
                                     android:paddingTop="20dp"
+                                    android:paddingRight="80dp"
                                     app:srcCompat="@drawable/evaluacionbutton" />
 
                             </RelativeLayout>
@@ -274,6 +279,7 @@
                                     android:layout_alignParentRight="true"
                                     android:onClick="salir"
                                     android:paddingTop="20dp"
+                                    android:paddingRight="80dp"
                                     app:srcCompat="@drawable/evaluacionbutton" />
 
                             </RelativeLayout>
@@ -308,6 +314,7 @@
                                     android:layout_alignParentRight="true"
                                     android:onClick="salir"
                                     android:paddingTop="20dp"
+                                    android:paddingRight="80dp"
                                     app:srcCompat="@drawable/evaluacionbutton" />
 
                             </RelativeLayout>
