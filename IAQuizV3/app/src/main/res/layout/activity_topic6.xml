@@ -59,7 +59,8 @@
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="-20dp">
+        android:layout_marginBottom="-20dp"
+        android:layout_marginTop="85dp">
 
         <RelativeLayout
             android:id="@+id/textpdf"
@@ -75,8 +76,7 @@
                 android:background="@drawable/esquinas"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
-                android:paddingTop="10dp"
-                android:layout_marginTop="90dp">
+                android:paddingTop="10dp">
 
                 <com.github.barteksc.pdfviewer.PDFView
                     android:id="@+id/pdfView"
@@ -90,10 +90,5 @@
         </RelativeLayout>
 
     </RelativeLayout>
-
-
-
-
-
 
 </LinearLayout>

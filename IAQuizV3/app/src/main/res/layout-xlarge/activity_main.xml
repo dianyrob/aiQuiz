@@ -17,38 +17,33 @@
 
         <ImageView
             android:id="@+id/logo"
-            android:layout_width="450dp"
+            android:layout_width="350dp"
             android:layout_height="100dp"
             android:layout_above="@+id/imgtext1"
-            android:paddingBottom="30dp"
-            android:paddingLeft="50dp"
             app:srcCompat="@drawable/logo" />
 
         <ImageView
             android:id="@+id/imgtext1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="820dp"
+            android:layout_height="400dp"
             android:layout_above="@+id/orangeline"
-            android:layout_centerHorizontal="true"
-            android:paddingBottom="30dp"
-            android:paddingRight="200dp"
+            android:paddingLeft="80dp"
             app:srcCompat="@drawable/text1" />
 
         <ImageView
             android:id="@+id/text2"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/orangeline"
+            android:layout_above="@id/btnbasic"
             android:layout_centerHorizontal="true"
-            android:paddingBottom="120dp"
-            android:paddingLeft="200dp"
+            android:paddingLeft="120dp"
             android:paddingRight="260dp"
-            android:paddingTop="30dp"
+            android:layout_marginBottom="130dp"
             app:srcCompat="@drawable/text2" />
 
         <ImageView
             android:id="@+id/btntesting"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_alignParentBottom="true"
@@ -58,7 +53,7 @@
 
         <ImageView
             android:id="@+id/btnbasic"
-            android:layout_width="500dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_above="@+id/btntesting"
             android:layout_centerHorizontal="true"
@@ -71,7 +66,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:paddingLeft="210dp"
+            android:paddingLeft="120dp"
             app:srcCompat="@drawable/orangeline"
             tools:ignore="SpeakableTextPresentCheck" />
 
