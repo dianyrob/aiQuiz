@@ -1,6 +1,7 @@
 package com.diana.iaquizv3;
 
 import android.app.Activity;
+import android.app.DownloadManager;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
@@ -8,11 +9,19 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.graphics.Color;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.net.Uri;
+import android.os.Environment;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ScrollView;
 import android.widget.Toast;
+
+import java.net.MalformedURLException;
+import java.net.URL;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AlertDialog.Builder;
@@ -119,6 +128,50 @@ public class QuestionSettings extends AppCompatActivity {
                 }).show();
     }
 
+    /*public void showMessageDownload(final Activity ActivityName, final String fileName, final String fileUrl, final NetworkInfo networkInfo){
+        new Builder(ActivityName,R.style.AlertDialogTheme)
+                .setTitle("Download file")
+                .setMessage("Verify you have internet connection and press Ok to download the file.")
+                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int whichButton) {
+                        finish();
+                        try {
+                            downloadFile(ActivityName, fileName,fileUrl, networkInfo);
+                        } catch (MalformedURLException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                })
+                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        //set what should happen when negative button is clicked
+                        finish();
+                    }
+                }).show();
+
+    }*/
+
+  /*  public void downloadFile(Activity ActivityName,String fileName, String filepath, NetworkInfo networkInfo) throws MalformedURLException {
+        URL url = new URL(filepath);
 
 
+        if (networkInfo != null && networkInfo.isConnected()) {
+            // Si hay conexión a Internet en este momento
+            DownloadManager.Request request = new DownloadManager.Request(Uri.parse(url + ""));
+            request.setTitle(fileName);
+            request.setMimeType("applcation/pdf");
+            request.allowScanningByMediaScanner();
+            request.setAllowedOverMetered(true);
+            request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+            request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, fileName);
+            DownloadManager dm = (DownloadManager) getSystemService(DOWNLOAD_SERVICE);
+            dm.enqueue(request);
+            Toast.makeText(getApplicationContext(),"Search your file in the Downloasd folder",Toast.LENGTH_LONG);
+        } else {
+            // No hay conexión a Internet en este momento
+            Toast.makeText(getApplicationContext(),"Verify your internet connection",Toast.LENGTH_LONG);
+        }
+    }
+*/
 }
