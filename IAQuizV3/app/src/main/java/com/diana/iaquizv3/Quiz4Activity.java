@@ -22,7 +22,7 @@ public class Quiz4Activity extends AppCompatActivity {
     int ra=0,rb=0,rc=0,rd=0;
     int questions=0,totalQuestions=34;
     int questionsLimit=34;
-    Intent i;
+    Intent i,modulos;
     int[] quest=new int[34];
     long startTime=0,endTime=0;
     Questions4 q4 = new Questions4();
@@ -57,7 +57,11 @@ public class Quiz4Activity extends AppCompatActivity {
         startTime = System.currentTimeMillis()/1000;
     }
     @Override
-    public void onBackPressed () { }
+    public void onBackPressed () {
+        modulos=new Intent(Quiz4Activity.this, ModulosActivity.class);
+        startActivity(modulos);
+        finish();
+    }
 
     public void responder(View v) {
         switch(v.getId()){

@@ -20,6 +20,7 @@
             android:layout_marginBottom="-90dp"
             android:paddingLeft="20dp"
             android:paddingTop="10dp"
+            android:onClick="option"
             app:srcCompat="@drawable/logo" />
 
         <ImageView

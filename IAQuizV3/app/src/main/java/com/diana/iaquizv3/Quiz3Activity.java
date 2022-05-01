@@ -24,7 +24,7 @@ public class Quiz3Activity extends AppCompatActivity {
     int ra=0,rb=0,rc=0,rd=0;
     int questions=0,totalQuestions=129;
     int questionsLimit=40;
-    Intent i;
+    Intent i,modulos;
     int[] quest={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
     long startTime=0,endTime=0;
     Questions3 q3 = new Questions3();
@@ -61,7 +61,9 @@ public class Quiz3Activity extends AppCompatActivity {
 
     @Override
     public void onBackPressed () {
-
+        modulos=new Intent(Quiz3Activity.this, ModulosActivity.class);
+        startActivity(modulos);
+        finish();
     }
     public void responder(View v) {
         switch(v.getId()){

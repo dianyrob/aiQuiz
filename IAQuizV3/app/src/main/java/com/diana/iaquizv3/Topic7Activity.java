@@ -2,16 +2,20 @@ package com.diana.iaquizv3;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.DownloadManager;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.view.View;
 import android.widget.ImageView;
 
 import com.github.barteksc.pdfviewer.PDFView;
 
 public class Topic7Activity extends AppCompatActivity {
-
+    String directory;
+    String fileName;
     Intent i;
 
     @Override
@@ -47,8 +51,33 @@ public class Topic7Activity extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+
+    public void download(View v){
+        /*directory = getApplicationInfo().dataDir;
+        //24 or the number of chars after the /0/ in the full path
+        int first = directory.length()-18;
+        directory = directory.substring(0, first) + "assets/chapte7.pdf";
+
+        fileName = directory;
+        fileName = fileName.substring(fileName.lastIndexOf('/') + 1);
+
+        DownloadManager.Request request = new DownloadManager.Request(Uri.parse(url + ""));
+        request.setTitle(fileName);
+        request.setMimeType("applcation/pdf");
+        request.allowScanningByMediaScanner();
+        request.setAllowedOverMetered(true);
+        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+        request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, fileName);
+        DownloadManager dm = (DownloadManager) getSystemService(DOWNLOAD_SERVICE);
+        dm.enqueue(request);*/
+    }
     public void option(View v) {
         switch(v.getId()){
+            case R.id.logo:
+                i = new Intent(Topic7Activity.this, MainActivity.class);
+                startActivity(i);
+                finish();
+                break;
             case R.id.back:
                 i = new Intent(Topic7Activity.this, ModulosActivity.class);
                 startActivity(i);

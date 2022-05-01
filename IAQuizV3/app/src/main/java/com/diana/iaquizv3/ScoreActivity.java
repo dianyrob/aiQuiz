@@ -40,7 +40,7 @@ public class ScoreActivity extends AppCompatActivity {
         format.setMaximumFractionDigits(2); //Define 2 decimales.
 
         TextView textView = (TextView) findViewById(R.id.about);
-        SpannableString mitexto = new SpannableString("About");
+        SpannableString mitexto = new SpannableString("About content");
         mitexto.setSpan(new UnderlineSpan(), 0, mitexto.length(),0);
         textView.setText(mitexto);
 
@@ -80,12 +80,12 @@ public class ScoreActivity extends AppCompatActivity {
     public void onBackPressed () { }
 
     public void showMsg(View v){
-        //Toast.makeText(ScoreActivity.this,"The content in this application has been taken from the AIu Artificial Intelligence Certified Tester Syllabus in the next link: https://www.ai-united.org", Toast.LENGTH_LONG).show();
         qSet.showMessage(ScoreActivity.this);
     }
 
-    public void update(){
-        qSet.requestName(ScoreActivity.this);
+    public void goHome(View v){
+        startActivity(x);
+        finish();
     }
 
     public void salir(View v){

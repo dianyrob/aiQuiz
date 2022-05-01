@@ -24,7 +24,7 @@ public class Quiz6Activity extends AppCompatActivity {
     int ra=0,rb=0,rc=0,rd=0;
     int questions=0,totalQuestions=41;
     int questionsLimit=40;
-    Intent i;
+    Intent i,modulos;
     int[] quest=new int[41];
     long startTime=0,endTime=0;
     Questions6 q6 = new Questions6();
@@ -60,7 +60,11 @@ public class Quiz6Activity extends AppCompatActivity {
     }
 
     @Override
-    public void onBackPressed () { }
+    public void onBackPressed () {
+        modulos=new Intent(Quiz6Activity.this, ModulosActivity.class);
+        startActivity(modulos);
+        finish();
+    }
 
     public void responder(View v) {
         switch(v.getId()){

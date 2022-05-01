@@ -110,8 +110,8 @@ public class QuestionSettings extends AppCompatActivity {
     }
     public void showMessage(final Activity ActivityName){
         new Builder(ActivityName,R.style.AlertDialogTheme)
-                .setTitle("About the content in the AI Trainer")
-                .setMessage("The content in this application has been taken from the AIu Artificial Intelligence Certified Tester Syllabus in the next link: https://www.ai-united.org")
+                .setTitle("Content in the AI Trainer app")
+                .setMessage("The content in this application has been taken from the AIU Artificial Intelligence Certified Tester Syllabus at the next link: https://www.ai-united.org")
                 .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int whichButton) {
                         finish();

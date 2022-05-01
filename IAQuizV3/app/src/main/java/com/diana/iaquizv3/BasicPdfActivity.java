@@ -55,6 +55,7 @@ public class BasicPdfActivity extends AppCompatActivity {
 
     public void option(View v) {
         switch(v.getId()){
+            case R.id.logo:
             case R.id.back:
                 i = new Intent(BasicPdfActivity.this, MainActivity.class);
                 startActivity(i);
